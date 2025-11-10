@@ -1,6 +1,121 @@
-\documentclass[]{book}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Preamble %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[]{report}
 
+\usepackage{cleveref}
+\usepackage{titling}
+\usepackage{fancyhdr}
+\usepackage{blindtext}
+\usepackage{titlesec}
+\usepackage[titletoc]{appendix}
+\usepackage[
+  letterpaper,
+  margin=1in,          % set all margins; tweak to taste (e.g., 0.8in)
+  includeheadfoot,     % count header & footer space inside the margins
+  headheight=14pt,     % matches your fancyhdr header content height
+  headsep=10pt,        % space between header and text
+  footskip=24pt        % space from bottom of text to baseline of footer
+]{geometry}
+
+\renewcommand{\familydefault}{\sfdefault} % Use sans-serif font
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Header/Footer Formatting %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\pagestyle{fancy} % use fancyhdr package to customize headers/footers
+\fancyhf{} % clear all header and footer fields
+
+% Expose the date you set for the title page so we can reuse it in the footer
+\makeatletter
+\newcommand{\frontpagedate}{\@date} % this will mirror whatever you put in \date{...}
+\makeatother
+
+% Put ONLY the chapter title (not "Chapter 1") in the running header mark
+\renewcommand{\chaptermark}[1]{\markboth{#1}{}}
+
+% --- Header: top-left shows chapter title on non-opening pages
+\fancyhead[L]{\nouppercase{\leftmark}}
+
+% --- Footer: left = fixed text + front-page date, right = page number
+\fancyfoot[L]{Project MARS SOP, \thedate}
+\fancyfoot[R]{\thepage}
+
+% Optional rules (lines). Header rule on; footer rule off.
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Make chapter opening pages use a blank header but keep the same footer
+% (report class sets chapter openings to \thispagestyle{plain} by default)
+\fancypagestyle{plain}{%
+  \fancyhf{}%
+  \fancyfoot[L]{Project MARS SOP, \thedate}%
+  \fancyfoot[R]{\thepage}%
+  \renewcommand{\headrulewidth}{0pt}%
+}
+
+% Prevent the classic "Package Fancyhdr Warning: \headheight is too small"
+\setlength{\headheight}{14pt} % bump if you add taller content
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Paragraph Numbering %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Number all levels we need
+\setcounter{secnumdepth}{5}
+
+% Chapter and Section numbering formats
+\renewcommand{\thechapter}{\arabic{chapter}}
+\renewcommand{\thesection}{\thechapter-\arabic{section}}
+
+% Paragraph / Subparagraph counters and print formats
+\makeatletter
+\@addtoreset{paragraph}{section}% reset a., b., c. each new section
+\@addtoreset{subparagraph}{paragraph}% reset (1), (2) under each letter
+\makeatother
+
+\renewcommand{\theparagraph}{\alph{paragraph}}
+\renewcommand{\thesubparagraph}{(\arabic{subparagraph})}
+
+% Label styles with titlesec (run-in headings)
+\titleformat{\section}
+  {\normalfont\Large\bfseries}{\thesection}{1em}{}
+
+% Paragraph: label = italic a., title = bold
+\titleformat{\paragraph}[runin]
+  {\normalfont\normalsize}%
+  {\textit{\theparagraph.}}{0.75em}{\bfseries}[\normalfont]
+
+% Subparagraph: label = (1), title = italics
+\titleformat{\subparagraph}[runin]
+  {\normalfont\normalsize}%
+  {\thesubparagraph}{0.75em}{\itshape}[\normalfont]
+
+% Optional: nicer spacing for the run-in heads
+\titlespacing*{\paragraph}{0pt}{0.5\baselineskip}{0.75em}
+\titlespacing*{\subparagraph}{0pt}{0pt}{0.75em}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Document Information %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\title{Project MARS - Standard Operating Procedure}
+\author{SFC Jamez White, Project NCOIC}
+\date{01 Dec 2025}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Document Content %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document}
+\maketitle
 
-\include{}
+\tableofcontents
+\listoffigures
+\listoftables
+
+\include{General}
+\include{Roles and Responsibilities}
+\include{Airframe and Supporting Systems}
+\include{Pilot Certification}
+\include{Flight Operations}
+\include{Maintenance}
+\include{Safety}
+
+\begin{appendices}
+\include{glossary.tex}
+\include{References}
+\include{Checklists}
+\include{Forms}
+\end{appendices}
 \end{document}

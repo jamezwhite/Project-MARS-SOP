@@ -1,0 +1,79 @@
+\contentsline {chapter}{\numberline {1}General}{5}{}%
+\contentsline {section}{\numberline {1-1}Purpose}{5}{}%
+\contentsline {paragraph}{\numberline {a}}{5}{}%
+\contentsline {section}{\numberline {1-2}Description of Operation}{5}{}%
+\contentsline {paragraph}{\numberline {a}}{5}{}%
+\contentsline {section}{\numberline {1-3}Applicability}{5}{}%
+\contentsline {section}{\numberline {1-4}Proponent and Authority}{5}{}%
+\contentsline {paragraph}{\numberline {a}Proponent}{5}{}%
+\contentsline {paragraph}{\numberline {b}Exception/Waiver Authority}{5}{}%
+\contentsline {paragraph}{\numberline {c}Limits to Proponent Authority}{6}{}%
+\contentsline {paragraph}{\numberline {d}Recommended Changes}{6}{}%
+\contentsline {paragraph}{\numberline {e}Precendence}{6}{}%
+\contentsline {chapter}{\numberline {2}Roles and Responsibilities}{7}{}%
+\contentsline {section}{\numberline {2-1}Hospital Commander}{7}{}%
+\contentsline {section}{\numberline {2-2}Project MARS OIC}{7}{}%
+\contentsline {section}{\numberline {2-3}Project MARS NCOIC}{7}{}%
+\contentsline {section}{\numberline {2-4}Chief of Pharmacy}{7}{}%
+\contentsline {section}{\numberline {2-5}Project MARS Technical Lead}{7}{}%
+\contentsline {section}{\numberline {2-6}Lead Pilot}{7}{}%
+\contentsline {section}{\numberline {2-7}Remote Pilot in Command (RPIC)}{7}{}%
+\contentsline {section}{\numberline {2-8}Visual Observer (VO)}{7}{}%
+\contentsline {section}{\numberline {2-9}Maintenance Officer / Technician}{7}{}%
+\contentsline {chapter}{\numberline {3}Airframe \& Supporting Systems}{8}{}%
+\contentsline {section}{\numberline {3-1}Approved Airframes}{8}{}%
+\contentsline {section}{\numberline {3-2}Configuration Management and Documentation}{8}{}%
+\contentsline {section}{\numberline {3-3}System Specifications}{8}{}%
+\contentsline {subsection}{\numberline {3-3.1}Airframe Performance}{8}{}%
+\contentsline {subsection}{\numberline {3-3.2}Command and Control (C2) Systems}{8}{}%
+\contentsline {subsection}{\numberline {3-3.3}Beyond Visual Line of Sight (BVLOS) Systems}{8}{}%
+\contentsline {section}{\numberline {3-4}Cargo Approved for Flight}{8}{}%
+\contentsline {section}{\numberline {3-5}Ground Control Station (GCS) and Software}{8}{}%
+\contentsline {chapter}{\numberline {4}Pilot Certication, Training, \& Currency}{9}{}%
+\contentsline {section}{\numberline {4-1}Pilot Qualification Framework}{9}{}%
+\contentsline {section}{\numberline {4-2}Base-Level Operator Training}{9}{}%
+\contentsline {section}{\numberline {4-3}Mission Qualification Training}{9}{}%
+\contentsline {section}{\numberline {4-4}Instructor Pilot (IP) Training / Pilot Evaluator Training}{9}{}%
+\contentsline {section}{\numberline {4-5}Currency and Recurrency Requirements}{9}{}%
+\contentsline {section}{\numberline {4-6}Training Records and Documentation}{9}{}%
+\contentsline {chapter}{\numberline {5}Flight Operations}{10}{}%
+\contentsline {section}{\numberline {5-1}Types of Operations}{10}{}%
+\contentsline {subsection}{\numberline {5-1.1}Routine Scheduled Delivery}{10}{}%
+\contentsline {subsection}{\numberline {5-1.2}On-Demand / Emergency Response Delivery}{10}{}%
+\contentsline {subsection}{\numberline {5-1.3}Developmental Test \& Evaluation (DT\&E) Flights}{10}{}%
+\contentsline {subsection}{\numberline {5-1.4}Training Flights}{10}{}%
+\contentsline {section}{\numberline {5-2}Air Corridor and Route Management}{10}{}%
+\contentsline {section}{\numberline {5-3}Mission Planning and Approval Cycle}{10}{}%
+\contentsline {section}{\numberline {5-4}Flight Procedures}{10}{}%
+\contentsline {section}{\numberline {5-5}Data Management}{10}{}%
+\contentsline {chapter}{\numberline {6}Maintenance and Logistics}{11}{}%
+\contentsline {section}{\numberline {6-1}Maintenance Overview}{11}{}%
+\contentsline {section}{\numberline {6-2}Maintenance Schedule}{11}{}%
+\contentsline {section}{\numberline {6-3}Battery Management Protocol}{11}{}%
+\contentsline {section}{\numberline {6-4}Software and Firmware Update Procedures}{11}{}%
+\contentsline {section}{\numberline {6-5}Supply and Spare Parts Management}{11}{}%
+\contentsline {section}{\numberline {6-6}Maintenance Documentation}{11}{}%
+\contentsline {chapter}{\numberline {7}Safety and Emergency Procedures}{12}{}%
+\contentsline {section}{\numberline {7-1}Risk Managment}{12}{}%
+\contentsline {section}{\numberline {7-2}General Emergency Procedures}{12}{}%
+\contentsline {section}{\numberline {7-3}Specific Emergency Procedures}{12}{}%
+\contentsline {subsection}{\numberline {7-3.1}Lost Communication (Lost Link) - VLOS}{12}{}%
+\contentsline {subsection}{\numberline {7-3.2}Lost Communication (Lost Link) - BVLOS}{12}{}%
+\contentsline {subsection}{\numberline {7-3.3}GPS/Navigation Failure}{12}{}%
+\contentsline {subsection}{\numberline {7-3.4}Uncommanded Flight (Flyaway)}{12}{}%
+\contentsline {subsection}{\numberline {7-3.5}Low Battery Emergency Landing}{12}{}%
+\contentsline {section}{\numberline {7-4}Aircraft/Medical Emergency Response}{12}{}%
+\contentsline {section}{\numberline {7-5}Accident/Incident Reporting}{12}{}%
+\contentsline {chapter}{Appendix \numberline {A}Glossary of Acronyms and Terms}{13}{}%
+\contentsline {section}{\numberline {A-1}Acronyms}{13}{}%
+\contentsline {section}{\numberline {A-2}Definitions}{13}{}%
+\contentsline {chapter}{Appendix \numberline {B}Regulatory Framework and References}{14}{}%
+\contentsline {chapter}{Appendix \numberline {C}Checklists}{15}{}%
+\contentsline {section}{\numberline {C-1}Pre-Flight Checklist}{15}{}%
+\contentsline {section}{\numberline {C-2}Post-Flight Checklist}{15}{}%
+\contentsline {section}{\numberline {C-3}Emergency Procedures Checklist}{15}{}%
+\contentsline {chapter}{Appendix \numberline {D}Required Forms}{16}{}%
+\contentsline {section}{\numberline {D-1}Pre-Flight Inspection Form}{16}{}%
+\contentsline {section}{\numberline {D-2}Flight Log Form}{16}{}%
+\contentsline {section}{\numberline {D-3}Maintenance Log Form}{16}{}%
+\contentsline {section}{\numberline {D-4}Incident Report Form}{16}{}%
