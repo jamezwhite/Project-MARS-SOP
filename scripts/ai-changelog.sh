@@ -97,13 +97,13 @@ JSON_PAYLOAD=$(
     --arg user "$USER_PROMPT" \
     '{
       "model": "gpt-5-mini",
-      "temperature": 0.15,
       "messages": [
         { "role": "system", "content": $sys },
         { "role": "user",   "content": $user }
       ]
     }'
 )
+
 
 echo "[ai-changelog] Requesting LaTeX-aware summary from gpt-5-mini..."
 
