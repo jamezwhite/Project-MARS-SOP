@@ -1,12 +1,15 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Preamble %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \documentclass[]{report}
 
-\usepackage{cleveref}
-\usepackage{titling}
-\usepackage{fancyhdr}
-\usepackage{blindtext}
-\usepackage{titlesec}
-\usepackage[titletoc]{appendix}
+\usepackage{titling}               % Adds control for typestting of the \maketitle command
+\usepackage{newtxtext}
+\usepackage{fancyhdr}              % Gives Control over headers and footers
+\usepackage{acro}                  % Adds Acronym Glossing and Appendix
+\usepackage[section=section]{glossaries}            % Adds Term Glossing and Appendix
+\usepackage{blindtext}             % Creates Lorem Ipsum when asked for
+\usepackage{titlesec}              % Allows for Alternative Section Titles
+\usepackage{graphicx}              % Allows for image use
+\usepackage[titletoc]{appendix}    % Gives extra control of appendices
 \usepackage[
   letterpaper,
   margin=1in,          % set all margins; tweak to taste (e.g., 0.8in)
@@ -14,7 +17,12 @@
   headheight=14pt,     % matches your fancyhdr header content height
   headsep=10pt,        % space between header and text
   footskip=24pt        % space from bottom of text to baseline of footer
-]{geometry}
+]{geometry}                        %Flexible and Complete Interface to Document Dimensions
+\usepackage[hidelinks]{hyperref}
+\usepackage{cleveref}              %Allows for intelligent crossreferencing
+\usepackage{pdfcomment}            % Allows for Tooltips in PDF
+\usepackage{enumitem}              % for tidy list spacing (optional)
+
 
 \renewcommand{\familydefault}{\sfdefault} % Use sans-serif font
 
@@ -54,41 +62,75 @@
 % Prevent the classic "Package Fancyhdr Warning: \headheight is too small"
 \setlength{\headheight}{14pt} % bump if you add taller content
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Acronym Setup and Tooltips %%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Load all acronyms from source file
+\input{KACH SOP/ABCA}  
+
+% Redefine commands after everything is loaded to turn on tooltips
+\AtBeginDocument{%
+    \let\oldac\ac
+    \renewcommand{\ac}[1]{%
+        \pdftooltip{\oldac{#1}}{\acl{#1}}%
+    }%
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Term Setup and Tooltips %%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Load all acronyms from source file
+\makenoidxglossaries
+\input{KACH SOP/Terms}  
+
+\AtBeginDocument{%
+  % Show tooltip with the entry's description when hovering the term
+  \NewDocumentCommand{\term}{m}{\pdftooltip{\gls{#1}}{\glsentrydesc{#1}}}
+  \NewDocumentCommand{\Term}{m}{\pdftooltip{\Gls{#1}}{\glsentrydesc{#1}}}
+  \NewDocumentCommand{\terms}{m}{\pdftooltip{\glspl{#1}}{\glsentrydesc{#1}}}
+  \NewDocumentCommand{\Terms}{m}{\pdftooltip{\Glspl{#1}}{\glsentrydesc{#1}}}
+}
+
+\newglossarystyle{termabove}{%
+  \setglossarystyle{list}% start from the basic list style
+  \renewenvironment{theglossary}%
+    {\begin{description}[leftmargin=0pt,labelsep=0pt,itemsep=.6\baselineskip]}%
+    {\end{description}}%
+  \renewcommand*{\glossentry}[2]{%
+    \item[]%
+      \glstarget{##1}{\textbf{\glsentryname{##1}}}\par
+      \glossentrydesc{##1}\glspostdescription\space ##2%
+  }%
+  \renewcommand*{\glsgroupskip}{}% suppress A/B/C group headings
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% % Reference  Formatting %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\crefformat{chapter}{Chapter~#2#1 (\descriptionlabel{#1})#3}
+\Crefformat{chapter}{Chapter~#2#1 (\descriptionlabel{#1})#3}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Paragraph Numbering %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-% Number all levels we need
+% Your existing counter setup (keep as-is)
 \setcounter{secnumdepth}{5}
-
-% Chapter and Section numbering formats
 \renewcommand{\thechapter}{\arabic{chapter}}
 \renewcommand{\thesection}{\thechapter-\arabic{section}}
 
-% Paragraph / Subparagraph counters and print formats
 \makeatletter
-\@addtoreset{paragraph}{section}% reset a., b., c. each new section
-\@addtoreset{subparagraph}{paragraph}% reset (1), (2) under each letter
+\@addtoreset{paragraph}{section}
+\@addtoreset{subparagraph}{paragraph}
 \makeatother
 
 \renewcommand{\theparagraph}{\alph{paragraph}}
 \renewcommand{\thesubparagraph}{(\arabic{subparagraph})}
 
-% Label styles with titlesec (run-in headings)
-\titleformat{\section}
-  {\normalfont\Large\bfseries}{\thesection}{1em}{}
-
-% Paragraph: label = italic a., title = bold
+% Modified paragraph formatting with hanging indent
 \titleformat{\paragraph}[runin]
   {\normalfont\normalsize}%
   {\textit{\theparagraph.}}{0.75em}{\bfseries}[\normalfont]
 
-% Subparagraph: label = (1), title = italics
 \titleformat{\subparagraph}[runin]
   {\normalfont\normalsize}%
-  {\thesubparagraph}{0.75em}{\itshape}[\normalfont]
+  {\thesubparagraph}{0.75em}{\underline}[\normalfont]
 
-% Optional: nicer spacing for the run-in heads
-\titlespacing*{\paragraph}{0pt}{0.5\baselineskip}{0.75em}
-\titlespacing*{\subparagraph}{0pt}{0pt}{0.75em}
+% Modified spacing with hanging indent control
+\titlespacing*{\paragraph}{1em}{0.5\baselineskip}{0.75em}
+\titlespacing*{\subparagraph}{2em}{0pt}{0.75em} % Indent subparagraphs
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Document Information %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -98,7 +140,7 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Document Content %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document}
-\maketitle
+\include{KACH SOP/frontpage}
 
 \tableofcontents
 \listoffigures
@@ -113,9 +155,10 @@
 \include{Safety}
 
 \begin{appendices}
-\include{glossary.tex}
 \include{References}
 \include{Checklists}
 \include{Forms}
+\include{KACH SOP/uas characteristics}
 \end{appendices}
+\include{glossary.tex}
 \end{document}
