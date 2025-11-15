@@ -1,0 +1,32 @@
+# .github/workflows/ai-changelog.yml
+name: AI Changelog
+
+on:
+  push:
+    branches:
+      - main
+      
+permissions:
+  contents: write      # allow push/force-push
+
+jobs:
+  summarize-and-amend:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 2  # need parent commit for diff
+
+      - name: Set up Git user for amend
+        run: |
+          git config user.name "ai-changelog-bot"
+          git config user.email "ai-changelog-bot@users.noreply.github.com"
+
+      - name: Generate AI changelog and amend commit
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          GITHUB_SHA: ${{ github.sha }}
+        run: |
+          bash scripts/ai-changelog.sh
