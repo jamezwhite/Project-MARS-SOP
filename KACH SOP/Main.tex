@@ -8,6 +8,7 @@
 \usepackage[section=section]{glossaries}            % Adds Term Glossing and Appendix
 \usepackage{blindtext}             % Creates Lorem Ipsum when asked for
 \usepackage{titlesec}              % Allows for Alternative Section Titles
+\usepackage[normalem]{ulem} % keeps \emph italic instead of underlined
 \usepackage{graphicx}              % Allows for image use
 \usepackage[titletoc]{appendix}    % Gives extra control of appendices
 \usepackage[
@@ -105,32 +106,68 @@
 \crefformat{chapter}{Chapter~#2#1 (\descriptionlabel{#1})#3}
 \Crefformat{chapter}{Chapter~#2#1 (\descriptionlabel{#1})#3}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Paragraph Numbering %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Your existing counter setup (keep as-is)
-\setcounter{secnumdepth}{5}
-\renewcommand{\thechapter}{\arabic{chapter}}
-\renewcommand{\thesection}{\thechapter-\arabic{section}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% % Section  Formatting %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ 
+    % Numbering policy: number through \paragraph; leave \subparagraph unnumbered
+    \setcounter{secnumdepth}{4}
+    % Optional: how deep to list in the ToC (tweak as you like)
+    \setcounter{tocdepth}{2}
 
-\makeatletter
-\@addtoreset{paragraph}{section}
-\@addtoreset{subparagraph}{paragraph}
-\makeatother
+% --------Chapter--------
+    \renewcommand{\thechapter}{\arabic{chapter}}
+    \titleformat{\chapter}[display]
+      {\normalfont\Huge\bfseries}%
+      {Chapter \thechapter}{0.5ex}{\LARGE}
+    \titlespacing*{\chapter}{0pt}{*3}{*2}
 
-\renewcommand{\theparagraph}{\alph{paragraph}}
-\renewcommand{\thesubparagraph}{(\arabic{subparagraph})}
+% --------Section--------
 
-% Modified paragraph formatting with hanging indent
-\titleformat{\paragraph}[runin]
-  {\normalfont\normalsize}%
-  {\textit{\theparagraph.}}{0.75em}{\bfseries}[\normalfont]
+    \renewcommand{\thesection}{\thechapter-\arabic{section}}
+    \titleformat{\section}
+      {\normalfont\Large\bfseries}%
+      {\thesection}{0.6em}{}
+    \titlespacing*{\section}{0pt}{*2}{0.5\baselineskip}
 
-\titleformat{\subparagraph}[runin]
-  {\normalfont\normalsize}%
-  {\thesubparagraph}{0.75em}{\underline}[\normalfont]
+% --------Subsection--------
 
-% Modified spacing with hanging indent control
-\titlespacing*{\paragraph}{1em}{0.5\baselineskip}{0.75em}
-\titlespacing*{\subparagraph}{2em}{0pt}{0.75em} % Indent subparagraphs
+    \renewcommand{\thesubsection}{\thesection.\arabic{subsection}}
+    \titleformat{\subsection}
+      {\normalfont\large\bfseries}%
+      {\thesubsection}{0.6em}{}
+    \titlespacing*{\subsection}{0pt}{*1.5}{0.4\baselineskip}
+
+% --------Subsubsection--------
+
+    \makeatletter
+    \@addtoreset{subsubsection}{subsection} % restart a., b., c. each subsection
+    \makeatother
+    \renewcommand{\thesubsubsection}{\alph{subsubsection}}
+    \titleformat{\subsubsection}[runin]
+      {\normalfont\normalsize\bfseries}%
+      {\textit{\thesubsubsection.}}{0.75em}{}
+      [\normalfont]
+    \titlespacing*{\subsubsection}{0pt}{0.5\baselineskip}{0.75em}
+
+% --------Paragraph--------
+
+    \makeatletter
+    \@addtoreset{paragraph}{subsubsection} % restart (1), (2) under each letter
+    \makeatother
+    \renewcommand{\theparagraph}{(\arabic{paragraph})}
+    \titleformat{\paragraph}[runin]
+      {\normalfont\normalsize}%
+      {\theparagraph}{0.75em}{\underline}
+      [\normalfont]
+    \titlespacing*{\paragraph}{1.5em}{0.25\baselineskip}{0.75em}
+
+% --------Subparagraph--------
+
+    % stays unnumbered because secnumdepth=4
+    \titleformat{\subparagraph}[runin]
+      {\normalfont\normalsize}%
+      {}{0pt}{}
+      [\normalfont]
+    \titlespacing*{\subparagraph}{3em}{0pt}{0.75em}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Document Information %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
