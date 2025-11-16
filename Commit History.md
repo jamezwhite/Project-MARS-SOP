@@ -163,3 +163,15 @@ Commit: `9b1c0be`
 
 ---
 
+## 2025-11-15 – Merge overleaf-2025-11-16-0310 into main
+
+Commit: `6ef9706`
+
+- Overhauled section and heading formatting: replaced the prior paragraph-formatting block with a new, clearer section-formatting policy that changes numbering/display for chapters, sections, subsections, subsubsections, paragraphs, and subparagraphs, and adjusts spacing/indents for each heading level.
+- Changed numbering depth and counter resets: number through paragraph level (secnumdepth=4), set table-of-contents depth to 2, restart subsubsection numbering per subsection and paragraph numbering per subsubsection; subsubsections now use alphabetic labels and paragraphs use parenthetical numerals, while subparagraphs remain unnumbered.
+- Added the ulem package (with normalem) to preserve italic emphasis styling while allowing underlining where used.
+- Promoted many inline paragraph entries to actual subsubsection headings (notably in the References appendix and the General chapter) to improve document hierarchy; also fixed a typo in the "Precedence" heading and standardized a few section titles.
+- Minor layout and markup cleanups across chapters: moved a chapter label onto its own line in Pilot Certification, normalized indentation/whitespace of subsection lines in several chapter files.
+
+---
+
