@@ -2,6 +2,12 @@
 set -euo pipefail
 
 # AI-powered changelog generator for the latest commit in a LaTeX/document repo.
+# It:
+#   1) Generates an AI summary of the diff.
+#   2) Appends a Markdown entry to "Commit History.md".
+#   3) Amends the commit message to include an "AI changelog:" section.
+#   4) Force-pushes the updated commit back to the same branch.
+#
 # Requirements on the runner:
 #   - curl
 #   - jq
@@ -16,10 +22,10 @@ set -euo pipefail
 # Handle the "first commit" edge case (no parent)
 if ! git rev-parse HEAD^ >/dev/null 2>&1; then
   echo "[ai-changelog] Single initial commit detected; using 'git show'."
-  DIFF=$(git show --stat --patch --format=short HEAD | head -c 12000)
+  DIFF=$(git show --stat --patch --format=short HEAD | head -c 12000 || true)
 else
   # Use parent diff. Trim to avoid giant prompts; adjust limit if needed.
-  DIFF=$(git diff HEAD^ HEAD | head -c 12000)
+  DIFF=$(git diff HEAD^ HEAD | head -c 12000 || true)
 fi
 
 if [ -z "$DIFF" ]; then
@@ -44,7 +50,6 @@ fi
 # 3. Build a high-quality AI prompt  #
 ######################################
 
-# System message: role & expectations
 SYSTEM_PROMPT="You are an expert technical writer and LaTeX user who writes concise, accurate document change summaries from git diffs.
 Your job is to produce a bullet-point changelog suitable for the body of a commit message in a long-form LaTeX project.
 
@@ -56,14 +61,13 @@ Guidelines:
 - The output is for authors and reviewers skimming document history later, not for marketing or release notes.
 - Prefer grouping related edits into a single bullet so the summary reads as coherent document changes, not a list of files."
 
-# User message: instructions + diff
 read -r -d '' USER_PROMPT <<EOF || true
 You will receive a git diff for a single commit to a LaTeX-based document project (e.g., report, thesis, SOP, or technical manual).
 
 Produce a concise changelog in plain English that could be appended to the commit message body.
 
 Output format requirements:
-- 3–10 bullet points in total. Use fewer if the change is very small.
+- 3–6 bullet points in total. Use fewer if the change is very small.
 - Each bullet MUST start with "- " (dash + space).
 - Each bullet should describe a distinct, meaningful document change or group of related changes.
 - Focus on the effect on the document's content, structure, and clarity:
@@ -90,7 +94,6 @@ if [ -z "${OPENAI_API_KEY:-}" ]; then
   exit 1
 fi
 
-# Build JSON payload safely
 JSON_PAYLOAD=$(
   jq -n \
     --arg sys "$SYSTEM_PROMPT" \
@@ -104,7 +107,6 @@ JSON_PAYLOAD=$(
     }'
 )
 
-
 echo "[ai-changelog] Requesting LaTeX-aware summary from gpt-5-mini..."
 
 API_RESPONSE=$(printf '%s' "$JSON_PAYLOAD" | \
@@ -113,7 +115,6 @@ API_RESPONSE=$(printf '%s' "$JSON_PAYLOAD" | \
     -H "Content-Type: application/json" \
     -d @-)
 
-# Extract summary text
 SUMMARY=$(printf '%s' "$API_RESPONSE" | jq -r '.choices[0].message.content // empty')
 
 if [ -z "$SUMMARY" ] || [ "$SUMMARY" = "null" ]; then
@@ -131,8 +132,32 @@ echo "----------------------------------------"
 echo "$SUMMARY"
 echo "----------------------------------------"
 
+#############################################
+# 5. Append to Commit History markdown file #
+#############################################
+
+COMMIT_HISTORY_FILE="Commit History.md"
+COMMIT_HASH=$(git rev-parse --short HEAD)
+COMMIT_DATE=$(git log -1 --date=short --pretty=%ad)
+
+# Create the file with a header if it doesn't exist yet
+if [ ! -f "$COMMIT_HISTORY_FILE" ]; then
+  echo "# Commit History" > "$COMMIT_HISTORY_FILE"
+  echo "" >> "$COMMIT_HISTORY_FILE"
+fi
+
+{
+  printf '## %s – %s\n\n' "$COMMIT_DATE" "$COMMIT_SUBJECT"
+  printf 'Commit: `%s`' "$COMMIT_HASH"
+  printf '\n\n'
+  printf '%s\n\n' "$SUMMARY"
+  printf '---\n\n'
+} >> "$COMMIT_HISTORY_FILE"
+
+git add "$COMMIT_HISTORY_FILE"
+
 #####################################
-# 5. Amend commit & force-push back #
+# 6. Amend commit & force-push back #
 #####################################
 
 NEW_MESSAGE="$COMMIT_SUBJECT
