@@ -154,3 +154,12 @@ Commit: `36631cd`
 
 ---
 
+## 2025-11-15 – Merge overleaf-2025-11-16-0128 into main
+
+Commit: `9b1c0be`
+
+- Removed executable bit from scripts/ai-changelog-local.sh and scripts/ai-changelog.sh (file mode changed from 100755 to 100644), so the helper scripts are no longer marked as executable.
+- No edits to document content, structure, or LaTeX sources — this is purely a tooling/permission change.
+
+---
+
