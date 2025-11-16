@@ -64,7 +64,7 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Acronym Setup and Tooltips %%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Load all acronyms from source file
-\input{KACH SOP/ABCA}  
+\input{glossaries/ABCA}
 
 % Redefine commands after everything is loaded to turn on tooltips
 \AtBeginDocument{%
@@ -77,7 +77,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Term Setup and Tooltips %%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Load all acronyms from source file
 \makenoidxglossaries
-\input{KACH SOP/Terms}  
+\input{glossaries/Terms}
 
 \AtBeginDocument{%
   % Show tooltip with the entry's description when hovering the term
@@ -140,27 +140,27 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Document Content %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document}
-\include{KACH SOP/frontpage}
+\include{frontmatter/frontpage}
 
 \tableofcontents
 \listoffigures
 \listoftables
 
-\include{General}
-\include{Roles and Responsibilities}
-\include{Airframe and Supporting Systems}
-\include{Pilot Certification}
-\include{Flight Operations}
-\include{Maintenance}
-\include{Safety}
+\include{chapters/General}
+\include{chapters/Roles and Responsibilities}
+\include{chapters/Airframe and Supporting Systems}
+\include{chapters/Pilot Certification}
+\include{chapters/Flight Operations}
+\include{chapters/Maintenance}
+\include{chapters/Safety}
 
 \begin{appendices}
-\include{References}
-\include{Checklists}
-\include{Forms}
-\include{KACH SOP/uas characteristics}
+\include{appendices/References}
+\include{appendices/Checklists}
+\include{appendices/Forms}
+\include{appendices/uas characteristics}
 \end{appendices}
-\include{glossary.tex}
+\include{glossaries/Glossary}
 \end{document}
 
 

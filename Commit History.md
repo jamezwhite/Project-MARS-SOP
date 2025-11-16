@@ -142,3 +142,15 @@ Commit: `90211a5`
 
 ---
 
+## 2025-11-15 – Merge pull request #1 from jamezwhite/codex/review-sop-structure
+
+Commit: `36631cd`
+
+- Reorganized the document source into a clearer directory structure: chapter files moved into chapters/, appendices into appendices/, glossary files into glossaries/, front page into frontmatter/, and images into assets/.  
+- Updated the main document to point to the new locations for the front matter, all chapter includes, and appendices so the table of contents, lists and appendices are built from the relocated files.  
+- Moved glossary/abbreviation and term inputs to the new glossaries/ folder and updated the main file to load them from that path.  
+- Adjusted the front page to use the relocated Project Mars Patch image under assets/ and updated the image reference accordingly.  
+- No substantive content changes to chapters, appendices, glossary entries, or checklists — files were renamed/moved (content preserved).
+
+---
+
