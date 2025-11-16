@@ -142,17 +142,23 @@ COMMIT_DATE=$(git log -1 --date=short --pretty=%ad)
 
 # Create the file with a header if it doesn't exist yet
 if [ ! -f "$COMMIT_HISTORY_FILE" ]; then
-  echo "# Commit History" > "$COMMIT_HISTORY_FILE"
-  echo "" >> "$COMMIT_HISTORY_FILE"
+  {
+    echo "# Commit History"
+    echo
+  } > "$COMMIT_HISTORY_FILE"
 fi
 
-{
-  printf '## %s – %s\n\n' "$COMMIT_DATE" "$COMMIT_SUBJECT"
-  printf 'Commit: `%s`' "$COMMIT_HASH"
-  printf '\n\n'
-  printf '%s\n\n' "$SUMMARY"
-  printf '---\n\n'
-} >> "$COMMIT_HISTORY_FILE"
+# Append a nicely formatted entry using a heredoc
+cat <<EOF >> "$COMMIT_HISTORY_FILE"
+## $COMMIT_DATE – $COMMIT_SUBJECT
+
+Commit: \`$COMMIT_HASH\`
+
+$SUMMARY
+
+---
+
+EOF
 
 git add "$COMMIT_HISTORY_FILE"
 

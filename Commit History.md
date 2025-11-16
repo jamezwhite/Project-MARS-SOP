@@ -133,3 +133,12 @@ AI changelog:
 
 
 ---
+## 2025-11-16 – Fixed issue with printf formatting in ai-changelog script
+
+Commit: `90211a5`
+
+- Simplified and clarified scripts/ai-changelog.sh file writing: creation of the commit-history header now uses a single grouped write (one redirect) instead of multiple separate echo calls, reducing redundant redirections.
+- Replaced the multi-printf append block with a heredoc that appends a consistently formatted entry (date and subject line, "Commit: `hash`", the summary text, and a '---' separator). The produced content and git add behavior remain the same, but the script is easier to read and maintain.
+
+---
+
