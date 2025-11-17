@@ -1,0 +1,125 @@
+name: Daily layman summary email
+
+on:
+  # GitHub Actions uses UTC for schedules.
+  # 04:30 Eastern = 09:30 UTC in standard time, 08:30 UTC in daylight time.
+  # We run at both 08:30 and 09:30 UTC, then check the local Eastern time
+  # inside the job and only proceed when it's actually 04:30 there.
+  schedule:
+    - cron: '30 8,9 * * *'
+  # Manual trigger for testing
+  workflow_dispatch: {}
+
+jobs:
+  daily-summary:
+    runs-on: ubuntu-latest
+    env:
+      OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+
+    steps:
+      - name: Check if it's 04:30 Eastern
+        id: timecheck
+        run: |
+          current_hour=$(TZ='America/New_York' date +'%H')
+          current_min=$(TZ='America/New_York' date +'%M')
+          echo "Current Eastern time: ${current_hour}:${current_min}"
+
+          if [ "$current_hour" = "04" ] && [ "$current_min" = "30" ]; then
+            echo "RUN_TASK=true" >> "$GITHUB_ENV"
+          else
+            echo "RUN_TASK=false" >> "$GITHUB_ENV"
+          fi
+
+      - name: Checkout repo
+        if: env.RUN_TASK == 'true'
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Collect commits from last 24 hours
+        if: env.RUN_TASK == 'true'
+        id: collect
+        run: |
+          git log --since="24 hours ago" --date=short \
+            --pretty=format:'Commit %h (%ad) by %an%n%s%n%b%n---%n' \
+            > daily_commits.txt
+
+          if [ ! -s daily_commits.txt ]; then
+            echo "No commits in last 24 hours."
+            echo "HAS_CHANGES=false" >> "$GITHUB_ENV"
+          else
+            echo "HAS_CHANGES=true" >> "$GITHUB_ENV"
+          fi
+
+      - name: Generate AI summary (gpt-5-mini)
+        if: env.RUN_TASK == 'true' && env.HAS_CHANGES == 'true'
+        id: ai_summary
+        run: |
+          # System prompt for a layperson summary
+          SYSTEM_PROMPT=$(cat << 'EOF'
+You are an expert technical communicator. Your job is to explain work to non-technical stakeholders in clear, friendly language.
+You will be given a list of git commits from the last 24 hours.
+EOF
+)
+
+          LOG_CONTENT=$(cat daily_commits.txt)
+
+          USER_PROMPT=$(cat << 'EOF'
+Summarize, in 3–5 plain-language bullet points, what was accomplished in the last 24 hours in this project.
+Write for a layperson (for example, a manager or stakeholder with no technical background).
+Focus on the big-picture document changes and why they matter (structure clarified, sections added, explanations improved).
+Do not list individual commits or files. Do not use jargon. Just give a short narrative summary broken into bullet points.
+Here are the raw commits:
+EOF
+)
+
+          JSON=$(jq -n \
+            --arg sys "$SYSTEM_PROMPT" \
+            --arg user "$USER_PROMPT" \
+            --arg log "$LOG_CONTENT" \
+            '{
+              "model": "gpt-5-mini",
+              "messages": [
+                {"role": "system", "content": $sys},
+                {"role": "user", "content": ($user + "\n\n" + $log)}
+              ]
+            }')
+
+          RESPONSE=$(echo "$JSON" | curl -sS https://api.openai.com/v1/chat/completions \
+            -H "Authorization: Bearer ${OPENAI_API_KEY}" \
+            -H "Content-Type: application/json" \
+            -d @-)
+
+          SUMMARY=$(echo "$RESPONSE" | jq -r '.choices[0].message.content // empty')
+
+          if [ -z "$SUMMARY" ] || [ "$SUMMARY" = "null" ]; then
+            echo "Summary generation failed:"
+            echo "$RESPONSE"
+            exit 1
+          fi
+
+          echo "Generated summary:"
+          echo "------------------"
+          echo "$SUMMARY"
+          echo "------------------"
+
+          {
+            echo "summary<<EOF"
+            echo "$SUMMARY"
+            echo "EOF"
+          } >> "$GITHUB_OUTPUT"
+
+      - name: Send daily email
+        if: env.RUN_TASK == 'true' && env.HAS_CHANGES == 'true'
+        uses: dawidd6/action-send-mail@v6
+        with:
+          # SMTP connection string stored as a secret, e.g.:
+          # smtp+starttls://user:[email protected]:587
+          connection_url: ${{ secrets.MAIL_CONNECTION }}
+
+          subject: "Daily project summary – ${{ github.repository }}"
+          to: ${{ secrets.MAIL_TO_PERSONALEMAIL }}
+          from: ${{ secrets.MAIL_FROM }}
+
+          # Plain-text body: the AI-generated layman summary
+          body: ${{ steps.ai_summary.outputs.summary }}

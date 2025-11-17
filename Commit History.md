@@ -175,3 +175,15 @@ Commit: `6ef9706`
 
 ---
 
+## 2025-11-17 – Add daily summary email workflow
+
+Commit: `7aadb85`
+
+- Added a new GitHub Actions workflow that sends a "Daily layman summary" email: scheduled to run at 08:30 and 09:30 UTC (with an internal check so it only proceeds when it's 04:30 Eastern) and also triggerable manually for testing.
+- The workflow checks out the repo, collects git commits from the last 24 hours (using a full fetch) and skips the rest of the pipeline if there are no recent commits.
+- When changes exist, it builds a plain‑language system+user prompt and calls the OpenAI gpt-5-mini model to produce a 3–5 bullet summary aimed at non‑technical stakeholders, focusing on high‑level document changes and their significance.
+- The generated summary is captured and used as the plain‑text body of an email that the workflow sends via an SMTP action; recipients, sender, and SMTP connection are supplied through repository secrets.
+- Secrets and failure handling: the workflow reads OPENAI_API_KEY and mail credentials from secrets, prints diagnostic output, and fails with an error if summary generation does not return valid content.
+
+---
+
