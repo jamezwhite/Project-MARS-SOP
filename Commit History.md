@@ -187,3 +187,14 @@ Commit: `7aadb85`
 
 ---
 
+## 2025-11-17 – Improve daily summary email workflow
+
+Commit: `2cb884a`
+
+- Condensed the schedule-related commentary: the previous multi-line note explaining Eastern vs UTC timing was shortened to a single-line summary while the cron schedule (08:30 and 09:30 UTC) is unchanged.
+- Converted the AI system and user prompts from multi-line heredocs to single-line shell strings with embedded newline escapes; prompt content is preserved with a small wording tweak to request the summary "in a bulleted list."
+- Removed a few commented examples/explanatory lines (notably the SMTP connection example and a comment about the plain-text body) to simplify the workflow file.
+- Minor cleanup of comments and spacing around the email/send steps; no functional change to the conditional gating, summary generation, or the email body which still uses the AI-generated summary.
+
+---
+

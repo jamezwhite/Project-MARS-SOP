@@ -2,9 +2,7 @@ name: Daily layman summary email
 
 on:
   # GitHub Actions uses UTC for schedules.
-  # 04:30 Eastern = 09:30 UTC in standard time, 08:30 UTC in daylight time.
-  # We run at both 08:30 and 09:30 UTC, then check the local Eastern time
-  # inside the job and only proceed when it's actually 04:30 there.
+  # We run at 08:30 and 09:30 UTC and gate on Eastern inside the job.
   schedule:
     - cron: '30 8,9 * * *'
   # Manual trigger for testing
@@ -55,23 +53,9 @@ jobs:
         if: env.RUN_TASK == 'true' && env.HAS_CHANGES == 'true'
         id: ai_summary
         run: |
-          # System prompt for a layperson summary
-          SYSTEM_PROMPT=$(cat << 'EOF'
-You are an expert technical communicator. Your job is to explain work to non-technical stakeholders in clear, friendly language.
-You will be given a list of git commits from the last 24 hours.
-EOF
-)
-
+          SYSTEM_PROMPT=$'You are an expert technical communicator. Your job is to explain work to non-technical stakeholders in clear, friendly language.\nYou will be given a list of git commits from the last 24 hours.'
           LOG_CONTENT=$(cat daily_commits.txt)
-
-          USER_PROMPT=$(cat << 'EOF'
-Summarize, in 3–5 plain-language bullet points, what was accomplished in the last 24 hours in this project.
-Write for a layperson (for example, a manager or stakeholder with no technical background).
-Focus on the big-picture document changes and why they matter (structure clarified, sections added, explanations improved).
-Do not list individual commits or files. Do not use jargon. Just give a short narrative summary broken into bullet points.
-Here are the raw commits:
-EOF
-)
+          USER_PROMPT=$'Summarize, in 3–5 plain-language bullet points, what was accomplished in the last 24 hours in this project.\nWrite for a layperson (for example, a manager or stakeholder with no technical background).\nFocus on the big-picture document changes and why they matter (structure clarified, sections added, explanations improved).\nDo not list individual commits or files. Do not use jargon. Just give a short narrative summary in a bulleted list.\nHere are the raw commits:'
 
           JSON=$(jq -n \
             --arg sys "$SYSTEM_PROMPT" \
@@ -113,13 +97,8 @@ EOF
         if: env.RUN_TASK == 'true' && env.HAS_CHANGES == 'true'
         uses: dawidd6/action-send-mail@v6
         with:
-          # SMTP connection string stored as a secret, e.g.:
-          # smtp+starttls://user:[email protected]:587
           connection_url: ${{ secrets.MAIL_CONNECTION }}
-
           subject: "Daily project summary – ${{ github.repository }}"
           to: ${{ secrets.MAIL_TO_PERSONALEMAIL }}
           from: ${{ secrets.MAIL_FROM }}
-
-          # Plain-text body: the AI-generated layman summary
           body: ${{ steps.ai_summary.outputs.summary }}
