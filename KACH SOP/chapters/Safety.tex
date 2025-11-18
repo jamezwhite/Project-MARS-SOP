@@ -7,56 +7,72 @@
     
     \section{Specific Emergency Procedures}
     
-    \subsection{Lost Communication (Lost Link)}
-       
-        \subsubsection{Situation} Lost Link refers to the loss of \ac{c2} between the \ac{gcs} and the \ac{suas} during flight. This includes primary and backup telemetry, command uplink, or video downlink loss beyond a pre-established threshold. Lost link may be temporary or permanent and can occur in both \ac{vlos} and \ac{bvlos} operations. All aircraft participating in Project \ac{mars} flights must be pre-programmed with an appropriate Lost Link procedure and contingency route.
+        \subsection{Lost Communication (Lost Link)}
+           
+            \subsubsection{Situation} 
+            Lost Link refers to the loss of \ac{c2} between the \ac{gcs} and the \ac{suas} during flight. This includes primary and backup telemetry, command uplink, or video downlink loss beyond a pre-established threshold. Lost link may be temporary or permanent and can occur in both \ac{vlos} and \ac{bvlos} operations. All aircraft participating in Project \ac{mars} flights must be pre-programmed with an appropriate Lost Link procedure and contingency route.
+        
+            \subsubsection{Detection and Initial Assessment} 
+            Lost Link is detected when:
     
-        \subsubsection{Detection and Initial Assessment} Lost Link is detected when:
+                \begin{itemize}
                 
-                \paragraph{} The \ac{gcs} indicates telemetry or control signal interruption (e.g., "No RC Signal," "Lost Telemetry").
-               
-                \paragraph{} The aircraft ceases to respond to manual inputs.
-               
-                \paragraph{} A pre-set timeout value (e.g., 3 seconds for control link, 10 seconds for telemetry) is exceeded without recovery.
+                    \item The \ac{gcs} indicates telemetry or control signal interruption (e.g., "No RC Signal," "Lost Telemetry").
+                    
+                    \item The aircraft ceases to respond to manual inputs.
 
+                    \item A pre-set timeout value (e.g., 3 seconds for control link, 10 seconds for telemetry) is exceeded without recovery.
+                    
+                \end{itemize}
+    
             \subsubsection*{}The Operator shall immediately verify the condition by confirming: \setcounter{paragraph}{0}
             
-                \paragraph{} Power and antenna integrity at the /ac{gcs}.
+                \begin{itemize}
                 
-                \paragraph{} System status on secondary displays or via secondary control links (if available).
-                
-                \paragraph{} Possible sources of local interference or terrain obstruction.
-    
+                    \item Power and antenna integrity at the \ac{gcs}.
+                    
+                    \item System status on secondary displays or via secondary control links (if available).
+                    
+                    \item Possible sources of local interference or terrain obstruction.
+                    
+                \end{itemize}
+                    
             \subsubsection{Priorities}
         
-                \paragraph{} Ensure safety of personnel, airspace users, and  infrastructure.
+                \begin{enumerate}
                 
-                \paragraph{} Prevent airspace incursion outside the authorized corridor.
+                    \item Ensure safety of personnel, airspace users, and  infrastructure.
+
+                    \item Prevent airspace incursion outside the authorized corridor.
+
+                    \item Recover the aircraft safely to a pre-designated Rally Point or \ac{rth} location.
+
+                    \item Maintain accountability of payloads (especially medical cargo).
+
+                    \item Comply with \ac{faa}, \ac{dod}, and \ac{kach} safety policies.
+               
+                \end{enumerate}
                 
-                \paragraph{} Recover the aircraft safely to a pre-designated Rally Point or \ac{rth} location.
-                
-                \paragraph{} Maintain accountability of payloads (especially medical cargo).
-                
-                \paragraph{} Comply with \ac{faa}, \ac{dod}, and \ac{kach} safety policies.
-            
             \subsubsection{Immediate Actions (All Flights)}
-               
-                \paragraph{} Attempt manual link recovery within 30 seconds.
-               
-                \paragraph{} If unsuccessful, monitor aircraft telemetry (if still available) and observe for programmed Lost Link behavior:
+
+               \begin{enumerate}
+                   \item Attempt manual link recovery within 30 seconds.
+
+                   \item If unsuccessful, monitor aircraft telemetry (if still available) and observe for programmed Lost Link behavior:
                     
-                    \subparagraph{} Autonomous /ac{rth}
-                    
-                    \subparagraph{} Loiter-and-land
-                    
-                    \subparagraph{} Pre-programmed contingency route
-               
-                \paragraph{} Notify XXXXX.
-             
-                \paragraph{} If aircraft is non-responsive and on unsafe trajectory, initiate termination protocol.
-       
-                \paragraph{} Log time, location, telemetry status, and any deviation from planned route.
-            
+                    \begin{itemize}
+                        \item Autonomous \ac{rth}
+                        \item Loiter-and-Land
+                        \item Pre-programmed contingency route
+                    \end{itemize}
+
+                    \item Notify XXX
+
+                    \item If aircraft is non-responsive and on unsafe trajectory, initiate termination protocol.
+
+                    \item Log time, location, telemetry status, and any deviation from planned route.
+                \end{enumerate}
+                                
             \subsubsection{\ac{bvlos} Specific Considerations}
       
             \subsubsection{\ac{vlos} Specific Considerations}
@@ -64,11 +80,13 @@
             \subsubsection{Reporting and Documentation}
        
             \subsubsection{Maintenance and Return to Service}
-        
+            
         \subsection{GPS/Navigation Failure}
         
             \subsubsection{Situation}
-            
+            \ac{gps} / Navigation Failure describes loss or severe degradation of onboard positioning data in primarily autonomous flight. When satellite signals, inertial sensors, or magnetometers become unreliable, the aircraft may revert to inertial dead reckoning, drift off the programmed track, or enter conservative failsafe behavior without human intervention. Operators must be prepared to monitor telemetry, switch to alternate navigation modes, and (if available) prompt the aircraft toward a safe loiter or landing using minimal manual inputs.
+
+
             \subsubsection{Detection and Initial Assessment}
             
             \subsubsection{Priorities}
@@ -86,7 +104,8 @@
         \subsection{Uncommanded Flight (Flyaway)}
         
             \subsubsection{Situation}
-            
+            Uncommanded Flight (Flyaway) refers to autonomous aircraft motion that diverges from the programmed mission without human input. Control system anomalies, corrupt waypoints, sensor faults, or malicious interference can cause unexpected climbs, turns, or speed changes while automation remains engaged. Crew members must quickly recognize abnormal behavior, assess whether the autopilot remains responsive to high-level overrides, and be prepared to transition the platform to stabilized manual control or initiate termination protocols if containment fails.
+
             \subsubsection{Detection and Initial Assessment}
             
             \subsubsection{Priorities}
@@ -102,9 +121,10 @@
             \subsubsection{Maintenance and Return to Service}
             
         \subsection{Intrusion of Local Airspace}
+        Intrusion of Local Airspace occurs when an uncooperative aircraft enters the /ac{rwc} volume around an autonomously flown /ac{suas}. Unexpected manned or unmanned traffic may appear without prior coordination, penetrate the /ac{rwc} volume from any direction, and present an immediate midair collision risk while automation remains engaged. Operators must watch for /ac{daa} or geofence alerts, issue prompt reroute or hold commands to increase separation, and be prepared to assume manual control or execute termination protocols if collision risk cannot be mitigated.
         
             \subsubsection{Situation}
-            
+
             \subsubsection{Detection and Initial Assessment}
             
             \subsubsection{Priorities}
@@ -122,7 +142,8 @@
         \subsection{Low Battery Emergency Landing}
         
             \subsubsection{Situation}
-            
+            Low Battery Emergency Landing is triggered when an autonomously flown aircraft forecasts insufficient power to complete the programmed mission safely. Accelerated discharge, cell imbalance, or temperature-induced capacity loss may reduce available endurance without human inputs to conserve energy. The automation may command aggressive power-saving modes, altitude reductions, or immediate descent; operators should supervise these transitions, select the nearest safe landing area, and provide minimal manual guidance only as needed to ensure a controlled touchdown before critical levels are reached.
+
             \subsubsection{Detection and Initial Assessment}
             
             \subsubsection{Priorities}
