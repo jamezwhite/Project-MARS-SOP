@@ -198,3 +198,28 @@ Commit: `2cb884a`
 
 ---
 
+
+## 2025-11-18 – Overleaf sync: restructure headings and outlines
+
+Commit: `f890b72`
+
+- Adjusted heading layout across the document: increased left indentation/spacing for subsections, subsubsections, paragraphs, and subparagraphs (switched to inch-based offsets) and cleaned a minor package/whitespace line for list spacing.
+- Added a set of placeholder subsections and high-level sections to the Flight Operations chapter: Routine Scheduled Delivery, On‑Demand / Emergency Response Delivery, DTE Flights, Training Flights, plus empty sections for Air Corridor and Route Management, Mission Planning and Approval Cycle, Flight Procedures, and Data Management (skeleton structure for detailed content).
+- Expanded the Maintenance chapter with section headings for Maintenance Schedule, Battery Management Protocol, Software and Firmware Update Procedures, Supply and Spare Parts Management, and Maintenance Documentation (skeleton additions to outline maintenance procedures).
+- Reflowed and clarified the Pilot Certification chapter: tidied paragraph breaks and indentation, preserved the Operator Qualification Framework and AO qualification text, and added/explicitly created headings for QP Qualification, EO Qualification, Instructor Pilot / Pilot Evaluator Training, and Currency and Recurrency Requirements.
+- Clarified Roles and Responsibilities wording: renamed/standardized references to the Technical Lead, added an explicit responsibility to certify individual airframes for flight, and specified that the Technical Lead trains and approves maintenance technicians; small wording fixes to the Maintenance Technician description.
+- Removed the opening lines of the "Lost Communication (Lost Link)" emergency-procedures subsection (the "Situation" heading and its opening sentence), indicating the start of a restructure of the Lost Link content.
+
+---
+## 2025-11-18 – Fix placement of Overleaf sync changelog
+
+Commit: `1d250ef`
+
+- Restructured heading layout and list spacing across the document: increased left indentation/spacing for subsections, subsubsections, paragraphs and subparagraphs (moved to inch-based offsets) and cleaned a minor package/whitespace line affecting list spacing.
+- Added a set of placeholder subsections to the Flight Operations chapter to create a high-level outline: Routine Scheduled Delivery, On‑Demand / Emergency Response Delivery, DTE Flights, Training Flights, plus skeleton headings for Air Corridor and Route Management, Mission Planning and Approval Cycle, Flight Procedures, and Data Management.
+- Expanded the Maintenance chapter with skeleton section headings for key procedures: Maintenance Schedule, Battery Management Protocol, Software and Firmware Update Procedures, Supply and Spare Parts Management, and Maintenance Documentation.
+- Reflowed and clarified the Pilot Certification chapter: tidied paragraph breaks and indentation, kept the Operator Qualification Framework and AO qualification text, and added explicit headings for QP Qualification, EO Qualification, Instructor Pilot / Pilot Evaluator Training, and Currency and Recurrency Requirements.
+- Clarified Roles and Responsibilities wording: standardized references to the Technical Lead, added an explicit responsibility to certify individual airframes for flight and to train/approve maintenance technicians, applied minor wording fixes to the Maintenance Technician description, and removed the opening "Situation" lines from the Lost Communication (Lost Link) emergency subsection as part of its restructuring.
+
+---
+
