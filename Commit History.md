@@ -244,3 +244,14 @@ Commit: `98591e6`
 
 ---
 
+## 2025-11-19 – Add SMTP server configuration for email action
+
+Commit: `427a4c4`
+
+- Replace the single connection_url secret with explicit SMTP fields: the workflow now specifies server address, port and secure flag instead of relying on a single connection URL.
+- Add explicit authentication fields (username and password) and note they should be stored in GitHub secrets; the previous single SECRET-based connection is removed.
+- Clarify email metadata and routing: subject, to, and from remain, and the message body is now explicitly set to the AI-generated summary output from the workflow step.
+- Add inline comments to document where to place SMTP details and that credentials should be kept in secrets for security.
+
+---
+

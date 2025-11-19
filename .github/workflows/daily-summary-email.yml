@@ -84,8 +84,19 @@ jobs:
         if: env.HAS_CHANGES == 'true'
         uses: dawidd6/action-send-mail@v6
         with:
-          connection_url: ${{ secrets.MAIL_CONNECTION }}
+          # Your SMTP server details
+          server_address: mail.spacemail.com
+          server_port: 465
+          secure: true
+
+          # Auth (put these in GitHub secrets)
+          username: ${{ secrets.MAIL_USERNAME }}
+          password: ${{ secrets.MAIL_PASSWORD }}
+
+          # Email metadata
           subject: "Daily project summary – ${{ github.repository }}"
           to: ${{ secrets.MAIL_TO_PERSONALEMAIL }}
           from: ${{ secrets.MAIL_FROM }}
+
+          # Body is the AI-generated summary
           body: ${{ steps.ai_summary.outputs.summary }}
