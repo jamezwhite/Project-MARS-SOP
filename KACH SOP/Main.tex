@@ -3,6 +3,7 @@
 
 \usepackage{titling}               % Adds control for typestting of the \maketitle command
 \usepackage{newtxtext}
+\usepackage{xspace}
 \usepackage{fancyhdr}              % Gives Control over headers and footers
 \usepackage{acro}                  % Adds Acronym Glossing and Appendix
 \usepackage[section=section]{glossaries}            % Adds Term Glossing and Appendix
@@ -25,7 +26,7 @@
 \usepackage{enumitem}              % for tidy list spacing
 
 \renewcommand{\familydefault}{\sfdefault} % Use sans-serif font
-
+\DeclareRobustCommand{\projectmars}{Project \ac{mars}\xspace} % Makes a \projectmars command that inputs the Project name when called.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Header/Footer Formatting %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \pagestyle{fancy} % use fancyhdr package to customize headers/footers
@@ -108,7 +109,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% % Section  Formatting %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
  
     % Numbering policy: number through \paragraph; leave \subparagraph unnumbered
-    \setcounter{secnumdepth}{4}
+    \setcounter{secnumdepth}{5}
     % Optional: how deep to list in the ToC (tweak as you like)
     \setcounter{tocdepth}{2}
 
@@ -157,16 +158,19 @@
       {\normalfont\normalsize}%
       {\theparagraph}{0.75em}{\underline}
       [\normalfont]
-    \titlespacing*{\paragraph}{in}{0.25\baselineskip}{0.75em}
+    \titlespacing*{\paragraph}{0.5in}{0.25\baselineskip}{0.75em}
 
 % --------Subparagraph--------
 
-    % stays unnumbered because secnumdepth=4
+    \makeatletter
+    \@addtoreset{subparagraph}{paragraph} % restart i, ii, iii under each number
+    \makeatother
+    \renewcommand{\thesubparagraph}{(\roman{subparagraph})}
     \titleformat{\subparagraph}[runin]
       {\normalfont\normalsize}%
-      {}{0pt}{}
+      {\thesubparagraph}{.75em}{\bfseries}
       [\normalfont]
-    \titlespacing*{\subparagraph}{.5in}{0pt}{0.75em}
+    \titlespacing*{\subparagraph}{.5in}{0.25\baselineskip}{0.75em}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Document Information %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -199,5 +203,3 @@
 \include{glossaries/Glossary}
 \end{document}
 
-
-% TEST: AI Changelong should mention this note. If it doesn't, it probably is a Montreal Canadiens fan. Go B's!

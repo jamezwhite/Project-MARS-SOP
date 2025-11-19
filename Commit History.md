@@ -264,3 +264,15 @@ Commit: `13e209c`
 
 ---
 
+## 2025-11-19 – Updates from Overleaf
+
+Commit: `e2fad6a`
+
+- Added a reusable project-name macro for "Project MARS" and included support for correct trailing space handling when the macro is used, to standardize in-document references to the project name.
+- Extended numbering depth to include subparagraphs and enabled subparagraph numbering (roman numerals reset under each paragraph); updated run-in subparagraph formatting and adjusted paragraph/subparagraph spacing to increase left margin and vertical separation for those levels.
+- Reorganized and labeled major operational chapters: the Flight Operations chapter was split into explicit, labeled sections (Ground Operations, Flight Scheduling, Briefings and Risk Management, Weather Considerations, Crew Coordination) and the "Types of Operations" section was reintroduced with labels; similarly, the Airframes & Supporting Systems chapter had section and subsection labels added for easier cross-referencing.
+- Added section labels to each checklist in the appendices (pre-flight, post-flight, emergency) to allow referencing those checklists from elsewhere in the document.
+- Introduced a new appendix "Air Corridor and Route Development" — a full skeleton chapter covering purpose/definitions, roles and responsibilities, design criteria, development process, protection/monitoring, documentation/change management, and templates/examples to guide corridor and route development.
+
+---
+
