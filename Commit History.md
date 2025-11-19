@@ -255,3 +255,12 @@ Commit: `427a4c4`
 
 ---
 
+## 2025-11-19 – Merge overleaf-2025-11-19-1504 into main
+
+Commit: `13e209c`
+
+- Fixed paragraph-level heading spacing in the document preamble: the left spacing argument for paragraph titles was changed (previously "1in", now "in"), adjusting the indentation applied to paragraph headings.
+- Minor layout tweak only — this affects the horizontal spacing/indentation of all paragraph headings throughout the document.
+
+---
+
