@@ -223,3 +223,13 @@ Commit: `1d250ef`
 
 ---
 
+## 2025-11-19 – Modify daily summary email schedule and remove time check
+
+Commit: `4edcc1f`
+
+- Schedule simplified: the workflow now runs once daily at 08:30 UTC instead of at both 08:30 and 09:30 UTC.
+- Removed the shell step that checked Eastern time (04:30) and set the RUN_TASK environment flag, eliminating the internal time-gating logic.
+- The checkout step (and any subsequent steps) still retain the conditional on env.RUN_TASK == 'true', but the workflow no longer sets that variable within the job.
+
+---
+

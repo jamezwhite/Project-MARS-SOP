@@ -4,7 +4,7 @@ on:
   # GitHub Actions uses UTC for schedules.
   # We run at 08:30 and 09:30 UTC and gate on Eastern inside the job.
   schedule:
-    - cron: '30 8,9 * * *'
+    - cron: '30 8 * * *'
   # Manual trigger for testing
   workflow_dispatch: {}
 
@@ -15,19 +15,7 @@ jobs:
       OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
 
     steps:
-      - name: Check if it's 04:30 Eastern
-        id: timecheck
-        run: |
-          current_hour=$(TZ='America/New_York' date +'%H')
-          current_min=$(TZ='America/New_York' date +'%M')
-          echo "Current Eastern time: ${current_hour}:${current_min}"
-
-          if [ "$current_hour" = "04" ] && [ "$current_min" = "30" ]; then
-            echo "RUN_TASK=true" >> "$GITHUB_ENV"
-          else
-            echo "RUN_TASK=false" >> "$GITHUB_ENV"
-          fi
-
+      
       - name: Checkout repo
         if: env.RUN_TASK == 'true'
         uses: actions/checkout@v4
