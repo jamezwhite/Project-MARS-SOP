@@ -233,3 +233,14 @@ Commit: `4edcc1f`
 
 ---
 
+## 2025-11-19 – Refactor daily summary email workflow conditions
+
+Commit: `98591e6`
+
+- Simplified the scheduled run: clarified the workflow now runs daily at 08:30 UTC (keeps the existing cron schedule) and removed the previous comment about running twice and gating on Eastern time.  
+- Introduced a job-level HAS_CHANGES flag (default "false") and updated the commit-collection step to set HAS_CHANGES=true/false; added a short log line when commits are found to make output clearer.  
+- Removed the previous RUN_TASK gating: repository checkout and commit collection always execute, and the AI-summary and email-send steps are now conditioned solely on HAS_CHANGES being true (no longer require RUN_TASK).  
+- Kept the existing AI summary generation and email-send actions, but simplified their if-conditions so they run whenever recent commits are detected.
+
+---
+

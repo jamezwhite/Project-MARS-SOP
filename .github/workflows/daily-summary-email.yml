@@ -2,7 +2,7 @@ name: Daily layman summary email
 
 on:
   # GitHub Actions uses UTC for schedules.
-  # We run at 08:30 and 09:30 UTC and gate on Eastern inside the job.
+  # Run daily at 08:30 UTC.
   schedule:
     - cron: '30 8 * * *'
   # Manual trigger for testing
@@ -13,17 +13,15 @@ jobs:
     runs-on: ubuntu-latest
     env:
       OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+      HAS_CHANGES: "false"
 
     steps:
-      
       - name: Checkout repo
-        if: env.RUN_TASK == 'true'
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
       - name: Collect commits from last 24 hours
-        if: env.RUN_TASK == 'true'
         id: collect
         run: |
           git log --since="24 hours ago" --date=short \
@@ -34,11 +32,12 @@ jobs:
             echo "No commits in last 24 hours."
             echo "HAS_CHANGES=false" >> "$GITHUB_ENV"
           else
+            echo "Found commits in last 24 hours."
             echo "HAS_CHANGES=true" >> "$GITHUB_ENV"
           fi
 
       - name: Generate AI summary (gpt-5-mini)
-        if: env.RUN_TASK == 'true' && env.HAS_CHANGES == 'true'
+        if: env.HAS_CHANGES == 'true'
         id: ai_summary
         run: |
           SYSTEM_PROMPT=$'You are an expert technical communicator. Your job is to explain work to non-technical stakeholders in clear, friendly language.\nYou will be given a list of git commits from the last 24 hours.'
@@ -82,7 +81,7 @@ jobs:
           } >> "$GITHUB_OUTPUT"
 
       - name: Send daily email
-        if: env.RUN_TASK == 'true' && env.HAS_CHANGES == 'true'
+        if: env.HAS_CHANGES == 'true'
         uses: dawidd6/action-send-mail@v6
         with:
           connection_url: ${{ secrets.MAIL_CONNECTION }}
