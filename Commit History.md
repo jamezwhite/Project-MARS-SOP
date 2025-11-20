@@ -276,3 +276,12 @@ Commit: `e2fad6a`
 
 ---
 
+## 2025-11-20 – Update daily-summary-email.yml
+
+Commit: `0fe37b5`
+
+- Updated the daily project summary GitHub Actions workflow to send the email to an additional recipient: the government address (adds MAIL_TO_GOVTEMAIL alongside the existing personal email).
+- Email metadata otherwise unchanged (subject, from, and AI-generated body remain the same).
+
+---
+

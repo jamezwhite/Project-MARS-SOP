@@ -95,7 +95,7 @@ jobs:
 
           # Email metadata
           subject: "Daily project summary – ${{ github.repository }}"
-          to: ${{ secrets.MAIL_TO_PERSONALEMAIL }}
+          to: ${{ secrets.MAIL_TO_PERSONALEMAIL }}, ${{ secrets.MAIL_TO_GOVTEMAIL }}
           from: ${{ secrets.MAIL_FROM }}
 
           # Body is the AI-generated summary
