@@ -347,3 +347,12 @@ Commit: `907d0a4`
 
 ---
 
+## 2025-11-21 – Add files via upload
+
+Commit: `37d0316`
+
+- Added a new image asset: assets/dod-logo.png (Department of Defense logo) to the project's assets folder.
+- No textual or structural document changes; the logo is now available for inclusion on the title page, headers, or figures where needed.
+
+---
+
