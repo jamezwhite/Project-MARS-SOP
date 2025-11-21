@@ -314,3 +314,14 @@ Commit: `26846f2`
 
 ---
 
+## 2025-11-21 – Create SOP class and simplify main document
+
+Commit: `b372a10`
+
+- Introduced a custom document class (latex classes/sop.cls) and switched the main file to use it. The new class centralizes the entire preamble: package loading, fonts, helper macros, page headers/footers, geometry, hyperref/cleveref, and other layout settings that were previously in the main file.
+- Moved all glossary/acronym and tooltip setup into the class (acro/glossaries loading, tooltip-wrapping of \ac and term commands, and the custom "termabove" glossary style), and kept the project glossary inputs in the main document so term data remain unchanged.
+- Sectioning, numbering and reference formatting (chapter/section/subsection/subsubsection/paragraph/subparagraph styles and cleveref chapter formatting) were migrated into the class so document-wide typography and numbering are applied automatically.
+- Main.tex was drastically slimmed down to the document metadata and content includes (title/author/date, glossary inputs, appendices, etc.); there are no substantive content or wording changes to the body text — this is a structural refactor to centralize style/configuration.
+
+---
+
