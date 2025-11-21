@@ -295,3 +295,12 @@ Commit: `fa01f90`
 
 ---
 
+## 2025-11-21 – Merge overleaf-2025-11-21-1539 into main
+
+Commit: `70b7c46`
+
+- Added an internal label placeholder to the "Accident/Incident Reporting" section to allow future cross-referencing; no other content in that section was changed.
+- Minor file-ending change: the trailing newline was removed (no substantive text edits or restructuring).
+
+---
+
