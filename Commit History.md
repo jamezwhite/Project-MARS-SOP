@@ -304,3 +304,13 @@ Commit: `70b7c46`
 
 ---
 
+## 2025-11-21 – Add baseline LaTeX class wrappers
+
+Commit: `26846f2`
+
+- Added six minimal wrapper class files under latex classes for the common LaTeX base classes: article, book, report, letter, memoir and standalone. These provide project-local class names that map to the corresponding standard classes.
+- Each wrapper is intentionally minimal and documented with a short usage comment; they do not impose any default options and instead forward any options the user supplies to the underlying base class.
+- Standardized class metadata (ProvidesClass with a 2025/05/15 identifier) is included in each file, making the wrappers discoverable and consistent across the project.
+
+---
+
