@@ -325,3 +325,13 @@ Commit: `b372a10`
 
 ---
 
+## 2025-11-21 – Updates from Overleaf
+
+Commit: `9ce55cb`
+
+- Added a new placeholder file under Certificate of Authorization/VLOS for an airspace request (COL Hipp) — file created for future content.
+- Removed the standalone "Aircraft/Medical Emergency Response" section from the Safety chapter, simplifying the section structure.
+- Consolidated "Accident/Incident Reporting": gave the section a proper label for cross-referencing and inserted an empty subsection as a placeholder for expanded content.
+
+---
+
