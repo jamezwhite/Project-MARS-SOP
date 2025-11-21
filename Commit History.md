@@ -356,3 +356,12 @@ Commit: `37d0316`
 
 ---
 
+## 2025-11-21 – Merge overleaf-2025-11-21-1859 into main
+
+Commit: `c7917be`
+
+- Added a new placeholder LaTeX source for the "Airspace Request - COL Hipp" under Certificate of Authorization/VLOS, establishing a file for the upcoming airspace request document.
+- The file is currently an empty standalone document (no sections, text, figures, or citations yet) and references the project's standalone document class—serves as a template stub for future content.
+
+---
+
