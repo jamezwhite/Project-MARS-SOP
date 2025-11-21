@@ -285,3 +285,13 @@ Commit: `0fe37b5`
 
 ---
 
+## 2025-11-21 – Uploading Overlay Photos for CoA
+
+Commit: `fa01f90`
+
+- Added two new aerial illustrations for the Proposed Airspace material: a satellite-overlay view and a VFR sectional view (JPEG assets).
+- These images are stored with the Certificate of Authorization materials and provide alternate visualizations of the proposed airspace boundaries and landmarks.
+- The new figures improve situational clarity for reviewers by offering both orthophoto/contextual imagery and a conventional VFR sectional depiction for navigation/airspace reference.
+
+---
+
