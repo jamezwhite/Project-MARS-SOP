@@ -335,3 +335,15 @@ Commit: `9ce55cb`
 
 ---
 
+## 2025-11-21 – Remove DoD seal binary asset
+
+Commit: `907d0a4`
+
+- Added a new custom LaTeX class "army-memo" to provide a ready-made memorandum layout: sans-serif font, 1 in margins and 1.5 spacing, unnumbered sections, header/footer setup, commands to set memo metadata (to/from/subject/date/office symbol/suspense/reply-to), automatic heading with a DoD-seal image (with fallback search paths), and helpers for signature blocks, point-of-contact lists, and distribution lists — enabling concise army-style memos from a simple document-level API.
+
+- Added a collection of blank/template documents under "Blank Documents": examples for an army memorandum (showing purpose/background/request, signature block, POC and distribution), and minimal skeletons for article, book, letter, memoir, report, SOP, and standalone documents. Each template contains basic structure and placeholder text to jump-start writing those document types.
+
+- Relocated the "Project Mars Patch.png" asset into the top-level assets directory and updated the frontpage file to use the new relative path (adjusted image include), ensuring the frontpage logo reference resolves after the asset move.
+
+---
+
