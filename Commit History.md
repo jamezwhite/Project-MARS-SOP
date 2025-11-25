@@ -376,3 +376,24 @@ Commit: `5e64152`
 
 ---
 
+## 2025-11-25 – Align list indentation with section levels
+
+Commit: `7dea015`
+
+- Centralized heading/list indentation: introduced a set of shared length registers and helper commands to represent chapter/section/subsection/subsubsection/paragraph/subparagraph indents and a computed list-offset, replacing hard-coded numeric spacing values used for title spacing.
+- Made title spacing configurable: chapter/section/subsection/subsubsection/paragraph/subparagraph spacing now references the new shared indentation lengths so heading indents can be adjusted from a single place.
+- Sync lists with surrounding headings: added hooks that update a computed left margin when entering a heading and apply that margin to itemize/enumerate, so lists align consistently with the containing heading level plus a fixed offset.
+- Infrastructure additions: loaded the etoolbox package and used its hook commands to attach the indent-updating behavior; no document text/content was changed—this is purely a layout/class refactor for consistent indentation.
+
+---
+
+## 2025-11-25 – Updates from Overleaf
+
+Commit: `55f0398`
+
+- Clarified the EO (equipment operator) Role: merged and tightened the description so EOs are explicitly the subject-matter experts for sUAS operations and also serve as flight instructors and operator evaluators; reiterates that the Lead Operator must be EO qualified.  
+- Expanded the Lead Operator "Primary Role" to enumerate duties: defined the Lead Operator as the project's SME for flight operations, required EO qualification, responsibility to help the Project OIC develop/implement/manage the aircrew training program (ATP), conduct initial qualification training (IQT) and AO qualification, and either conduct or assist with QP training depending on Master Trainer status.  
+- Added an explicit Lead Operator responsibility that they maintain flight qualification training records for project personnel (keeps the Appointment clause unchanged).
+
+---
+
