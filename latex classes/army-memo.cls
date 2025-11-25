@@ -4,7 +4,12 @@
 \makeatletter
 
 % Base document class
-\LoadClass{article}
+\LoadClass[
+  12pt,
+  oneside,
+  headings=small,
+  DIV=15
+]{scrartcl}
 
 % Packages
 \RequirePackage[letterpaper,margin=1in]{geometry}
@@ -52,13 +57,13 @@
 % Heading block
 % DoD seal for header
 \newcommand{\dodseal}{%
-  \IfFileExists{../assets/dod-seal.png}{%
-    \includegraphics[width=1.25in]{../assets/dod-seal.png}%
+  \IfFileExists{../assets/dod-logo.png}{%
+    \includegraphics[width=1.25in]{../assets/dod-logo.png}%
   }{%
-    \IfFileExists{assets/dod-seal.png}{%
-      \includegraphics[width=1.25in]{assets/dod-seal.png}%
+    \IfFileExists{assets/dod-logo.png}{%
+      \includegraphics[width=1.25in]{assets/dod-logo.png}%
     }{%
-      \fbox{\scriptsize DoD seal missing}%
+      \fbox{\scriptsize DoD Logo missing}%
     }%
   }%
 }
@@ -124,6 +129,9 @@
 % Compatibility with older template name
 \providecommand{\armymemosection}{\section}
 \providecommand{\armymemosubsection}{\subsection}
+
+
+
 
 % End of class
 \makeatother

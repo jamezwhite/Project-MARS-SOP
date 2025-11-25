@@ -124,10 +124,10 @@
 
 % --------Subsection--------
 \renewcommand{\thesubsection}{\thesection.\arabic{subsection}}
-\titleformat{\subsection}
+\titleformat{\subsection}[runin]
   {\normalfont\large\bfseries}%
   {\thesubsection}{0.6em}{}
-\titlespacing*{\subsection}{0.10in}{*1.5}{0.4\baselineskip}
+\titlespacing*{\subsection}{0.10in}{*2}{0.5\baselineskip}
 
 % --------Subsubsection--------
 \makeatletter
@@ -149,7 +149,7 @@
   {\normalfont\normalsize}%
   {\theparagraph}{0.75em}{\underline}
   [\normalfont]
-\titlespacing*{\paragraph}{0.5in}{0.25\baselineskip}{0.75em}
+\titlespacing*{\paragraph}{0.5in}{0.5\baselineskip}{0.75em}
 
 % --------Subparagraph--------
 \makeatletter
@@ -160,6 +160,6 @@
   {\normalfont\normalsize}%
   {\thesubparagraph}{.75em}{\bfseries}
   [\normalfont]
-\titlespacing*{\subparagraph}{.5in}{0.25\baselineskip}{0.75em}
+\titlespacing*{\subparagraph}{.75in}{0.5\baselineskip}{0.75em}
 
 \endinput

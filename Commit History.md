@@ -365,3 +365,14 @@ Commit: `c7917be`
 
 ---
 
+## 2025-11-25 – Updates from Overleaf
+
+Commit: `5e64152`
+
+- Updated the LaTeX class reference in the army memo template to point to the shared "latex classes" directory (adjusts the documentclass path so the memo uses the centralized class file).
+- Replaced the old Pilot Certification chapter file with a relocated/renamed chapter: the include in Main.tex now references the new Operator Certification file and the original Pilot Certification.tex was removed (chapter remains part of the main build under the new path).
+- Added/kept a comprehensive "Pilot Certification, Training & Currency" chapter (now stored as Operator Certification) that defines the operator qualification framework and tiers (AO, QP, EO), spells out eligibility and baseline requirements for all operators, and details role descriptions and re‑certification requirements for each tier.
+- Expanded and clarified currency and recurrency policy: frequency and tracking rules for AO/QP/EO currency, procedures for lapse and re‑establishment of currency, waiver authority, and cross‑platform currency applicability.
+
+---
+
