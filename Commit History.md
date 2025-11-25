@@ -387,3 +387,13 @@ Commit: `7dea015`
 
 ---
 
+## 2025-11-25 – Updates from Overleaf
+
+Commit: `55f0398`
+
+- Clarified the EO (equipment operator) Role: merged and tightened the description so EOs are explicitly the subject-matter experts for sUAS operations and also serve as flight instructors and operator evaluators; reiterates that the Lead Operator must be EO qualified.  
+- Expanded the Lead Operator "Primary Role" to enumerate duties: defined the Lead Operator as the project's SME for flight operations, required EO qualification, responsibility to help the Project OIC develop/implement/manage the aircrew training program (ATP), conduct initial qualification training (IQT) and AO qualification, and either conduct or assist with QP training depending on Master Trainer status.  
+- Added an explicit Lead Operator responsibility that they maintain flight qualification training records for project personnel (keeps the Appointment clause unchanged).
+
+---
+
