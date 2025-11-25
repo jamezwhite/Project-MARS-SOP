@@ -28,6 +28,7 @@
 \RequirePackage{cleveref}
 \RequirePackage{pdfcomment}
 \RequirePackage{enumitem}
+\RequirePackage{etoolbox}
 
 % ------------------------------ Fonts and project helper ------------------------------
 \renewcommand{\familydefault}{\sfdefault}
@@ -108,26 +109,54 @@
 % Optional: how deep to list in the ToC (tweak as you like)
 \setcounter{tocdepth}{2}
 
+
+% Shared indentation lengths for headings and lists
+\makeatletter
+\newlength{\sop@chapterindent}
+\newlength{\sop@sectionindent}
+\newlength{\sop@subsectionindent}
+\newlength{\sop@subsubsectionindent}
+\newlength{\sop@paragraphindent}
+\newlength{\sop@subparagraphindent}
+\newlength{\sop@listindentaddon}
+\newlength{\sop@currentindent}
+\newlength{\sop@listleftmargin}
+
+\setlength{\sop@chapterindent}{0pt}
+\setlength{\sop@sectionindent}{0pt}
+\setlength{\sop@subsectionindent}{0.10in}
+\setlength{\sop@subsubsectionindent}{0.25in}
+\setlength{\sop@paragraphindent}{0.5in}
+\setlength{\sop@subparagraphindent}{.75in}
+\setlength{\sop@listindentaddon}{0.25in}
+\setlength{\sop@currentindent}{\sop@chapterindent}
+
+\newcommand{\sop@setcurrentindent}[1]{\setlength{\sop@currentindent}{#1}}
+\newcommand{\sop@updateleftmargin}{%
+  \setlength{\sop@listleftmargin}{\dimexpr\sop@currentindent+\sop@listindentaddon\relax}%
+}
+\makeatother
+
 % --------Chapter--------
 \renewcommand{\thechapter}{\arabic{chapter}}
 \titleformat{\chapter}[display]
   {\normalfont\Huge\bfseries}%
   {Chapter \thechapter}{0.5ex}{\LARGE}
-\titlespacing*{\chapter}{0pt}{*3}{*2}
+\titlespacing*{\chapter}{\sop@chapterindent}{*3}{*2}
 
 % --------Section--------
 \renewcommand{\thesection}{\thechapter-\arabic{section}}
 \titleformat{\section}
   {\normalfont\Large\bfseries}%
   {\thesection}{0.6em}{}
-\titlespacing*{\section}{0pt}{*2}{0.5\baselineskip}
+\titlespacing*{\section}{\sop@sectionindent}{*2}{0.5\baselineskip}
 
 % --------Subsection--------
 \renewcommand{\thesubsection}{\thesection.\arabic{subsection}}
 \titleformat{\subsection}[runin]
   {\normalfont\large\bfseries}%
   {\thesubsection}{0.6em}{}
-\titlespacing*{\subsection}{0.10in}{*2}{0.5\baselineskip}
+\titlespacing*{\subsection}{\sop@subsectionindent}{*2}{0.5\baselineskip}
 
 % --------Subsubsection--------
 \makeatletter
@@ -138,7 +167,7 @@
   {\normalfont\normalsize\bfseries}%
   {\textit{\thesubsubsection.}}{0.75em}{}
   [\normalfont]
-\titlespacing*{\subsubsection}{0.25in}{0.5\baselineskip}{0.75em}
+\titlespacing*{\subsubsection}{\sop@subsubsectionindent}{0.5\baselineskip}{0.75em}
 
 % --------Paragraph--------
 \makeatletter
@@ -149,7 +178,7 @@
   {\normalfont\normalsize}%
   {\theparagraph}{0.75em}{\underline}
   [\normalfont]
-\titlespacing*{\paragraph}{0.5in}{0.5\baselineskip}{0.75em}
+\titlespacing*{\paragraph}{\sop@paragraphindent}{0.5\baselineskip}{0.75em}
 
 % --------Subparagraph--------
 \makeatletter
@@ -160,6 +189,20 @@
   {\normalfont\normalsize}%
   {\thesubparagraph}{.75em}{\bfseries}
   [\normalfont]
-\titlespacing*{\subparagraph}{.75in}{0.5\baselineskip}{0.75em}
+\titlespacing*{\subparagraph}{\sop@subparagraphindent}{0.5\baselineskip}{0.75em}
+
+% Match list indentation to the containing section + a shared offset
+\pretocmd{\chapter}{\sop@setcurrentindent{\sop@chapterindent}}{}{}
+\pretocmd{\section}{\sop@setcurrentindent{\sop@sectionindent}}{}{}
+\pretocmd{\subsection}{\sop@setcurrentindent{\sop@subsectionindent}}{}{}
+\pretocmd{\subsubsection}{\sop@setcurrentindent{\sop@subsubsectionindent}}{}{}
+\pretocmd{\paragraph}{\sop@setcurrentindent{\sop@paragraphindent}}{}{}
+\pretocmd{\subparagraph}{\sop@setcurrentindent{\sop@subparagraphindent}}{}{}
+
+\AtBeginEnvironment{itemize}{\sop@updateleftmargin}
+\AtBeginEnvironment{enumerate}{\sop@updateleftmargin}
+
+\setlist[itemize]{leftmargin=\sop@listleftmargin}
+\setlist[enumerate]{leftmargin=\sop@listleftmargin}
 
 \endinput
