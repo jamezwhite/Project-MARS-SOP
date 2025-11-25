@@ -406,3 +406,19 @@ Commit: `402cee3`
 
 ---
 
+## 2025-11-25 – Updates from Overleaf
+
+Commit: `0a80f94`
+
+- Cleaned up heading structure and minor formatting in "Roles and Responsibilities": removed an empty subheading, corrected the "Permanent / Appointed Positions" title, and adjusted the heading level for "Additional Responsibilities" under Hospital Commander for consistent hierarchy and presentation.
+
+- Renamed and tightened risk subsections in Safety: "Training Flight Risk" → "Risk of Training Flights" and the catch-all subsection → "Risk of All Other Flights"; clarified that non‑training flights require a hazard analysis and a risk determination and that briefings and prescribed mitigation measures are to be implemented (briefings to be conducted by the RPIC).
+
+- Reworked "Specific Emergency Procedures" layout and references: consolidated the introductory text, switched to capitalized cross‑reference formatting, and reorganized the Lost Communication (Lost Link) guidance into clearer detection/verification checks and bulleted steps for immediate action.
+
+- Expanded and clarified Lost Link procedures and responsibilities: defined RPIC priorities, specified immediate actions (attempt manual link recovery within 30 seconds; monitor telemetry; expect programmed behaviors such as RTH, loiter‑and‑land, or navigation along a contingency route), added notification rules (notify a QP if the RPIC is not QP‑qualified and notify the lead operator), and required logging of time/location/telemetry and reporting to the project NCOIC (with follow‑up actions if a reportable mishap occurs).
+
+- Replaced the previous BVLOS/VLOS subsections with mode‑based guidance: added "Autonomous Flight Mode Specific Considerations" and "Controlled Flight Mode Specific Considerations" to distinguish risks and recommended responses depending on whether the aircraft was on an autonomous route or under person‑control; also standardized the "GPS / Navigation Failure" heading spacing.
+
+---
+

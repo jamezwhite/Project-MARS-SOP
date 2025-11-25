@@ -7,9 +7,9 @@
 
         \subsection{Risk Acceptance Authority} The overall \ac{raa} for \projectmars{} is the \nameref{role:hospitalcommander}. The \nameref{role:hospitalcommander} has delegated \ac{raa} to the \nameref{role:projectoic} for nonrecurring missions conducted under \ac{vlos} conditions. Because of the potential risk to non-participating personnel during \ac{bvlos} operations, the \ac{raa} for \ac{bvlos} operations is the \ac{smc}, or their delegate. The \ac{usma} Superintendent, as \ac{smc} has delegated this approval authority to the \ac{wp} Garrison Commander.
 
-        \subsection{Training Flight Risk}All \projectmars{} training flights are considered low risk since the aircraft must be operated within line of sight of the \nameref{role:rpic} or \nameref{role:visualobserver}.  Training flights are restricted to unpopulated areas where risk to people and property is minimal. During these flights, line of sight will be maintained between the aircraft and ground station at all times.
+        \subsection{Risk of Training Flights}All \projectmars{} training flights are considered low risk since the aircraft must be operated within line of sight of the \nameref{role:rpic} or \nameref{role:visualobserver}.  Training flights are restricted to unpopulated areas where risk to people and property is minimal. During these flights, line of sight will be maintained between the aircraft and ground station at all times.
 
-        \subsection{}All \projectmars{} flights conducted for other than training must have a hazard analysis and a risk determination. \projectmars{} Personnel will obtain briefings from the \nameref{role:projectncoic} and implement the mitigations in accordance with the risk determination prior to any flight operations. Briefings will be conducted by the /ac{rpic}.
+        \subsection{Risk of All Other Flights}All \projectmars{} flights conducted other than for training must have a hazard analysis and a risk determination. \projectmars{} Personnel will obtain briefings from the \nameref{role:projectncoic} and implement the proscribed mitigation measures in accordance with the risk determination prior to any flight operations. Briefings will be conducted by the \ac{rpic}.
 
         \subsection{}
         
@@ -32,30 +32,45 @@
                     \paragraph{Communicate}  Once the \ac{rpic} has positive control of the aircraft they should communicate the issue appropriately as laid out in this \ac{sop}. This may be done simultaneous to the navigate step above, but should not take priority over safe navigation or operation of the aircraft.
             
     \section{Specific Emergency Procedures}
-
-            \subsubsection{} The following specific \ac{ep}s reflect the most common emergencies encountered by \ac{suas} operators. These \ac{ep}s should be followed to the extent that they align with the priorities listed in \cref{sec:ep-general}.
+        
+        The following specific \ac{ep}s reflect the most common emergencies encountered by \ac{suas} operators. These \ac{ep}s should be followed to the extent that they align with the priorities listed in \Cref{sec:ep-general}.
 
         \subsection{Lost Communication (Lost Link)}\label{ssec:ep-losslink}
            
             \subsubsection{Situation}Lost Link refers to the loss of \ac{c2} between the \ac{gcs} and the \ac{suas} during flight. This includes primary and backup telemetry, command uplink, or video downlink loss beyond a pre-established threshold. Lost link may be temporary or permanent and can occur in both \ac{vlos} and \ac{bvlos} operations. All aircraft participating in \projectmars{} flights must be pre-programmed with an appropriate Lost Link procedure and contingency route.
         
             \subsubsection{Detection and Initial Assessment} Lost Link is detected when:
-                
-                \paragraph{} The \ac{gcs} indicates telemetry or control signal interruption (e.g., "No RC Signal," "Lost Telemetry").
-                    
-                \paragraph{} The aircraft ceases to respond to manual inputs.
 
-                \paragraph{} A pre-set timeout value (e.g., 3 seconds for control link, 10 seconds for telemetry) is exceeded without recovery.
-    
-            \subsubsection*{}The Operator shall immediately verify the condition by confirming:\setcounter{paragraph}{0}
+                \begin{itemize}
+                    
+                    \item The \ac{gcs} indicates telemetry or control signal interruption (e.g., "No RC Signal," "Lost Telemetry").
+                    
+                    \item The aircraft ceases to respond to manual inputs.
+
+                    \item A pre-set timeout value (e.g., 3 seconds for control link, 10 seconds for telemetry) is exceeded without recovery.
+                
+                \end{itemize}
+                
+            In the event the \ac{rpic} has detected a lost link, they shall immediately verify the condition by confirming:
+
+                \begin{itemize}
+                     
+                    \item Power and antenna integrity at the \ac{gcs}.
+                    
+                    \item System status on secondary displays or via secondary control links (if available).
+                    
+                    \item Possible sources of local interference or terrain obstruction.
+                    \item Power and antenna integrity at the \ac{gcs}.
+                    
+                    \item System status on secondary displays or via secondary control links (if available).
+                    
+                    \item Possible sources of local interference or terrain obstruction.
+                    
+                \end{itemize}
             
-                \paragraph{}Power and antenna integrity at the \ac{gcs}.
+                
                     
-                \paragraph{}System status on secondary displays or via secondary control links (if available).
-                    
-                \paragraph{}Possible sources of local interference or terrain obstruction.
-                    
-            \subsubsection{Priorities}
+            \subsubsection{Priorities} During a loss of communication with the aircraft, the \ac{rpic}'s priorities are as follows:
         
                 \paragraph{}Ensure safety of personnel, airspace users, and  infrastructure.
 
@@ -67,33 +82,40 @@
 
                 \paragraph{}Comply with \ac{faa}, \ac{dod}, and \ac{kach} safety policies.
                 
-            \subsubsection{Immediate Actions (All Flights)}
+            \subsubsection{Immediate Actions (All Flights)} After confirming a lost link, the \ac{rpic} should take the following immediate actions:
 
                \paragraph{}Attempt manual link recovery within 30 seconds.
 
-                \paragraph{}If unsuccessful, monitor aircraft telemetry (if still available) and observe for programmed Lost Link behavior:
+                \paragraph{}If unsuccessful, monitor aircraft telemetry (if still available) and watch for the aircraft to perform programmed Lost Link behavior such as:
                     
                     \subparagraph{}Autonomous \ac{rth}
                 
                     \subparagraph{}Loiter-and-Land
                     
-                    \subparagraph{} Pre-programmed contingency route
+                    \subparagraph{} Navigation along a pre-programmed contingency route
                     
-                \paragraph{} Notify XXX
+                \paragraph{} If the \ac{rpic} is not \ac{qp} qualified, or higher, they will immediately notify a \ac{qp} qualified person. 
+
+                \paragraph{} Notify the \namecref{role:leadoperator}.
 
                 \paragraph{} If aircraft is non-responsive and on unsafe trajectory, initiate termination protocol.
 
                 \paragraph{} Log time, location, telemetry status, and any deviation from planned route.
                                 
-            \subsubsection{\ac{bvlos} Specific Considerations}
+            \subsubsection{Autonomous Flight Mode Specific Considerations} Loss of link during autonomous flight presents less risk than doing so during person-controlled flight, as the aircraft is already traveling on a pre-programmed route and does not need active input from the \ac{rpic}.  However, loss of link is not a normal condition and may reflect additional issues with the aircraft.  \ac{rpic}'s who are \ac{ao} qualified may not be equipped for the possible repercussions of this emergency and should immediately contact someone who is \namecref{sec:qual-qp} for assistance.
       
-            \subsubsection{\ac{vlos} Specific Considerations}
+            \subsubsection{Controlled Flight Mode Specific Considerations}
+            Loss of link during controlled flight represents a distinct emergency. An aircraft in a piloted flight mode that has lost link is a hazard to everyone that is within its potential flight range, as there is not a way to control it without reestablishing link.  \ac{rpic}'s who experience a lost link must stay calm, attempt to recover the link, and be prepared to intervene if the aircraft looks to be heading in an unsafe direction.
        
             \subsubsection{Reporting and Documentation}
+            
+                \paragraph{} Loss of Link is not, in itself, a reportable mishap. In the event of a loss of link, the \ac{rpic} will log the time, location, telemetry status, and any deviation from planned route on their flight log, and report it to the \namecref{role:projectncoic}.  
+                
+                \paragraph{} If loss of link leads to a reportable mishap, the \ac{rpic} will follow the instructions listed in \Cref{sec:accidentreporting}.
        
             \subsubsection{Maintenance and Return to Service}
             
-        \subsection{GPS/Navigation Failure}\label{ssec:ep-gpsfail}
+        \subsection{GPS / Navigation Failure}\label{ssec:ep-gpsfail}
         
             \subsubsection{Situation} \ac{gps} / Navigation Failure describes loss or severe degradation of onboard positioning data in primarily autonomous flight. When satellite signals, inertial sensors, or magnetometers become unreliable, the aircraft may revert to inertial dead reckoning, drift off the programmed track, or enter conservative failsafe behavior without human intervention. Operators must be prepared to monitor telemetry, switch to alternate navigation modes, and (if available) prompt the aircraft toward a safe loiter or landing using minimal manual inputs.
 

@@ -29,6 +29,7 @@
 \RequirePackage{pdfcomment}
 \RequirePackage{enumitem}
 \RequirePackage{etoolbox}
+\RequirePackage{xparse} % for \NewDocumentCommand (tooltips for terms)
 
 % ------------------------------ Fonts and project helper ------------------------------
 \renewcommand{\familydefault}{\sfdefault}
@@ -50,7 +51,7 @@
 \fancyhead[L]{\nouppercase{\leftmark}}
 
 % --- Footer: left = fixed text + front-page date, right = page number
-\fancyfoot[L]{Project MARS SOP, \thedate}
+\fancyfoot[L]{Project MARS SOP, \frontpagedate}
 \fancyfoot[R]{\thepage}
 
 % Optional rules (lines). Header rule on; footer rule off.
@@ -60,7 +61,7 @@
 % Make chapter opening pages use a blank header but keep the same footer
 \fancypagestyle{plain}{%
   \fancyhf{}%
-  \fancyfoot[L]{Project MARS SOP, \thedate}%
+  \fancyfoot[L]{Project MARS SOP, \frontpagedate}%
   \fancyfoot[R]{\thepage}%
   \renewcommand{\headrulewidth}{0pt}%
 }
@@ -109,7 +110,6 @@
 % Optional: how deep to list in the ToC (tweak as you like)
 \setcounter{tocdepth}{2}
 
-
 % Shared indentation lengths for headings and lists
 \makeatletter
 \newlength{\sop@chapterindent}
@@ -127,7 +127,7 @@
 \setlength{\sop@subsectionindent}{0.10in}
 \setlength{\sop@subsubsectionindent}{0.25in}
 \setlength{\sop@paragraphindent}{0.5in}
-\setlength{\sop@subparagraphindent}{.75in}
+\setlength{\sop@subparagraphindent}{0.75in}
 \setlength{\sop@listindentaddon}{0.25in}
 \setlength{\sop@currentindent}{\sop@chapterindent}
 
@@ -158,9 +158,7 @@
 \titlespacing*{\subsection}{\sop@subsectionindent}{*2}{0.5\baselineskip}
 
 % --------Subsubsection--------
-\makeatletter
 \@addtoreset{subsubsection}{subsection} % restart a., b., c. each subsection
-\makeatother
 \renewcommand{\thesubsubsection}{\alph{subsubsection}}
 \titleformat{\subsubsection}[runin]
   {\normalfont\normalsize\bfseries}%
@@ -169,9 +167,7 @@
 \titlespacing*{\subsubsection}{\sop@subsubsectionindent}{0.5\baselineskip}{0.75em}
 
 % --------Paragraph--------
-\makeatletter
 \@addtoreset{paragraph}{subsubsection} % restart (1), (2) under each letter
-\makeatother
 \renewcommand{\theparagraph}{(\arabic{paragraph})}
 \titleformat{\paragraph}[runin]
   {\normalfont\normalsize}%
@@ -180,9 +176,7 @@
 \titlespacing*{\paragraph}{\sop@paragraphindent}{0.5\baselineskip}{0.75em}
 
 % --------Subparagraph--------
-\makeatletter
 \@addtoreset{subparagraph}{paragraph} % restart i, ii, iii under each number
-\makeatother
 \renewcommand{\thesubparagraph}{(\roman{subparagraph})}
 \titleformat{\subparagraph}[runin]
   {\normalfont\normalsize}%
@@ -190,7 +184,17 @@
   [\normalfont]
 \titlespacing*{\subparagraph}{\sop@subparagraphindent}{0.5\baselineskip}{0.75em}
 
-% Match list indentation to the containing section + a shared offset
+% ------------------------------ List indentation logic ------------------------------
+
+% Global list spacing to feel like normal paragraphs rather than cramped bullets
+\setlist{
+  itemsep=0.25\baselineskip,  % space between list items
+  parsep=0pt,
+  topsep=0.5\baselineskip,    % space before and after the list block
+  partopsep=0pt
+}
+
+% Track "current" indentation based on the last heading used
 \pretocmd{\chapter}{\sop@setcurrentindent{\sop@chapterindent}}{}{}
 \pretocmd{\section}{\sop@setcurrentindent{\sop@sectionindent}}{}{}
 \pretocmd{\subsection}{\sop@setcurrentindent{\sop@subsectionindent}}{}{}
@@ -198,11 +202,16 @@
 \pretocmd{\paragraph}{\sop@setcurrentindent{\sop@paragraphindent}}{}{}
 \pretocmd{\subparagraph}{\sop@setcurrentindent{\sop@subparagraphindent}}{}{}
 
+% Update the list left margin whenever a list starts
 \AtBeginEnvironment{itemize}{\sop@updateleftmargin}
 \AtBeginEnvironment{enumerate}{\sop@updateleftmargin}
 
-\setlist[itemize]{leftmargin=\sop@listleftmargin}
-\setlist[enumerate]{leftmargin=\sop@listleftmargin}
+% Level-1 lists: indent relative to the parent section.
+% Nested lists keep enumitem's default additional indent.
+\setlist[itemize,1]{leftmargin=\sop@listleftmargin}
+\setlist[enumerate,1]{leftmargin=\sop@listleftmargin}
+
+
 \makeatother
 
 \endinput
