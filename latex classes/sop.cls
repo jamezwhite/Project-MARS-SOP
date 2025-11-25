@@ -111,6 +111,7 @@
 
 
 % Shared indentation lengths for headings and lists
+\makeatletter
 \newlength{\sop@chapterindent}
 \newlength{\sop@sectionindent}
 \newlength{\sop@subsectionindent}
@@ -202,5 +203,6 @@
 
 \setlist[itemize]{leftmargin=\sop@listleftmargin}
 \setlist[enumerate]{leftmargin=\sop@listleftmargin}
+\makeatother
 
 \endinput

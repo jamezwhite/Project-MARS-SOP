@@ -397,3 +397,12 @@ Commit: `55f0398`
 
 ---
 
+## 2025-11-25 – Wrap sop class internals in makeatletter
+
+Commit: `402cee3`
+
+- Wrapped the class's internal indentation and list-setting definitions with LaTeX's makeatletter/makeatother so the '@' character is treated as a letter for those internal macro names.  
+- This scopes internal length registers and list margin settings correctly, preventing related compilation warnings/errors while leaving visible document formatting unchanged.
+
+---
+
