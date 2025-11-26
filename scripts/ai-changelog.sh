@@ -70,6 +70,7 @@ Output format requirements:
 - 3–6 bullet points in total. Use fewer if the change is very small.
 - Each bullet MUST start with "- " (dash + space).
 - Each bullet should describe a distinct, meaningful document change or group of related changes.
+- Any script, or workflow changes should be summarized in a single bullet.
 - Focus on the effect on the document's content, structure, and clarity:
   - what sections/subsections were added, removed, or significantly revised;
   - what key explanations, arguments, or descriptions were added or improved;

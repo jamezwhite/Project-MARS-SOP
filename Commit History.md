@@ -422,3 +422,11 @@ Commit: `0a80f94`
 
 ---
 
+## 2025-11-26 – Update ai-changelog.sh
+
+Commit: `079b47d`
+
+- Add a new guidance line to the changelog generator instructions requiring that any script or workflow changes be summarized in a single bullet, updating the Output format requirements in scripts/ai-changelog.sh.
+
+---
+
