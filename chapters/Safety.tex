@@ -1,0 +1,558 @@
+\chapter{Safety and Emergency Procedures}
+\label{ch:safety}
+
+    \section{Risk Management}
+
+        \subsection{Controlling Doctrine}Risk management for \projectmars{} is done in accordance with DA Pamphlet 385-30. Additionally, all \projectmars{} \ac{suas} will have current \ac{awr}s in accordance with AR 70-62 prior to conducting flight operations. 
+
+        \subsection{Risk Acceptance Authority} The overall \ac{raa} for \projectmars{} is the \nameref{role:hospitalcommander}. The \nameref{role:hospitalcommander} has delegated \ac{raa} to the \nameref{role:projectoic} for nonrecurring missions conducted under \ac{vlos} conditions. Because of the potential risk to non-participating personnel during \ac{bvlos} operations, the \ac{raa} for \ac{bvlos} operations is the \ac{smc}, or their delegate. The \ac{usma} Superintendent, as \ac{smc} has delegated this approval authority to the \ac{wp} Garrison Commander.
+
+        \subsection{Risk of Training Flights}All \projectmars{} training flights are considered low risk since the aircraft must be operated within line of sight of the \nameref{role:rpic} or \nameref{role:visualobserver}. Training flights are restricted to unpopulated areas where risk to people and property is minimal. During these flights, line of sight will be maintained between the aircraft and ground station at all times.
+
+        \subsection{Risk of All Other Flights}All \projectmars{} flights conducted other than for training must have a hazard analysis and a risk determination. \projectmars{} Personnel will obtain briefings from the \nameref{role:projectncoic} and implement the proscribed mitigation measures in accordance with the risk determination prior to any flight operations. Briefings will be conducted by the \ac{rpic}.
+        
+      \section{General Emergency Procedures}\label{sec:ep-general}
+    
+            \subsubsection{Priorities} This \ac{sop} cannot anticipate every type of emergency that an operation may encounter. Any \acf{ep} laid out in this chapter for specific emergencies can be equated to 'immediate action' techniques for a small arms weapons system. They do not replace critical thinking. \projectmars{} personnel will, at all times, prioritize the following criteria in order:
+            
+                \paragraph{Preservation of Life} No stateside operation is so important that it is worth the loss of a single human life.  At all times, \projectmars{} personnel will act to minimize the risk of injury/fatality to anyone, whether or not they are directly involved with the Operation.
+                 
+                \paragraph{Preservation of Materiel} While \ac{suas} are considered consumable commodities, rather than durable property, they are non-trivial to replace and their safety should be prioritized when possible. In an emergency, \projectmars{} personnel will prioritize safeguarding non-\projectmars{} materiel ahead of \ac{suas} equipment.
+                 
+                \paragraph{Preservation of Mission} The mission of \projectmars{} is to develop a safe, reliable, autonomous \ac{suas} based resupply capability. However, no individual operation is so critical that its accomplishment overrides general safety procedures. In an emergency, \projectmars{} personnel will prioritize mission accomplishment only after ensuring that there is no further risk to personnel or materiel; if any doubt exist, the mission will be scrubbed.
+    
+            \subsubsection{Pilot Priorities} Loss of control of the aircraft remains the highest risk related to sUAS operations. The following priorities should be followed by operators during an in-flight emergency:
+    
+                    \paragraph{Aviate} When an aircraft is in the air, the top priority of the \ac{rpic} must always be to aviate. That means to maintain (or regain) manual control of the aircraft.
+    
+                    \paragraph{Navigate} After ensuring they have control of the aircraft, the \ac{rpic} must navigate the aircraft to the safest location possible in accordance with the mission parameters. \ac{rpic}'s must keep in mind that while this may be either \ac{lz}, or \ac{saa}, if the aircraft is unable to reach any of those locations safely, the \ac{rpic} must use their best judgement to land the aircraft in the safest manner possible considering the above priorities.
+    
+                    \paragraph{Communicate}  Once the \ac{rpic} has positive control of the aircraft they should communicate the issue appropriately as laid out in this \ac{sop}. This may be done simultaneous to the navigate step above, but should not take priority over safe navigation or operation of the aircraft.
+                  
+    \section{Specific Emergency Procedures}
+        
+        The following specific \ac{ep}s reflect the most common emergencies encountered by \ac{suas} operators. These \ac{ep}s should be followed to the extent that they align with the priorities listed in \Cref{sec:ep-general}.
+
+        \subsection{Lost Communication (Lost Link)}\label{ssec:ep-losslink}
+           
+            \subsubsection{Situation}Lost Link refers to the loss of \ac{c2} between the \ac{gcs} and the \ac{suas} during flight. This includes primary and backup telemetry, command uplink, or video downlink loss beyond a pre-established threshold. Lost link may be temporary or permanent and can occur in both \ac{vlos} and \ac{bvlos} operations. All aircraft participating in \projectmars{} flights must be pre-programmed with an appropriate Lost Link procedure and contingency route.
+        
+            \subsubsection{Detection and Initial Assessment} Lost Link is detected when:
+ 
+                \begin{itemize}
+                    
+                    \item The \ac{gcs} indicates telemetry or control signal interruption (e.g., "No RC Signal," "Lost Telemetry").
+                    
+                    \item The aircraft ceases to respond to manual inputs.
+ 
+                    \item A pre-set timeout value (e.g., 3 seconds for control link, 10 seconds for telemetry) is exceeded without recovery.
+                
+                \end{itemize}
+                
+            In the event the \ac{rpic} has detected a lost link, they shall immediately verify the condition by confirming:
+
+                \begin{itemize}
+                     
+                    \item Power and antenna integrity at the \ac{gcs}.
+                    
+                    \item System status on secondary displays or via secondary control links (if available).
+                    
+                    \item Possible sources of local interference or terrain obstruction.
+                    \item Power and antenna integrity at the \ac{gcs}.
+                    
+                    \item System status on secondary displays or via secondary control links (if available).
+                    
+                    \item Possible sources of local interference or terrain obstruction.
+                    
+                \end{itemize}
+                    
+            \subsubsection{Priorities} During a loss of communication with the aircraft, the \ac{rpic}'s priorities are as follows:
+        
+                \paragraph{}Ensure safety of personnel, airspace users, and  infrastructure.
+
+                \paragraph{}Prevent airspace incursion outside the authorized corridor.
+
+                \paragraph{}Recover the aircraft safely to a pre-designated Rally Point or \ac{rth} location.
+
+                \paragraph{}Maintain accountability of payloads.
+
+                \paragraph{}Comply with \ac{faa}, \ac{dod}, and \ac{kach} safety policies.
+                
+            \subsubsection{Immediate Actions (All Flights)} After confirming a lost link, the \ac{rpic} should take the following immediate actions:
+
+               \paragraph{}Attempt manual link recovery within 30 seconds.
+
+                \paragraph{}If unsuccessful, monitor aircraft telemetry (if still available) and watch for the aircraft to perform programmed Lost Link behavior such as:
+                    
+                    \subparagraph{}Autonomous \ac{rth}
+                
+                    \subparagraph{}Loiter-and-Land
+                    
+                    \subparagraph{} Navigation along a pre-programmed contingency route
+                    
+                \paragraph{} If the \ac{rpic} is not \ac{qp} qualified, or higher, they will immediately notify a \ac{qp} qualified person. 
+
+                \paragraph{} Notify the \nameref{role:leadoperator}.
+
+                \paragraph{} If aircraft is non-responsive and on unsafe trajectory, initiate termination protocol.
+
+                \paragraph{} Log time, location, telemetry status, and any deviation from planned route.
+
+            \subsubsection{Autonomous Flight Mode Specific Considerations} During autonomous flight, a lost link presents less immediate risk than during direct pilot control, because the aircraft continues on its pre-programmed route without needing active input from the \ac{rpic}. However, lost link is an abnormal condition that may reflect other system problems. \ac{rpic}s holding only \ac{ao} qualification may not be fully prepared to deal with this situation and should immediately contact a qualified \ac{qp} for assistance.
+
+            \subsubsection{Manual Flight Mode Specific Considerations} In piloted operations (manual flight), a lost link is a critical emergency because the operator loses all command capability over the aircraft. The \ac{rpic} must remain calm while attempting to reestablish the link, and be prepared to take immediate action if the aircraft’s trajectory becomes unsafe. If link cannot be restored quickly, the \ac{rpic} should be ready to execute an emergency landing or flight termination to prevent the \ac{suas} from causing harm.
+       
+            \subsubsection{Reporting and Documentation}
+            
+                \paragraph{} Loss of Link is not, in itself, a reportable mishap. In the event of a loss of link, the \ac{rpic} will log the time, location, telemetry status, and any deviation from planned route on their flight log, and report it to the \nameref{role:projectncoic}.  
+                
+                \paragraph{} If loss of link leads to a reportable mishap, the \ac{rpic} will follow the instructions listed in \Cref{sec:accidentreporting}.
+       
+            \subsubsection{Maintenance and Return to Service}
+                            
+                \paragraph{} The \ac{rpic} will perform a thorough inspection of the aircraft and ground control system after any lost link event, focusing on the \ac{c2} link equipment (antennas, transceivers) for faults or damage.
+                
+                \paragraph{} All relevant flight logs and telemetry data should be reviewed to determine the cause of the lost link (e.g., radio interference, hardware failure, software glitch).
+                
+                \paragraph{} Any identified issues must be corrected and verified on the ground (such as conducting a range test to ensure the control link is reliable) before the next flight.
+                
+                \paragraph{} If the root cause cannot be determined or fixed immediately, the aircraft will remain grounded until evaluated by \nameref{role:maintenancetech} or the \nameref{role:technicallead} for further guidance.
+                
+            % Army UAS safety protocols mandate troubleshooting and validating system integrity after a lost link before returning to normal operations.
+            
+        \subsection{GPS / Navigation Failure}\label{ssec:ep-gpsfail}
+        
+            \subsubsection{Situation} \ac{gps} / Navigation Failure describes loss or severe degradation of onboard positioning data in primarily autonomous flight. When satellite signals, inertial sensors, or magnetometers become unreliable, the aircraft may revert to inertial dead reckoning, drift off the programmed track, or enter conservative failsafe behavior without human intervention. Operators must be prepared to monitor telemetry, switch to alternate navigation modes, and (if available) prompt the aircraft toward a safe loiter or landing using minimal manual inputs.
+
+            \subsubsection{Detection and Initial Assessment} GPS / Navigation failure is detected by signs such as:
+            
+            \begin{itemize}
+ 
+                \item The \ac{gcs} issues an alert of positioning or sensor failure (e.g., "GPS signal lost" or an abnormal increase in position error).
+
+                \item The navigation solution becomes erratic or blank (for instance, the map display no longer updates the \ac{uas}'s position accurately).
+
+                \item The \ac{uas} deviates from its planned course or has difficulty holding a fixed position (indicating it may have reverted to an attitude hold mode or dead-reckoning).
+
+                \item The number of GPS satellites or the quality of the GPS signal (as shown on the \ac{gcs}) falls below the minimum required for reliable navigation.
+
+                \item The \ac{rpic} or \ac{vo} observes the aircraft drifting or not following waypoint commands as expected.
+
+            \end{itemize}
+
+            If a navigation failure is suspected, the \ac{rpic} will cross-check the aircraft’s sensor status (e.g., verify satellite count and compass functionality) and confirm whether the autopilot has switched to any backup mode. Quick verification of these signs will help determine if immediate manual control is required.
+             
+            \subsubsection{Priorities}During a navigation failure, the priorities are:
+            
+                \paragraph{}Ensure the aircraft remains under control (stabilize its attitude and prevent uncontrolled drift).
+                
+                \paragraph{}Keep the \ac{uas} within the authorized airspace and away from any populated or high-risk areas, even if precise navigation is lost.
+                
+                \paragraph{}Attempt to regain accurate navigation capability by switching to backup systems or manual flight, as necessary.
+                
+                \paragraph{}Navigate (as much as possible) toward a safe location where the aircraft can loiter or land, rather than continuing on the intended route without guidance.
+                
+                \paragraph{}Communicate the situation to the crew and any relevant authority, and prepare for a possible mission abort.
+            
+            \subsubsection{Immediate Actions (All Flights)}
+            
+                \paragraph{} Immediately attempt to stabilize the aircraft by switching to a flight mode that does not depend on \ac{gps} (e.g., Attitude hold or full manual mode).
+                
+                \paragraph{} If the aircraft is beyond visual range and manual control inputs are not effective, command the \ac{uas} into a stable holding pattern or hover (if the autopilot accepts such a command) to stop it from wandering.
+                
+                \paragraph{} Use any available navigational cues (such as the \ac{uas}’s last known heading or visual landmarks from the camera feed) to guide the aircraft toward the nearest safe landing area.
+                
+                \paragraph{} Avoid relying on erratic or inaccurate \ac{gps} data; instead, control the aircraft using attitude references and apply minimal control inputs to prevent over-correction or loss of stability.
+                
+                \paragraph{} If position control cannot be regained and the aircraft is in danger of leaving the safe area, be prepared to activate the flight termination system or intentionally bring the aircraft down in a known safe area to prevent greater harm.
+                
+                \paragraph{} If the \ac{rpic} is not \ac{qp} qualified, immediately contact a \ac{qp} for assistance in managing the situation.
+                
+                \paragraph{} Notify the \nameref{role:leadoperator} of the navigation failure and the actions being taken.
+                
+                \paragraph{} Once the aircraft is under control or on the ground, record the time, location, and nature of the failure in the flight log, along with any corrective actions executed.
+             
+            \subsubsection{BVLOS Specific Considerations} A loss of navigation capability during a \ac{bvlos} mission is critical because the \ac{rpic} cannot visually monitor the aircraft’s position. The \ac{rpic} must rely on any remaining telemetry (such as inertial data or compass heading) and preplanned contingency behaviors. \ac{bvlos} operations should include predefined responses to navigation failure (e.g., an automatic hover or altitude hold). If these do not engage or are ineffective, the mission must be aborted immediately. Without reliable position data, a conservative approach—such as initiating an immediate descent and landing in a safe known area—is preferred to letting the aircraft continue on an unknown path.
+ 
+            \subsubsection{VLOS Specific Considerations} In \ac{vlos} operations, the crew can visually observe the \ac{uas} and notice if it begins to drift or stray from course. The \ac{rpic} should switch to manual flight mode at the first sign of GPS failure and use visual references to pilot the aircraft back. The \ac{vo} can assist by providing information about the aircraft’s position and movement relative to the intended path. Flying without \ac{gps} (Attitude mode) requires constant attention to wind drift; the \ac{rpic} should execute a prompt landing as soon as practicable once stable control is achieved. If the \ac{rpic} cannot maintain control even with visual cues, they should immediately choose a safe area and land or terminate the flight to prevent the \ac{uas} from flying away.
+            
+            \subsubsection{Reporting and Documentation}
+
+                \paragraph{} GPS / Navigation Failure by itself (with a safe recovery) is not a reportable mishap outside \projectmars{}. The \ac{rpic} will document the event in the flight log, noting the time, location, and any suspected cause (e.g., interference or sensor failure), and inform the \nameref{role:projectncoic}.
+                
+                \paragraph{} If the navigation failure results in an unauthorized airspace deviation, loss of the aircraft, or any injury/damage, then it becomes a reportable incident. The \ac{rpic} will follow the mishap reporting procedures in \Cref{sec:accidentreporting} (e.g., notifying the chain of command and filing necessary reports).
+
+            \subsubsection{Maintenance and Return to Service}
+        
+                \paragraph{} Following a navigation failure, maintenance personnel will examine the \ac{uas}’s navigation systems (\ac{gps} receiver, compass, inertial unit) for any faults. Any sensor recalibration or replacement must be completed before the next flight.
+                
+                \paragraph{} The \nameref{role:technicallead} should coordinate a ground test where the aircraft’s \ac{gps} functionality is checked in a controlled environment to ensure proper signal reception and accuracy.
+                
+                \paragraph{} If the failure was due to external factors, this information will be recorded. Future missions will avoid those conditions or locations if possible, or additional controls will be implemented.
+                
+                \paragraph{} The aircraft shall not be returned to operational status until the navigation system is verified to be functioning normally and any risk of recurrence has been mitigated.
+            % Army UAS doctrine encourages robust testing and verification after any onboard system failure (navigation or otherwise) before resuming flights.
+
+        
+            \subsubsection{Situation}Uncommanded Flight (Flyaway) refers to autonomous aircraft motion that diverges from the programmed mission without human input. Control system anomalies, corrupt waypoints, sensor faults, or malicious interference can cause unexpected climbs, turns, or speed changes while automation remains engaged. 
+% Crew members must quickly recognize abnormal behavior, assess whether the autopilot remains responsive to high-level overrides, and be prepared to transition the platform to stabilized manual control or initiate termination protocols if containment fails.
+Crew members must quickly recognize such abnormal behavior, check if the autopilot still responds to override commands, and be prepared to switch to manual control or trigger flight termination if the aircraft cannot be contained within the safe area.
+ 
+            \subsubsection{Detection and Initial Assessment} Flyaway conditions are recognized by:
+            \begin{itemize}
+                \item The aircraft deviating significantly from its programmed flight path or waypoints without any commanded reason.
+                \item Lack of appropriate response to control inputs (the \ac{rpic} commands changes, but the aircraft continues its own maneuver), indicating the autopilot may not be obeying commands.
+                \item Telemetry data showing anomalous behavior (e.g., sudden uncommanded changes in altitude, heading, or speed) that does not match the mission plan.
+                \item The \ac{vo} visually observes the \ac{uas} maneuvering erratically or departing the designated operating area.
+            \end{itemize}
+            Upon noticing these signs, the \ac{rpic} should immediately attempt a positive control check by issuing a direct command (such as a new loiter command or altitude change). If the aircraft does not respond, this confirms a flyaway condition requiring immediate intervention.
+ 
+            \subsubsection{Priorities} During a flyaway emergency, the \ac{rpic}'s priorities are:
+            
+                \paragraph{}Ensure the safety of any persons both in the air and on the ground by steering or forcing the errant aircraft away from populated or sensitive areas.
+                
+                \paragraph{}Contain the aircraft within the designated operational airspace if possible; prevent it from entering uncontrolled or unauthorized airspace.
+                
+                \paragraph{}Regain positive control of the aircraft (via manual override or other means) or reduce its energy (altitude/speed) to minimize potential damage if it must come down.
+                
+                \paragraph{}Maintain situational awareness of the aircraft’s trajectory and continuously evaluate potential impact points so warnings can be given or areas cleared if necessary.
+                
+                \paragraph{}Prioritize retrieval of the aircraft and any attached payload once the situation is stabilized, but only after safety of life and property is assured.
+                
+                \paragraph{}Comply with notification requirements (for example, inform \ac{atc} or local authorities if the aircraft departs the approved area or poses a wider hazard).
+ 
+            \subsubsection{Immediate Actions (All Flights)}
+            
+                \paragraph{} Attempt to override the errant flight behavior by switching the \ac{uas} to a manual or emergency flight mode (e.g., toggle from autonomous to manual control).
+                
+                \paragraph{} If the aircraft does not respond to control inputs, activate any available flight termination system or emergency recovery mechanism (such as a kill-switch to cut power or a parachute deployment, if equipped) to immediately stop the flyaway.
+                
+                \paragraph{} If partial control is regained, stabilize the aircraft and command an immediate landing at the nearest safe location (do not attempt to continue the mission).
+                
+                \paragraph{} Continue to monitor the aircraft’s position via telemetry and visually (if possible), and be prepared for further contingencies if it approaches populated areas or leaves the operations area.
+                
+                \paragraph{} If the \ac{rpic} is not \ac{qp} qualified, they will immediately notify a \ac{qp}-qualified team member of the situation and seek assistance.
+                
+                \paragraph{} Communicate the emergency to all crew members and, if applicable, to air traffic control or range control, especially if the \ac{uas} is leaving the intended operating area.
+                
+                \paragraph{} Notify the \nameref{role:leadoperator} as soon as practicable that a flyaway is in progress and report the actions being taken.
+                
+                \paragraph{} After the aircraft has been recovered or comes to rest, record the last known flight path, approximate duration of the flyaway, and any control actions attempted in the flight log.
+ 
+            \subsubsection{\ac{bvlos} Specific Considerations} In a \ac{bvlos} scenario, a flyaway is especially dangerous because the aircraft can travel far beyond the visual range of the crew. BVLOS operations typically have engineered mitigations (like geo-fences and automatic flight termination triggers) to contain a flyaway. The \ac{rpic} must quickly determine if an onboard contingency (such as an automatic \ac{rth} or preset termination) has activated. If not, the \ac{rpic} should manually trigger flight termination or immediate landing as outlined in the mission’s BVLOS emergency plan. The \ac{rpic} or another crew member will promptly notify \ac{atc} or any controlling agency that the \ac{uas} is no longer adhering to its clearance and provide the last known coordinates and altitude. Tracking the aircraft via any available means (radar, telemetry, visual observers along the route) is crucial; if telemetry is lost entirely, the crew should relay the last known position and heading to local authorities to aid in public safety and recovery efforts. BVLOS missions require this scenario to be pre-briefed, and often a dedicated “containment area” or procedure is in place to minimize risk if a flyaway occurs.
+ 
+            \subsubsection{\ac{vlos} Specific Considerations} During \ac{vlos} operations, the flight crew can visually track the aircraft if it begins to fly away, which aids in responding to the emergency. The \ac{vo} will immediately alert the \ac{rpic} to the erratic behavior and keep the aircraft in sight. The \ac{rpic} may try repositioning themselves or the control antenna to improve the link quality, and if possible, even move (on foot or by vehicle) to follow the aircraft and maintain line-of-sight/communication. The crew should use visual orientation to gauge how the aircraft is moving; if it is heading toward people or property, they must warn those at risk (e.g., by shouting or using any available communication) and ensure the aircraft is brought down away from them. Visual contact also aids in locating the aircraft once it lands or crashes. Once the flyaway has ended, the crew will use their visual observations to assist in recovering the aircraft and analyzing the incident.
+ 
+            \subsubsection{Reporting and Documentation}
+            
+                \paragraph{} Any uncommanded flyaway event is treated as a serious incident. The \ac{rpic} must report the flyaway to the \nameref{role:projectncoic} as soon as possible after regaining control or after the aircraft is lost. Details such as the duration of loss of control, approximate flight path, and how/where the aircraft was recovered (or where it went missing) will be logged.
+                
+                \paragraph{} A flyaway that results in the aircraft leaving the approved airspace, being lost, or causing damage or injury is a reportable mishap. In such cases, the \ac{rpic} will follow \Cref{sec:accidentreporting} procedures (e.g., immediate chain-of-command notification and formal reporting). If the flyaway was quickly contained with no damage, it will still be documented internally for safety review and future prevention.
+ 
+            \subsubsection{Maintenance and Return to Service}
+            
+                \paragraph{} After a flyaway incident, the aircraft will not be returned to flight until a thorough investigation and remediation are completed. Maintenance and engineering personnel will analyze the flight logs and autopilot data to identify the root cause of the uncommanded flight (whether a software anomaly, sensor failure, control link issue, etc.). External support (such as contacting the autopilot manufacturer or consulting engineering experts) may be involved if needed.
+                
+                \paragraph{} The \ac{uas} will undergo a full inspection. Any components suspected of contributing to the flyaway—such as faulty GPS units, flight controllers, or actuators—must be repaired or replaced. The airframe, propellers, and motors will also be checked for stress or damage resulting from any extreme maneuvers or a hard landing/termination.
+                
+                \paragraph{} If a software or configuration error is identified, updates or corrections will be applied and tested in a controlled setting (e.g., a ground simulation or tethered flight) before attempting normal flight again. Similarly, if a hardware fault is found, the fix or new component will be verified.
+                
+                \paragraph{} The aircraft must successfully pass a test flight (preferably under \ac{vlos} conditions) demonstrating normal operation and control responsiveness prior to being cleared for operational missions again.
+                
+                \paragraph{} The \nameref{role:projectoic} will approve return to service only after reviewing the findings of the flyaway investigation and the corrective actions taken, ensuring confidence that the issue has been resolved.
+            % Range safety doctrine requires a thorough root-cause analysis and verification after any uncontrolled flight incident before resuming operations.
+            % UAS operators are trained that any uncommanded deviation from the flight plan is an emergency condition requiring immediate action (per UAS flight regulations).
+        
+        \subsection{Intrusion of Local Airspace}\label{ssec:ep-intrusion}
+        
+            \subsubsection{Situation}Intrusion of Local Airspace occurs when an uncooperative aircraft enters the \ac{rwc} volume around an autonomously flown \ac{suas}. Unexpected manned or unmanned traffic may appear without prior coordination, penetrate the \ac{rwc} volume from any direction, and present an immediate midair collision risk while automation remains engaged. Operators must watch for \ac{daa} or geofence alerts and issue prompt reroute or hold commands to increase separation from the intruder. They must also be prepared to assume manual control or execute termination protocols if the collision risk cannot be adequately mitigated.
+            % 14 CFR 107.37: The remote pilot must yield right-of-way to all manned aircraft; this principle underlies all intruder avoidance procedures.
+ 
+            \subsubsection{Detection and Initial Assessment} An intruding aircraft may be detected through:
+            \begin{itemize}
+                \item Visual observation by the \ac{vo} or \ac{rpic} of an aircraft (manned or another drone) approaching or entering the operating area.
+                \item Electronic alerts from \ac{daa} systems (e.g., ADS-B based traffic alerts or radar) indicating an aircraft in proximity to the \ac{uas}.
+                \item Geofence breach warnings if the intruding aircraft triggers any virtual boundary alarms set around the operation.
+                \item Notification from air traffic control or other pilots (e.g., a radio call about unexpected traffic in the vicinity).
+            \end{itemize}
+            Once an intruder is detected, the \ac{rpic} will immediately assess its relative position, altitude, and direction. This rapid assessment determines if an immediate avoidance maneuver is required (for example, descending or turning to increase separation).
+ 
+            \subsubsection{Priorities} In the event of an airspace intrusion by another aircraft:
+            
+                \paragraph{}Yield right-of-way to the intruding aircraft to avoid collision, even if that means abandoning the mission route.
+                
+                \paragraph{}Aviate (maintain safe separation): execute any necessary maneuvers to increase distance from the intruder while keeping the \ac{uas} under control.
+                
+                \paragraph{}Navigate to safety: if needed, move the \ac{uas} to a predefined safe location or altitude (for example, descend to a minimum loiter altitude) to deconflict with the intruder.
+                
+                \paragraph{}Communicate: alert the crew (“Traffic intrusion, taking evasive action”) and, if possible, broadcast on relevant aviation frequencies or inform \ac{atc} about the \ac{uas}’s evasive actions.
+                
+                \paragraph{}Only after the intruding aircraft has cleared out and the airspace is confirmed safe should the mission resume or continue. Avoiding a mid-air conflict takes absolute precedence over mission objectives.
+ 
+            \subsubsection{Immediate Actions (All Flights)}
+            
+                \paragraph{} Immediately perform an avoidance maneuver. In most cases, the safest initial action is to descend the \ac{uas} to a low altitude well below the intruder’s flight path, or land immediately if a safe landing spot is available.
+                
+                \paragraph{} If descending alone is insufficient (for example, the intruder is a low-flying helicopter), execute a lateral maneuver to increase separation (e.g., move the \ac{uas} to a known safe hold area away from the intruder’s projected path).
+                
+                \paragraph{} If equipped with a radio or other comms, broadcast the \ac{uas} operation’s status and location (e.g., “Unmanned aircraft at [location], descending due to traffic”) on common traffic advisory frequencies, or notify ATC, to warn the intruder pilot.
+                
+                \paragraph{} Activate all available anti-collision measures: ensure the \ac{uas}’s strobe/lighting is on (to maximize visibility) and position the \ac{uas} in a way that minimizes the risk (for example, orient it to move away from the intruder).
+                
+                \paragraph{} If a collision appears imminent and avoidance maneuvers are not sufficient, initiate flight termination to eliminate the risk of mid-air collision. It is better to sacrifice the \ac{uas} than allow any chance of a mid-air collision with a manned aircraft.
+                
+                \paragraph{} Once clear of the conflict, recover the \ac{uas} to a safe state (either resume the mission if authorized or land) and then communicate to the crew that the immediate airspace threat has passed.
+ 
+            \subsubsection{\ac{bvlos} Specific Considerations} In \ac{bvlos} operations, detecting intruding aircraft relies on technology and coordination with air traffic services since the crew cannot see the entire area. All BVLOS missions have predefined contingency plans for airspace intrusions. Upon receiving a DAA alert or notification from ATC of an approaching aircraft, the \ac{rpic} should immediately execute the planned avoidance maneuver (such as an immediate descent or turn to a safe heading) without waiting for visual confirmation. The \ac{rpic} must also notify ATC (or the controlling authority) that the \ac{uas} is deviating from its course due to conflicting traffic. Without visual contact, the \ac{rpic} should assume worst-case proximity and act conservatively—e.g., land or terminate the flight if unsure of sufficient separation. BVLOS crews maintain open communication with air traffic control during operations for this reason and should be prepared to report any off-nominal intrusions in real time.
+ 
+            \subsubsection{\ac{vlos} Specific Considerations} In \ac{vlos} operations, the \ac{vo} and \ac{rpic} are actively scanning the sky for intruding aircraft. At the first sight or sound of another aircraft nearby, the \ac{vo} will call it out (e.g., “Traffic above us, knock it off!”), and the \ac{rpic} will immediately respond by yielding: typically descending to a very low altitude or landing as quickly as possible. The crew practices these responses; for example, in training they simulate an intruder scenario where the \ac{rpic} must immediately drop to minimum altitude and hover until given the all-clear. The \ac{vo} continues to monitor the intruder and provides updates (“intruder passing, still to our north”) so the \ac{rpic} knows when it's safe. Once the intruding aircraft has gone and the \ac{vo} confirms the airspace is clear, the \ac{rpic} can resume the mission. This visual see-and-avoid capability is the primary safety net in VLOS operations and is used decisively to prevent any close calls.
+ 
+            \subsubsection{Reporting and Documentation}
+            
+                \paragraph{} An airspace intrusion that is resolved without incident is not an externally reportable mishap. However, the \ac{rpic} will document the encounter in the flight log, including the time of intrusion, type of intruding aircraft (if known), and the avoidance action taken. The \nameref{role:projectncoic} should be informed during the post-flight debrief.
+                
+                \paragraph{} If the intrusion resulted in a near mid-air collision situation or caused the \ac{uas} to deviate significantly from its cleared airspace, the \nameref{role:projectoic} may direct that a formal incident or hazard report be filed in accordance with aviation safety protocols. All available data (telemetry, any video) should be preserved for analysis.
+                
+                \paragraph{} Lessons learned from the incident will be incorporated into future mission planning and briefs. For example, the team might establish a larger buffer or improve communication with local airfield managers if an intruder came from a known nearby airstrip.
+ 
+            \subsubsection{Maintenance and Return to Service}
+            
+                \paragraph{} If the \ac{uas} performed an abrupt evasive maneuver (such as a sudden dive or climb) to avoid an intruder, it will undergo a post-flight inspection. Critical components (propellers, motors, airframe joints) will be checked for any signs of stress or damage. In particular, the battery and power system will be examined since rapid maneuvers can cause voltage sag or spikes.
+                
+                \paragraph{} In the absence of any physical contact or collision, no special maintenance is typically required beyond this inspection. If no issues are found, the \ac{uas} can be returned to service for the next mission.
+                
+                \paragraph{} Nonetheless, the maintenance team and operators will review whether the \ac{uas}'s DAA systems functioned as intended. Any necessary adjustments (for example, tuning geofence parameters or updating firmware for traffic alerts) will be made before the next flight to enhance the system’s response to potential intrusions.
+        
+        \subsection{Ground Risk Incursion}\label{ssec:ep-groundrisk}
+        
+            \subsubsection{Situation}Ground Risk Incursion occurs when an unauthorized person, vehicle, animal, or other object unexpectedly enters the designated operational area (such as the takeoff/landing zone or a delivery drop zone) while the \ac{uas} is in flight. These incursions can happen with little or no warning, often during takeoff or landing phases, and pose a serious hazard because the \ac{uas} could collide with an uninvolved person or object on the ground. Even with perimeter security and clear announcements, bystanders or vehicles might inadvertently encroach on the flight area. In such an event, the crew must be ready to immediately alter the flight plan, pause or abort the mission, and prioritize ground safety over mission objectives.
+            % 14 CFR 107.39 prohibits flight over uninvolved persons; any person entering the operational area necessitates an immediate halt or adjustment of \ac{uas} operations to remain compliant and safe.
+            
+            \subsubsection{Detection and Initial Assessment} Ground incursions are typically detected by:
+            \begin{itemize}
+                \item Visual observation by the \ac{rpic}, \ac{vo}, or other crew members of a person, vehicle, or animal entering the restricted operating area.
+                \item Alerts or calls from support personnel (e.g., a team member positioned near a landing zone) indicating that an unauthorized entry has occurred.
+                \item Onboard camera feed showing an unexpected object or person in the vicinity of the \ac{uas}'s intended flight path or landing point.
+            \end{itemize}
+            Once a ground incursion is noticed, the \ac{rpic} (or any crew member) should immediately assess the position and movement of the intruder relative to the \ac{uas}. Key considerations include whether the \ac{uas} is on approach to that area, how much time is available to react, and what evasive action will best protect both the person and the aircraft.
+            
+            \subsubsection{Priorities} In the event of a ground risk incursion:
+                \paragraph{}Protect human life on the ground above all else. Cease or modify any \ac{uas} operation that would put the intruding person or bystanders at risk.
+                \paragraph{}Aviate: maintain control of the \ac{uas} and avoid sudden, erratic maneuvers that could lead to loss of control. Be prepared, however, to execute an immediate evasive maneuver (such as an emergency climb or hover hold) to prevent the \ac{uas} from coming into contact with the intruder.
+                \paragraph{}Navigate: move or hold the aircraft in a safe location away from the intruder. For example, abort the landing and climb to a safe altitude to loiter until the ground area is clear, or divert to a predefined alternate landing site if necessary.
+                \paragraph{}Communicate: alert the crew by calling out the ground hazard (e.g., “Ground incursion, aborting landing!”) so everyone is aware. If possible, have a team member or security personnel on the ground communicate with or intercept the intruding person to keep them safe and clear of the area.
+                \paragraph{}Once ground safety is re-established (the area is confirmed clear), only then consider resuming the mission or proceeding with landing. Mission continuation is secondary to preventing harm from ground hazards.
+            
+            \subsubsection{Immediate Actions (All Flights)}
+                \paragraph{} If the \ac{uas} is on final approach to land and a person or obstacle is spotted in the landing zone, immediately execute a go-around or climb to a hover at a safe altitude. The landing should be aborted without hesitation.
+                \paragraph{} If a payload drop is imminent and the drop zone is compromised, cancel or delay the release. Do not drop any items until the ground area is verified clear.
+                \paragraph{} If the \ac{uas} is in the process of takeoff and an incursion occurs (for example, a vehicle crossing the takeoff path), abort the takeoff. If the aircraft is still on the ground, do not lift off; if it has just lifted, land it straight back down if able, or hover at a low safe altitude until the area is clear.
+                \paragraph{} Establish the aircraft in a safe holding pattern or hover away from the incursion point (e.g., hold at least 50~ft above and offset from the affected area) while monitoring the intruder’s position.
+                \paragraph{} If crew members are available, have one attempt to warn or guide the intruder away from the danger (shout, wave, or approach if it can be done safely) while the \ac{rpic} keeps the \ac{uas} clear.
+                \paragraph{} Consider utilizing an alternate landing zone if one has been designated and it is known to be clear. This can shorten the time the \ac{uas} must remain airborne with low battery or other constraints.
+                \paragraph{} If the \ac{rpic} is not \ac{qp} qualified, immediately inform a \ac{qp} of the situation and follow any instructions given.
+                \paragraph{} Notify the \nameref{role:leadoperator} that a ground hazard has occurred and that the operation is on hold or terminating.
+                \paragraph{} Maintain the holding pattern until the area is confirmed clear by visual inspection or communication from ground personnel. Once clear, the \ac{rpic} can resume the mission or land as appropriate.
+                \paragraph{} After the flight, document the incursion, including the time, duration, description of the intruder (person, vehicle, etc.), and the actions taken by the crew to resolve it.
+            
+            \subsubsection{\ac{bvlos} Specific Considerations} In \ac{bvlos} operations, ground risk incursions at remote sites are mitigated by having local support personnel or observers whenever possible. If an unexpected person or vehicle is reported at a remote landing or drop site, the \ac{rpic} should immediately hold the \ac{uas} in a safe airborne position (e.g., circle or hover at a designated safe altitude) and await confirmation that the area is clear. BVLOS missions should include pre-briefed alternate landing sites along the route; if the primary site remains compromised, the \ac{rpic} can divert the \ac{uas} to an alternate location that has been deemed safe for landing. Communication with on-site personnel (via radio or phone) is critical: the \ac{rpic} must rely on them to evaluate and resolve the ground incursion since they have eyes on the situation. If no on-site personnel are present and a ground incursion is suspected (for example, detected via camera or other sensors), the default action is to abort the mission’s landing or drop segment—either holding in the air or returning to base—rather than risking an unattended landing in a potentially unsafe area.
+            
+            \subsubsection{\ac{vlos} Specific Considerations} In \ac{vlos} operations, the crew can directly see and often hear individuals or vehicles near the operation area. The \ac{vo} should continuously scan not just the airspace but also the ground around the operating area for any encroachment. At the sight of a ground intruder, the \ac{vo} will call it out (e.g., “Person in the landing zone!”), and the \ac{rpic} will immediately take evasive action (abort landing, climb and hold position). Because the crew is on site, they can also directly interact with the intruder: a team member can approach the individual (if it can be done safely) to inform them of the ongoing operation and keep them at a safe distance. The \ac{rpic} should keep the \ac{uas} high enough and away from the person until receiving a clear signal that the area is secured. Once the intruder is at a safe distance or removed, and the crew has verified the zone is clear, the \ac{rpic} may continue the operation or land the \ac{uas}. VLOS crews benefit from being on the scene—decisions and adjustments can be made rapidly based on actual visual conditions, which greatly aids in safely handling these situations. They should always prioritize a controlled hover or diversion over trying to rush a landing when any person is near the landing area.
+            
+            \subsubsection{Reporting and Documentation}
+                \paragraph{} Ground incursions that do not result in any injury or damage are generally not reportable outside the unit. However, the \ac{rpic} will record the incident in the flight log and inform the \nameref{role:projectncoic} during the debrief, especially if the incursion was a close call or caused an abort.
+                \paragraph{} If an unauthorized person came dangerously close to being struck, or if the \ac{uas} had to be intentionally brought down to avoid a person, the incident may be elevated to a formal safety incident report per the chain of command’s protocols.
+                \paragraph{} Regardless of the outcome, the details of the event (who/what caused the incursion, where and when it happened, and why it was not prevented) should be analyzed by the team. Preventive measures—such as improved site security, additional signage, or extra observers—may be adopted to reduce the likelihood of similar incursions in the future.
+            
+            \subsubsection{Maintenance and Return to Service}
+                \paragraph{} If the incursion was managed without any physical contact or extreme maneuvers by the \ac{uas}, only standard post-flight checks are necessary. The aircraft can be turned around for the next operation once routine inspections (battery levels, motor health, airframe condition) are completed.
+                \paragraph{} If the \ac{uas} performed any abrupt or high-stress maneuvers to avoid a ground hazard (for example, a sudden full-throttle climb or rapid braking action), a targeted inspection is warranted. Crew should examine propellers for nicks, motor mounts for any shifts, and measure the battery temperature to ensure it wasn’t overheated by a surge in current draw.
+                \paragraph{} Provided no anomalies are detected, the \ac{uas} can return to service immediately. If any wear or damage is observed (even if minor), maintenance will replace or repair the affected components. A brief functional test or test flight might be conducted if a repair was made, to ensure all systems function correctly before the next mission.
+        
+        \subsection{Unsafe Weather / Knock-it-Off}\label{ssec:ep-weather}
+        
+            \subsubsection{Situation}Unsafe Weather / “Knock-it-Off” refers to any situation where environmental conditions deteriorate beyond safe limits or any emergent hazard prompts an immediate cessation of the mission. Common weather triggers include thunderstorms (lightning), high winds or gusts exceeding the \ac{uas}’s capability, heavy rain or snow, icing conditions, or sudden loss of visibility (fog). In such cases, any crew member may call “Knock it Off,” which is a directive for all participants to halt the operation and focus on safety. Upon a “Knock it Off” call due to weather or other hazards, the \ac{rpic} must immediately prioritize securing the aircraft (aviate), navigating it out of danger (navigate), and communicating the situation (communicate) to the crew and any relevant authority. No mission objective is worth continuing flight into unsafe weather.
+            % USACE Aviation Policy Letter 95-1-1: A "Knock it Off" call from any crewmember indicates that the UA must immediately land due to safety concerns.
+            
+            \subsubsection{Detection and Initial Assessment} Indicators of unsafe weather or conditions requiring a “Knock it Off” include:
+            \begin{itemize}
+                \item Sudden onset of precipitation or lightning in the vicinity of the operation.
+                \item Wind gusts or sustained winds that exceed mission limits or cause the \ac{uas} difficulty in maintaining position/track.
+                \item Visibility dropping below required minimums (e.g., the \ac{rpic}/\ac{vo} loses sight of the \ac{uas} due to fog, heavy rain, or dusk conditions beyond what was planned).
+                \item Unforecast severe weather cells approaching on radar or visually (dark thunderclouds, dust storms, etc.).
+                \item Any crew member’s judgment that conditions have become unsafe (this could include non-weather factors, such as another concurrent safety issue—when in doubt, they call “Knock it Off”).
+            \end{itemize}
+            Upon noticing any of these signs, the crew should immediately compare the observed conditions to the mission’s safety criteria. If any limit is exceeded or imminent (e.g., lightning within a predetermined radius, wind above threshold), a “Knock it Off” will be declared. The \ac{rpic} quickly evaluates the \ac{uas}’s current state (battery level, position relative to home or alternate landing sites) and decides on the safest immediate course of action (return to home, land immediately at current position, etc.).
+            
+            \subsubsection{Priorities} In an unsafe weather or “Knock-it-Off” situation:
+                \paragraph{}Preserve life and safety: ensure crew members and bystanders are not put at risk by the operation (for example, cease flight before a lightning storm arrives, so no one has to handle electronics outside during lightning).
+                \paragraph{}Aviate: maintain control of the aircraft despite deteriorating conditions. This may involve slowing down, switching to a more stable flight mode, or temporarily climbing above turbulence.
+                \paragraph{}Navigate: immediately direct the aircraft toward the safest possible location (usually back toward the launch/recovery point or a known safe landing area) while avoiding known weather hazards (like storm cells or high winds over ridges).
+                \paragraph{}Communicate: clearly announce the abort (“Knock it Off - unsafe weather”) so that all crew acknowledge it. If applicable, inform any air traffic control or other agencies that the mission is terminating early due to weather.
+                \paragraph{}Safeguard equipment secondary to safety: while protecting the \ac{uas} and payload is desirable (e.g., avoiding rain damage by landing under cover), such concerns are secondary to a controlled landing. If needed, the \ac{uas} can be sacrificed to avoid greater harm (e.g., ditching it in a field if that means avoiding an out-of-control descent near people).
+            
+            \subsubsection{Immediate Actions (All Flights)}
+                \paragraph{} Immediately acknowledge the "Knock it Off" call. The \ac{rpic} discontinues any mission task (such as waypoint following or payload operation) and takes direct control if not already in manual control.
+                \paragraph{} If the \ac{uas} is beyond the immediate vicinity, initiate an expeditious return-to-home (\ac{rth}) or navigate to the nearest safe landing area. Do not wait—begin the recovery while sufficient battery and options remain.
+                \paragraph{} If weather conditions are rapidly worsening (e.g., an approaching thunderstorm or sudden extreme winds), consider an immediate precautionary landing at the current location or a closer site rather than attempting to reach the original destination. A controlled landing in a safe open area is preferable to losing the aircraft in flight.
+                \paragraph{} In multi-\ac{uas} operations, deconflict the aircraft during the abort: for example, assign each \ac{uas} a specific loiter altitude or landing order to prevent them from interfering with each other as they all seek to land quickly.
+                \paragraph{} Adjust flight parameters for safety: reduce altitude (to get out of turbulent conditions aloft), reduce speed (to lessen wind stress), and avoid any aerobatic or aggressive maneuvers. If rain is present, fly the \ac{uas} as level as possible to keep water out of sensitive areas and be gentle on the controls to avoid water-induced instability.
+                \paragraph{} Ensure ground crew take appropriate actions: for instance, have someone ready with a dry landing pad or catch net if the ground is muddy, and have personnel move to safe positions (under shelter if lightning is in the area). No one should be holding antennas or standing on high ground during lightning risk.
+                \paragraph{} If the \ac{rpic} is not \ac{qp} qualified and feels overwhelmed by the conditions, they should immediately ask a \ac{qp} (if one is present) to take over or assist.
+                \paragraph{} Notify the \nameref{role:leadoperator} that the flight is aborting due to weather and keep them updated on where and when you intend to land.
+                \paragraph{} Once the aircraft is on the ground, quickly secure it (motors off, power down) and move it to a safe area if the weather threat continues (e.g., get it out of the rain or away from an open field in lightning).
+                \paragraph{} After the situation is stabilized, record the weather conditions and timing (e.g., “mission aborted at 14:32 due to gust front arrival”) in the flight log for documentation.
+            
+            \subsubsection{\ac{bvlos} Specific Considerations} In \ac{bvlos} missions, weather assessments rely heavily on forecasts, onboard sensors, and any available remote observers. BVLOS operations should not commence without acceptable weather forecasts for the entire route and duration, but unexpected weather can still arise. The \ac{rpic} should continuously monitor weather data like ground station readings (temperature, wind) and any telemetry from the aircraft (such as wind estimation or airspeed trends) for signs of degrading conditions. At the first hint of unsafe weather along the route or at a remote destination (e.g., the remote site reports high winds or the aircraft’s battery is draining faster than normal due to cold), the \ac{rpic} should call "Knock it Off". The aircraft’s autonomy may have a built-in weather abort: for instance, if wind exceeds a threshold, it might automatically \ac{rth}. The \ac{rpic} must be ready to manually command an abort if those systems don’t trigger. BVLOS flights typically have contingency landing spots; the \ac{rpic} will choose the nearest one that keeps the aircraft and public safe. They will also communicate with any remote personnel (e.g., a field team at the destination) to let them know of the abort. If ATC or a flight following service is involved in the BVLOS mission, notify them of the early termination due to weather. Ultimately, because visual confirmation of conditions isn’t possible, BVLOS pilots should be highly conservative regarding weather: if in doubt, get the aircraft on the ground.
+            
+            \subsubsection{\ac{vlos} Specific Considerations} In \ac{vlos} operations, the crew can directly observe weather conditions and feel their effects. The \ac{rpic} and \ac{vo} should continuously monitor the sky for developing clouds, changes in wind (like dust picking up or trees swaying harder), and other signs like distant lightning or thunder. If any crew member voices concern about the weather, that alone can justify a "Knock it Off"—better to be safe and land than push it. Once "Knock it Off" is called, the \ac{rpic} should immediately bring the \ac{uas} back toward the home point. Since the aircraft is nearby, often a prompt landing can beat the arrival of the worst conditions. The crew should have a plan for sudden weather: for example, if rain starts, have a towel or case ready to cover the \ac{uas} once it’s recovered; if lightning starts, everyone knows to not handle antenna masts and to get indoors after the \ac{uas} is secured. Because VLOS flights are usually shorter range, there’s usually no need for alternate sites—returning to launch and landing quickly is typically feasible. The \ac{rpic} may perform a slightly expedited landing (faster descent than normal) to minimize time in adverse conditions, but must balance that against maintaining control. Practice in handling the \ac{uas} in wind and light rain (if allowable) can build confidence for the real scenario, but ultimately in VLOS operations the philosophy is: at the first sign of trouble, get it down.
+            
+            \subsubsection{Reporting and Documentation}
+                \paragraph{} Aborting a flight due to unsafe weather or a "Knock it Off" call is not considered a mishap; it is a prudent decision. The \ac{rpic} will note in the flight log that the mission was terminated early due to weather, including the specific cause (e.g., “terminated due to lightning within 5 NM” or “wind exceeded limit”). This entry helps the team in later analysis and in refining weather minimums or decision points.
+                \paragraph{} The \nameref{role:projectncoic} should be informed of the abort as part of the normal flight operations reporting (so they are aware the mission did not complete as planned). This is generally for situational awareness; no external reporting is required when a mission is safely aborted without incident.
+                \paragraph{} If the weather event caused any damage (for example, the \ac{uas} was forced into a hard landing by a gust and got banged up, or equipment was damaged by weather exposure), then appropriate maintenance actions will be taken and, if necessary, an incident report may be generated per \projectmars{} guidelines. Otherwise, the abort is simply documented and the mission can be attempted again when conditions improve.
+            
+            \subsubsection{Maintenance and Return to Service}
+                \paragraph{} After an unsafe weather abort, the \ac{uas} should be inspected for any weather-related effects. If it flew through precipitation, it must be dried off and sensitive components (like electronics and vents) checked for moisture. Any water ingress should be addressed (drying, use of electronics-safe cleaner) before next use.
+                \paragraph{} If the aircraft experienced strong turbulence or wind stress, check all mechanical connections, propellers, and control surfaces for signs of stress (e.g., loose screws, hairline cracks). Also verify that the GPS and compass are still calibrated—severe magnetic disturbances (like nearby lightning) can sometimes upset sensors.
+                \paragraph{} The battery should be examined if heavy current draw was needed during the abort (high throttle to fight wind can heat the battery). Ensure the battery is cool, at a safe voltage, and undamaged. Recharge it slowly to balance cells if it was heavily taxed.
+                \paragraph{} Any components found to be adversely affected (water damage, loosening, etc.) must be repaired or replaced. Once maintenance is done, the \ac{uas} can be returned to service. If substantial repairs were needed, a brief test flight in benign conditions is recommended to ensure all systems function properly before the next mission.
+        
+        \subsection{Low Battery Emergency Landing}\label{ssec:ep-lowbattery}
+        
+            \subsubsection{Situation}Low Battery Emergency Landing is triggered when an autonomously flown aircraft forecasts insufficient power to complete the programmed mission safely. Accelerated discharge, cell imbalance, or temperature-induced capacity loss may reduce available endurance without human inputs to conserve energy. The automation may command aggressive power-saving modes, altitude reductions, or immediate descent; operators should supervise these transitions, select the nearest safe landing area, and provide minimal manual guidance only as needed to ensure a controlled touchdown before critical levels are reached.
+ 
+            \subsubsection{Detection and Initial Assessment} Low battery conditions are detected by:
+            \begin{itemize}
+                \item On-screen alerts from the \ac{gcs} indicating the battery has reached predefined low or critical levels (for example, “Battery Low – 30\%” and “Battery Critical – 15\%” warnings).
+                \item Autopilot behavior such as initiating an \ac{rth} or hovering in place because it calculates insufficient battery to continue the mission.
+                \item Observable difficulty maintaining performance: for instance, the \ac{uas} might struggle to climb or hold altitude, signaling that battery voltage is dropping to a critical point.
+                \item The \ac{rpic} noticing an abnormally rapid drop in battery percentage or voltage on the telemetry readout.
+            \end{itemize}
+            When a low battery warning occurs, the \ac{rpic} should immediately cross-check the remaining battery percentage and voltage against the distance/altitude of the \ac{uas}. They must quickly determine if the \ac{uas} can safely return to the planned recovery site or if an immediate landing at a closer location is required. Initial assessment includes factoring in wind (a strong headwind can drastically reduce range on low battery) and any available power reserve.
+ 
+            \subsubsection{Priorities} When facing a low battery emergency:
+            
+                \paragraph{}Aviate: maintain stable flight and avoid panic inputs. Fly smoothly to conserve what power remains (rapid throttle changes or fighting the wind aggressively can accelerate battery drain).
+                
+                \paragraph{}Navigate: head for the closest safe landing zone immediately. This could be the launch point or a known emergency landing site – whichever the \ac{uas} can reach with the remaining battery. If the original \ac{lz} is too far, be prepared to land short in a safe open area rather than attempting to stretch the glide.
+                
+                \paragraph{}Communicate: inform the crew (“Low battery – landing ASAP”) so ground personnel can prepare the landing area (clear people away, be ready to recover the aircraft). If operating in controlled airspace, advise \ac{atc} that you are performing an emergency landing due to low battery to let them know of the deviation.
+                
+                \paragraph{}Preserve the aircraft if possible: it’s better to land under control with a few percent of battery left than to overfly and have the battery die mid-air. Do not continue any mission task—focus only on landing. Payload jettison is generally not necessary unless dropping it would significantly increase safety and is part of an approved emergency procedure.
+                
+                \paragraph{}Mission priority is suspended. The only goal is a safe landing before the battery is exhausted.
+ 
+            \subsubsection{Immediate Actions (All Flights)}
+            
+                \paragraph{} Acknowledge the low battery alert and immediately terminate the mission segment. Command an immediate return-to-home or navigate to the nearest safe landing site without delay.
+                
+                \paragraph{} If possible, reduce power consumption: for example, if the \ac{uas} has adjustable speed, slow down to an efficient cruise (unless a strong headwind makes speed necessary). Turn off or minimize use of any unnecessary equipment (like additional lights or payload devices) to save power.
+                
+                \paragraph{} Initiate a gentle, continuous descent toward the chosen landing area while you still have a safe power margin. Aim to have the aircraft on the ground while a small reserve (e.g., ~10\% battery) remains, rather than riding the battery down to 0\%.
+                
+                \paragraph{} Monitor the battery voltage as well as percentage; in cold or high-load situations, voltage can drop suddenly. If the voltage approaches the minimum safe level, prepare to land immediately, even if that means landing off-airfield in an open spot directly below.
+                
+                \paragraph{} Be ready to assume manual control if the autopilot’s low-battery behavior isn’t optimal. Some systems will auto-land vertically when critical; if that auto-land is targeting an unsafe spot (water, trees), override it and steer the aircraft a short distance to a safer touchdown point.
+                
+                \paragraph{} Communicate the emergency: announce to the team that an emergency landing is in progress due to low battery. Ensure the landing zone (or intended touchdown area) is clear of people and obstacles. If an alternate site is used, direct a team member (if available) to move to that location for recovery and security of the aircraft.
+                
+                \paragraph{} Once the aircraft is on the ground, quickly deactivate the motors and power system. A critically low battery can sometimes swell or overheat; removing the battery from the aircraft (if feasible) and placing it in a safe, ventilated area is wise as a precaution.
+ 
+            \subsubsection{\ac{bvlos} Specific Considerations} In \ac{bvlos} missions, careful battery management is planned, but unforeseen factors (like an unexpected headwind or hovering longer than planned) can lead to a low battery situation. The \ac{rpic} should design the route with contingency landing points. At the first sign of insufficient battery to continue, the \ac{rpic} will divert the \ac{uas} to the closest predetermined landing site or a safe unplanned site if necessary. Because the aircraft is beyond sight, the \ac{rpic} must rely on telemetry to judge battery and distance. Modern autopilots often estimate if the battery is enough to get home; if the estimate shows negative margin, the \ac{rpic} must land immediately at the nearest safe location. BVLOS often involves notifying authorities of off-nominal landings (since you might land outside the original area): if time permits, inform ATC or any authority tracking the flight that you are putting the \ac{uas} down early due to low battery and give coordinates. BVLOS \acp{uas} sometimes have higher battery redundancy or reserve, but the principle remains: do not push the limits. Additionally, if the BVLOS mission has a remote crew at the landing site (e.g., to retrieve a package), communicate with them to expect an emergency landing and ensure the area is clear. Finally, after recovery, perform a quick check: a severely depleted battery can be a safety hazard (risk of fire), so treat it carefully during transport from a remote site.
+ 
+            \subsubsection{\ac{vlos} Specific Considerations} In \ac{vlos} operations, responding to a low battery is more straightforward due to close proximity and direct line-of-sight. At the first low battery warning, the \ac{rpic} should immediately head back to the launch point or a known safe landing area that’s within sight. Because distances are short, an \ac{uas} under VLOS can usually be recovered quickly. The \ac{rpic} can also visually gauge how the aircraft is performing—if it’s struggling against wind or slowing down, that’s a sign to get it down sooner. If the battery becomes critical when the \ac{uas} is still a bit away, the \ac{rpic} may choose to land it in a safe open area within sight rather than risk it shutting off in mid-air. The \ac{vo} can assist by guiding the \ac{rpic} to any nearby clearing if needed. VLOS drones often have some failsafe like auto-land at critical battery; the \ac{rpic} must be prepared to override if that auto-landing would occur in a suboptimal spot (for instance, over water or trees)—instead, command it to a better area or catch it (if it’s a small drone and that technique is practiced). Because VLOS typically implies one is in a controlled environment (e.g., a test field), the main focus is simply executing the landing promptly and safely. The crew should practice low-battery drills (like sudden “battery low, land now” scenarios) so that in real cases their reactions are immediate.
+ 
+            \subsubsection{Reporting and Documentation}
+            
+                \paragraph{} A low battery emergency landing, by itself, is not a reportable mishap externally as long as it concludes without damage or injury. The \ac{rpic} will note the event in the flight log, including the battery percentage/voltage at landing, the estimated remaining flight time or distance if available, and what actions were taken (e.g., “initiated RTH at 25\%, landed with 8\% remaining”). This helps evaluate whether procedures need adjustment (for example, maybe the initial warning threshold should be set higher).
+                
+                \paragraph{} The \nameref{role:projectncoic} should be informed that the mission was cut short due to low battery as part of the normal operational reporting. If the cause of the low battery condition was something avoidable (such as launching with an undercharged battery or unexpected payload weight), that will be addressed in crew debriefs.
+                
+                \paragraph{} If the low battery situation resulted in a landing off the intended site or any unintended outcome (like a hard landing or minor damage), then internal incident reports will be filed accordingly. Such instances are also used as training case studies to improve energy management in future flights.
+ 
+            \subsubsection{Maintenance and Return to Service}
+            
+                \paragraph{} After a low battery emergency, special attention must be given to the battery involved. If it was drained below its safe discharge level or if any cell readings were very low, that battery may be damaged or degraded. Maintenance will perform a capacity test and cell health check on the battery. It may be removed from service if it shows signs of puffing, imbalance, or significant capacity loss.
+                
+                \paragraph{} Inspect the power system of the \ac{uas} as well. Sometimes a low battery incident might be caused or exacerbated by a failing component (for example, a motor drawing excessive current due to a bad bearing). Check motors, ESCs (electronic speed controllers), and wiring for any signs of overheating (discoloration, smell) that might indicate why power consumption was higher than expected.
+                
+                \paragraph{} If the \ac{uas} performed an auto-land or was landed quickly in suboptimal conditions, examine the airframe for any stress. A rapid descent and landing might put more strain on the landing gear or fuselage; ensure nothing is cracked or bent.
+                
+                \paragraph{} Address any issues found: replace any suspect motors or electronics, and certainly replace the battery if there is doubt about its reliability. Before returning to normal operations, it’s advisable to do a short test flight with a fresh battery to confirm that the \ac{uas} is behaving normally and that the telemetry properly reflects battery levels.
+                
+                \paragraph{} Going forward, consider adjusting mission plans or battery reserve thresholds if this event revealed that the prior margins were insufficient. The \nameref{role:projectoic} and maintenance officer may set a higher minimum battery reserve for future flights as a corrective measure.
+        
+    \section{Accident/Incident Reporting}\label{sec:accidentreporting}
+
+%         \subsubsection{} Standard operations of the \ac{uas} may involved flight termination within the operating area.
+        \subsubsection{} Standard operations of the \ac{uas} may involve flight termination within the operating area. Nominal operations may result in mid-air collisions between \projectmars{} \ac{uas} within the operating area, which may cause components to break. These events do not constitute mishaps that are reportable outside the \projectmars{} chain of command. Reportable mishaps include:
+        
+            \paragraph{}Flight outside approved airspace
+        
+            \paragraph{}\ac{suas} operations leading to injury
+        
+%             \paragraph{}\ac{suas} operations leading to damge to property not invovled with \projectmars{}.
+            \paragraph{}\ac{suas} operations leading to damage to property not involved with \projectmars{}.
+        
+        \subsubsection{} In the event of a reportable mishap, crash, vehicle accident, or injury all \projectmars{} \ac{suas} are immediately grounded until cleared by the \nameref{role:projectoic} via \ac{mfr}.
+        
+        \subsubsection{RPIC Responsibilities}In the event of a \ac{uas} mishap, vehicle accident, or injury, the following steps will be taken by the \ac{rpic}:
+        
+            \paragraph{}Stop the mission.
+        
+            \paragraph{}In the event of injury to personnel, or ongoing threat to life or property (e.g. fire), dial 911.
+             
+            \paragraph{}Contact \nameref{role:projectncoic} about incident; if unable to reach \nameref{role:projectncoic}, escalate to \nameref{role:projectoic}.  If unable to reach either the \nameref{role:projectncoic} or \nameref{role:projectoic} and there are injuries, make contact with the \nameref{role:hospitalcommander}.
+        
+            \paragraph{}Collect the following information:
+        
+                \subparagraph{}Type of \ac{uas}
+        
+                \subparagraph{}Model of \ac{uas}
+        
+                \subparagraph{}Type of Assistance Needed
+        
+                \subparagraph{}Location of incident
+        
+                \subparagraph{}Type and severity of injuries
+        
+                \subparagraph{}Names of injured
+        
+                \subparagraph{}Date and time
+        
+                \subparagraph{}Personnel and property involved in accident
+        
+                \subparagraph{}Any additional hazards remaining (e.g., fire/hazmat/etc)
+        
+            \paragraph{}Apply the following precautions:
+        
+                \subparagraph{}Keep others away for their own safety.
+        
+                \subparagraph{}Render first aid.
+        
+                \subparagraph{}Secure and control the accident site.
+        
+                \subparagraph{}Advise personnel help is on the way. 
+        
+                \subparagraph{}Remain at accident site until relieved either by \nameref{role:projectncoic} or \nameref{role:projectoic}.
+        
+        \subsubsection{Project NCOIC Responsibilities} Upon notification of a mishap, the \nameref{role:projectncoic} will:
+        
+            \paragraph{}Immediately move to the incident site to provide supervision.
+        
+            \paragraph{}Notify \nameref{role:projectoic} of incident. 
+        
+            \paragraph{}Ensure all aircraft and crewmember flight records are secured. 
+        
+            \paragraph{}Recover the aircraft when safe.
+        
+            \paragraph{}Be prepared to brief the \nameref{role:hospitalcommander} as requested.
+        
+            \paragraph{}Provide resources and assistance to accident investigators as necessary.
+        
+        \subsubsection{Project OIC Responsibilities} Upon notification of a mishap, the \nameref{role:projectoic} will:
+        
+            \paragraph{}Notify the \nameref{role:hospitalcommander} as appropriate.
+        
+            \paragraph{}Identify the nature of the mishap and appoint appropriate personnel to investigate. In the event of injury, damage to non-\projectmars{} material, and in other circumstances the \ac{oic} deems appropriate, the \nameref{role:projectoic} will recommend appointment of \ac{io} to the chain of command.

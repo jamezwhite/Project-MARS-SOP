@@ -430,3 +430,15 @@ Commit: `079b47d`
 
 ---
 
+## 2025-12-15 – Updates from Overleaf
+
+Commit: `532e385`
+
+- Removed a set of blank starter templates used across the project: army memorandum, article, book, letter, memoir, report, SOP, and standalone document templates. These basic example files and their placeholder content (titles, author/date, minimal sections) were deleted, so the repository no longer contains those ready-to-use LaTeX skeletons.
+
+- Deleted Certificate of Authorization visual and placeholder assets: two proposed airspace images (satellite overlay and VFR sectional) and a minimal VLOS airspace-request TeX file. The visual materials and the small COA TeX wrapper are no longer present.
+
+- Removed several KACH SOP helper files (binary helpers and spreadsheets: "3) SOP Generic Operation rev 3.docx", "ABCA Terms LaTeX generator.xlsx", "DRAFT Generic Configuration matrix rev1.docx") and, importantly, deleted the entire Safety and Emergency Procedures chapter. The removed Safety chapter contained the risk-management framework, delegated risk-acceptance authorities, distinctions between training and other flights, general emergency priorities (preservation of life/materiel/mission), pilot priorities (aviate/navigate/communicate), and the beginning of specific emergency procedures including a lost-link subsection.
+
+---
+
