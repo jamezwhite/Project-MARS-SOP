@@ -1,0 +1,28 @@
+# Auto-detect text files and normalize line endings to LF
+* text=auto
+
+# LaTeX files
+*.tex text eol=lf
+*.cls text eol=lf
+*.sty text eol=lf
+*.bib text eol=lf
+
+# Scripts
+*.sh text eol=lf
+*.bash text eol=lf
+
+# Documentation
+*.md text eol=lf
+README text eol=lf
+
+# Images - treat as binary
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.pdf binary
+*.eps binary
+
+# Configuration files
+*.yml text eol=lf
+*.yaml text eol=lf
+*.json text eol=lf

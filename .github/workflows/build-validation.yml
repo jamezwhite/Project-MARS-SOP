@@ -1,0 +1,81 @@
+name: Build Validation
+
+on:
+  pull_request:
+    branches: [ main ]
+    paths:
+      - '**.tex'
+      - '**.cls'
+      - '**.sty'
+      - 'Makefile'
+      - '.latexmkrc'
+  push:
+    branches: [ main ]
+    paths:
+      - '**.tex'
+      - '**.cls'
+      - '**.sty'
+
+jobs:
+  build-pdf:
+    name: Build and Validate PDF
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install LaTeX dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y texlive-latex-extra texlive-fonts-extra
+          sudo apt-get install -y texlive-science latexmk
+          sudo apt-get install -y texlive-pictures
+
+      - name: Build PDF (Full Build)
+        run: make build
+
+      - name: Check for build artifacts
+        run: |
+          if [ ! -f "Project-MARS-SOP.pdf" ]; then
+            echo "Error: PDF file not generated"
+            exit 1
+          fi
+          echo "PDF build successful"
+
+      - name: Validate PDF metadata
+        run: |
+          sudo apt-get install -y poppler-utils
+          pdfinfo Project-MARS-SOP.pdf
+
+      - name: Upload PDF artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: Project-MARS-SOP-${{ github.sha }}
+          path: Project-MARS-SOP.pdf
+          retention-days: 30
+
+      - name: Check for LaTeX warnings
+        run: |
+          if [ -f "build/Main.log" ]; then
+            echo "=== Checking for LaTeX warnings ==="
+            # Look for common warnings (but don't fail the build)
+            grep -i "warning" build/Main.log || echo "No warnings found"
+            grep -i "undefined" build/Main.log || echo "No undefined references"
+          fi
+
+      - name: Comment PR with artifact link
+        if: github.event_name == 'pull_request'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const pdfSize = fs.statSync('Project-MARS-SOP.pdf').size;
+            const sizeInMB = (pdfSize / (1024 * 1024)).toFixed(2);
+
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: `✅ **PDF Build Successful**\n\n- Size: ${sizeInMB} MB\n- Artifact available for 30 days\n- SHA: \`${context.sha.substring(0, 7)}\``
+            });

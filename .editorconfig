@@ -1,0 +1,57 @@
+# EditorConfig for Project MARS SOP
+# Ensures consistent coding styles across different editors and IDEs
+# See https://editorconfig.org for more information
+
+root = true
+
+# Default settings for all files
+[*]
+charset = utf-8
+end_of_line = lf
+insert_final_newline = true
+trim_trailing_whitespace = true
+
+# LaTeX files
+[*.tex]
+indent_style = space
+indent_size = 2
+max_line_length = 100
+
+# LaTeX class and style files
+[*.{cls,sty}]
+indent_style = space
+indent_size = 2
+max_line_length = 100
+
+# BibTeX files
+[*.bib]
+indent_style = space
+indent_size = 2
+
+# Shell scripts
+[*.{sh,bash}]
+indent_style = space
+indent_size = 2
+max_line_length = 120
+
+# Markdown files
+[*.md]
+indent_style = space
+indent_size = 2
+max_line_length = 120
+trim_trailing_whitespace = false  # Allow trailing spaces for line breaks
+
+# YAML files (GitHub Actions)
+[*.{yml,yaml}]
+indent_style = space
+indent_size = 2
+
+# Makefile (requires tabs)
+[Makefile]
+indent_style = tab
+indent_size = 4
+
+# JSON files
+[*.json]
+indent_style = space
+indent_size = 2

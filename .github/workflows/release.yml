@@ -1,0 +1,69 @@
+name: Release Build
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'Release version (e.g., v1.0.0)'
+        required: true
+        type: string
+      release_notes:
+        description: 'Release notes summary'
+        required: false
+        type: string
+
+jobs:
+  build-and-release:
+    name: Build and Create Release
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install LaTeX dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y texlive-latex-extra texlive-fonts-extra
+          sudo apt-get install -y texlive-science latexmk
+          sudo apt-get install -y texlive-pictures
+
+      - name: Build PDF
+        run: make build
+
+      - name: Rename PDF with version
+        run: |
+          mv Project-MARS-SOP.pdf "Project-MARS-SOP-${{ inputs.version }}.pdf"
+
+      - name: Generate PDF metadata
+        run: |
+          sudo apt-get install -y poppler-utils
+          pdfinfo "Project-MARS-SOP-${{ inputs.version }}.pdf" > pdf-metadata.txt
+
+      - name: Create Release
+        uses: softprops/action-gh-release@v1
+        with:
+          tag_name: ${{ inputs.version }}
+          name: Project MARS SOP ${{ inputs.version }}
+          body: |
+            ## Project MARS Standard Operating Procedure
+
+            **Version:** ${{ inputs.version }}
+            **Date:** ${{ github.event.head_commit.timestamp }}
+            **Commit:** ${{ github.sha }}
+
+            ${{ inputs.release_notes }}
+
+            ### Changes
+            See [Commit History.md](https://github.com/${{ github.repository }}/blob/main/Commit%20History.md) for detailed changelog.
+
+            ### Download
+            - [Project-MARS-SOP-${{ inputs.version }}.pdf](https://github.com/${{ github.repository }}/releases/download/${{ inputs.version }}/Project-MARS-SOP-${{ inputs.version }}.pdf)
+          files: |
+            Project-MARS-SOP-${{ inputs.version }}.pdf
+            pdf-metadata.txt
+          draft: false
+          prerelease: false

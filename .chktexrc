@@ -1,0 +1,47 @@
+# ChkTeX configuration for Project MARS SOP
+# ChkTeX is a LaTeX semantic checker
+# Install: apt-get install chktex
+
+# Suppress specific warnings (adjust as needed)
+
+# Warning 1: Command terminated with space
+# Suppress because we use xspace package
+CmdLine { -n1 }
+
+# Warning 8: Wrong length of dash
+# Allow flexible dash usage for military terminology
+CmdLine { -n8 }
+
+# Warning 13: Intersentence spacing
+# Allow normal spacing (not strict typographic rules)
+CmdLine { -n13 }
+
+# Warning 24: Delete this space to maintain correct pagereferences
+CmdLine { -n24 }
+
+# Warning 36: You should not use \\ here
+# Allow in specific contexts (tables, etc.)
+CmdLine { -n36 }
+
+# Silent mode (only show warnings/errors)
+Silent { -q }
+
+# Tab size for indentation checking
+TabSize { 2 }
+
+# Quote style
+QuoteStyle { Traditional }
+
+# Output format
+VerboseFormat {
+  %f:%l:%c: %k: %m\n
+}
+
+# Custom commands to ignore
+UserWarn {
+  \projectmars
+  \ac
+  \acs
+  \acl
+  \gls
+}

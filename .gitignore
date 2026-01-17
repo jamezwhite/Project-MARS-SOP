@@ -1,0 +1,66 @@
+# LaTeX Build Outputs
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.toc
+*.synctex.gz
+*.lof
+*.lot
+*.acn
+*.acr
+*.alg
+*.glg
+*.glo
+*.gls
+*.ist
+*.xdy
+*.nav
+*.snm
+*.vrb
+*.bcf
+*.run.xml
+*.idx
+*.ilg
+*.ind
+
+# LaTeX Temporary Files
+*.dvi
+*.ps
+*.pdf
+*-eps-converted-to.pdf
+
+# Build Directories
+build/
+dist/
+output/
+
+# Editor/IDE Files
+# Note: .vscode/*.json files are tracked for project configuration
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
+!.vscode/launch.json
+!.vscode/tasks.json
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# OS-specific
+.AppleDouble
+.LSOverride
+._*
+
+# Overleaf Sync
+.overleaf/
+
+# Backup Files
+*.bak
+*.backup
+*-old.*

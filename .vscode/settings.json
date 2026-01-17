@@ -1,0 +1,114 @@
+{
+  "editor.formatOnSave": false,
+  "editor.rulers": [80, 100],
+  "editor.wordWrap": "wordWrapColumn",
+  "editor.wordWrapColumn": 100,
+  "editor.insertSpaces": true,
+  "editor.tabSize": 2,
+  "editor.detectIndentation": false,
+  "files.eol": "\n",
+  "files.trimTrailingWhitespace": true,
+  "files.insertFinalNewline": true,
+
+  // LaTeX Workshop extension settings
+  "latex-workshop.latex.autoBuild.run": "onSave",
+  "latex-workshop.latex.recipe.default": "pdflatex-with-glossaries",
+
+  "latex-workshop.latex.recipes": [
+    {
+      "name": "pdflatex-with-glossaries",
+      "tools": [
+        "pdflatex",
+        "makeglossaries",
+        "pdflatex",
+        "pdflatex"
+      ]
+    },
+    {
+      "name": "latexmk",
+      "tools": [
+        "latexmk"
+      ]
+    }
+  ],
+
+  "latex-workshop.latex.tools": [
+    {
+      "name": "pdflatex",
+      "command": "pdflatex",
+      "args": [
+        "-interaction=nonstopmode",
+        "-halt-on-error",
+        "-output-directory=%OUTDIR%",
+        "%DOC%"
+      ]
+    },
+    {
+      "name": "makeglossaries",
+      "command": "makeglossaries",
+      "args": [
+        "-d",
+        "%OUTDIR%",
+        "%DOCFILE%"
+      ]
+    },
+    {
+      "name": "latexmk",
+      "command": "latexmk",
+      "args": [
+        "-pdf",
+        "-outdir=%OUTDIR%",
+        "%DOC%"
+      ]
+    }
+  ],
+
+  "latex-workshop.latex.outDir": "./build",
+  "latex-workshop.view.pdf.viewer": "tab",
+
+  // Spell checking for LaTeX
+  "cSpell.language": "en-US",
+  "cSpell.enableFiletypes": [
+    "latex",
+    "tex"
+  ],
+  "cSpell.words": [
+    "MARS",
+    "KACH",
+    "BVLOS",
+    "SUAS",
+    "RPIC",
+    "FRAGO",
+    "OPORD",
+    "Jamez",
+    "pdflatex",
+    "makeglossaries",
+    "latexmk"
+  ],
+
+  // File associations
+  "files.associations": {
+    "*.cls": "latex",
+    "*.sty": "latex"
+  },
+
+  // Exclude build directory from search
+  "search.exclude": {
+    "**/build": true,
+    "**/*.aux": true,
+    "**/*.log": true,
+    "**/*.out": true,
+    "**/*.toc": true,
+    "**/*.synctex.gz": true
+  },
+
+  // File explorer exclusions
+  "files.exclude": {
+    "**/build": true,
+    "**/*.aux": true,
+    "**/*.log": true,
+    "**/*.out": true,
+    "**/*.toc": true,
+    "**/*.synctex.gz": true
+  }
+}
