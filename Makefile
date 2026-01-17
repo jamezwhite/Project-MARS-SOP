@@ -18,6 +18,10 @@ all: build
 build:
 	@echo "Building Project MARS SOP (full build)..."
 	@mkdir -p $(OUTPUT_DIR)
+	@mkdir -p $(OUTPUT_DIR)/chapters
+	@mkdir -p $(OUTPUT_DIR)/appendices
+	@mkdir -p $(OUTPUT_DIR)/glossaries
+	@mkdir -p $(OUTPUT_DIR)/frontmatter
 	$(LATEX_CMD) $(LATEX_FLAGS) $(MAIN_TEX)
 	@if [ -f $(OUTPUT_DIR)/Main.aux ]; then \
 		makeglossaries -d $(OUTPUT_DIR) Main; \
@@ -31,6 +35,10 @@ build:
 quick:
 	@echo "Quick build (single pass)..."
 	@mkdir -p $(OUTPUT_DIR)
+	@mkdir -p $(OUTPUT_DIR)/chapters
+	@mkdir -p $(OUTPUT_DIR)/appendices
+	@mkdir -p $(OUTPUT_DIR)/glossaries
+	@mkdir -p $(OUTPUT_DIR)/frontmatter
 	$(LATEX_CMD) $(LATEX_FLAGS) $(MAIN_TEX)
 	@mv $(OUTPUT_DIR)/Main.pdf ./$(PDF_NAME)
 	@echo "Quick build complete: $(PDF_NAME)"
@@ -40,6 +48,10 @@ watch:
 	@echo "Starting continuous build (watch mode)..."
 	@echo "Press Ctrl+C to stop"
 	@mkdir -p $(OUTPUT_DIR)
+	@mkdir -p $(OUTPUT_DIR)/chapters
+	@mkdir -p $(OUTPUT_DIR)/appendices
+	@mkdir -p $(OUTPUT_DIR)/glossaries
+	@mkdir -p $(OUTPUT_DIR)/frontmatter
 	latexmk -pdf -pvc -outdir=$(OUTPUT_DIR) $(MAIN_TEX)
 
 # Clean build artifacts
