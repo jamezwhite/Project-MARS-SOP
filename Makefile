@@ -15,8 +15,9 @@ LATEX_FLAGS = -interaction=nonstopmode -halt-on-error -output-directory=$(OUTPUT
 all: build
 
 # Full build with glossaries and cross-references
-build: $(OUTPUT_DIR)
+build:
 	@echo "Building Project MARS SOP (full build)..."
+	@mkdir -p $(OUTPUT_DIR)
 	$(LATEX_CMD) $(LATEX_FLAGS) $(MAIN_TEX)
 	@if [ -f $(OUTPUT_DIR)/Main.aux ]; then \
 		makeglossaries -d $(OUTPUT_DIR) Main; \
@@ -27,21 +28,19 @@ build: $(OUTPUT_DIR)
 	@echo "Build complete: $(PDF_NAME)"
 
 # Quick build (single pass, no glossaries)
-quick: $(OUTPUT_DIR)
+quick:
 	@echo "Quick build (single pass)..."
+	@mkdir -p $(OUTPUT_DIR)
 	$(LATEX_CMD) $(LATEX_FLAGS) $(MAIN_TEX)
 	@mv $(OUTPUT_DIR)/Main.pdf ./$(PDF_NAME)
 	@echo "Quick build complete: $(PDF_NAME)"
 
 # Continuous build with latexmk
-watch: $(OUTPUT_DIR)
+watch:
 	@echo "Starting continuous build (watch mode)..."
 	@echo "Press Ctrl+C to stop"
-	latexmk -pdf -pvc -outdir=$(OUTPUT_DIR) $(MAIN_TEX)
-
-# Create build directory
-$(OUTPUT_DIR):
 	@mkdir -p $(OUTPUT_DIR)
+	latexmk -pdf -pvc -outdir=$(OUTPUT_DIR) $(MAIN_TEX)
 
 # Clean build artifacts
 clean:
