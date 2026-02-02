@@ -1,0 +1,316 @@
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{AR 95--1, Paragraph D--10: Nonstandard small unmanned aircraft systems with a non-tactical mission (22 March 2018).}}{4}{section*.3}%
+\contentsline {replaced}{Replaced~(claude): \truncate {\Changestruncatewidth }{nameref{sec:qual-ao}}}{9}{section*.5}%
+\contentsline {replaced}{Replaced~(claude): \truncate {\Changestruncatewidth }{nameref{sec:qual-qp}}}{9}{section*.6}%
+\contentsline {replaced}{Replaced~(claude): \truncate {\Changestruncatewidth }{liftoff}}{10}{section*.7}%
+\contentsline {replaced}{Replaced~(claude): \truncate {\Changestruncatewidth }{nameref{sec:qual-ao}}}{10}{section*.8}%
+\contentsline {replaced}{Replaced~(claude): \truncate {\Changestruncatewidth }{nameref{sec:qual-qp}}}{10}{section*.9}%
+\contentsline {replaced}{Replaced~(claude): \truncate {\Changestruncatewidth }{cref{ch:certification}}}{11}{section*.10}%
+\contentsline {replaced}{Replaced~(claude): \truncate {\Changestruncatewidth }{label{section:systemspecs}}}{12}{section*.11}%
+\contentsline {replaced}{Replaced~(claude): \truncate {\Changestruncatewidth }{nameref{sec:qual-ao}}}{14}{section*.12}%
+\contentsline {replaced}{Replaced~(claude): \truncate {\Changestruncatewidth }{nameref{sec:qual-qp}}}{14}{section*.13}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{This chapter establishes flight operations procedures for \projectmars {} \pdftooltip {\oldac {suas}}{\acl {suas}} operations conducted from \pdftooltip {\oldac {kach}}{\acl {kach}} across the \pdftooltip {\oldac {wp}}{\acl {wp}} Garrison. Operations are conducted under both \pdftooltip {\oldac {faa}}{\acl {faa}} Part 107 with \pdftooltip {\oldac {coa}}{\acl {coa}} and \pdftooltip {\oldac {dod}}{\acl {dod}}/Army regulations. This chapter addresses both \pdftooltip {\oldac {vlos}}{\acl {vlos}} operations (used during development, testing, and training) and \pdftooltip {\oldac {bvlos}}{\acl {bvlos}} operations (used during routine autonomous delivery missions).}}{16}{section*.14}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{The \pdftooltip {\oldac {gcs}}{\acl {gcs}} will be positioned to provide optimal telemetry reception and, for \pdftooltip {\oldac {vlos}}{\acl {vlos}} operations, direct line of sight to the \pdftooltip {\oldac {lz}}{\acl {lz}} and initial flight path. The \nameref {role:rpic} will verify:}}{16}{section*.15}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{\pdftooltip {\oldac {gcs}}{\acl {gcs}} is powered and all telemetry links are established}}{16}{section*.16}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{Antenna orientation is correct for the planned flight path}}{16}{section*.17}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{All software applications are running and displaying current data}}{16}{section*.18}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{Backup power is available for extended operations}}{16}{section*.19}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{All \projectmars {} flights require coordination with multiple agencies and must be scheduled in advance through the established process.}}{17}{section*.20}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{Prior to flight operations, the following coordination will be completed:}}{17}{section*.21}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{The \nameref {role:projectncoic} will coordinate with 2nd Aviation Detachment for airspace deconfliction no later than three hours prior to flight. 2nd Aviation will be notified within 15 minutes of flight completion.}}{17}{section*.22}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{The \nameref {role:projectncoic} will consult with \pdftooltip {\oldac {usma}}{\acl {usma}} \pdftooltip {\oldac {g3}}{\acl {g3}} during weekly mission planning to ensure flight operations do not conflict with installation activities.}}{17}{section*.23}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{A structured briefing process ensures all personnel understand mission requirements, hazards, and contingency procedures.}}{17}{section*.24}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{A mission brief will be conducted the day before scheduled flights. For \pdftooltip {\oldac {vlos}}{\acl {vlos}} developmental flights, the brief will be conducted by the \nameref {role:leadoperator} or designated \pdftooltip {\oldac {rpic}}{\acl {rpic}}. The mission brief will include:}}{18}{section*.25}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{Mission objectives and planned routes}}{18}{section*.26}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{Weather forecast and go/no-go criteria}}{18}{section*.27}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{Crew assignments and responsibilities}}{18}{section*.28}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{Aircraft and equipment assignments}}{18}{section*.29}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{Communication procedures and frequencies}}{18}{section*.30}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{Emergency procedures and \acp {saa}}}{18}{section*.31}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{Known hazards and mitigations}}{18}{section*.32}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{On the day of flight, the \pdftooltip {\oldac {rpic}}{\acl {rpic}} will conduct a crew brief immediately prior to operations. The crew brief will confirm:}}{18}{section*.33}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{Current weather conditions meet minimums}}{18}{section*.34}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{All crewmembers understand their roles}}{18}{section*.35}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{Emergency procedures are understood}}{18}{section*.36}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{Communication checks are complete}}{18}{section*.37}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{Any changes from the mission brief}}{18}{section*.38}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{\pdftooltip {\oldac {crm}}{\acl {crm}} will be conducted in accordance with DA Pamphlet 385-30 using DA Form 7566. The \nameref {role:projectncoic} will ensure a current \pdftooltip {\oldac {crm}}{\acl {crm}} assessment exists for each flight profile. The \pdftooltip {\oldac {crm}}{\acl {crm}} will:}}{18}{section*.39}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{Identify hazards specific to the planned operation}}{18}{section*.40}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{Assess initial risk levels}}{18}{section*.41}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{Develop controls and mitigations}}{18}{section*.42}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{Determine residual risk}}{18}{section*.43}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{Obtain appropriate risk acceptance authority signature}}{18}{section*.44}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{The \pdftooltip {\oldac {raa}}{\acl {raa}} for \projectmars {} operations is established in \cref {ch:safety}. The \pdftooltip {\oldac {rpic}}{\acl {rpic}} will review the applicable \pdftooltip {\oldac {crm}}{\acl {crm}} assessment prior to each flight and verify all controls remain in place.}}{18}{section*.45}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{\projectmars {} operations will comply with \pdftooltip {\oldac {faa}}{\acl {faa}} Part 107 weather minimums unless more restrictive limits are specified in the applicable \pdftooltip {\oldac {coa}}{\acl {coa}} or this \pdftooltip {\oldac {sop}}{\acl {sop}}.}}{19}{section*.46}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{The following weather minimums apply to all \projectmars {} flight operations:}}{19}{section*.47}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{Visibility: 3 statute miles minimum}}{19}{section*.48}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{Cloud clearance: 500 feet below clouds, 2000 feet horizontal from clouds}}{19}{section*.49}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{Maximum altitude: 400 feet \pdftooltip {\oldac {agl}}{\acl {agl}}}}{19}{section*.50}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{Daylight operations only (civil twilight to civil twilight)}}{19}{section*.51}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{Operations during civil twilight require the \pdftooltip {\oldac {suas}}{\acl {suas}} to be equipped with anti-collision lights visible for at least 3 statute miles.}}{19}{section*.52}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{In addition to weather minimums, the following conditions constitute automatic no-go criteria:}}{19}{section*.53}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{Sustained winds exceeding aircraft limitations}}{19}{section*.54}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{Gusts exceeding aircraft limitations}}{19}{section*.55}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{Precipitation (rain, snow, sleet)}}{19}{section*.56}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{Lightning within 10 nautical miles}}{19}{section*.57}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{Icing conditions}}{19}{section*.58}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{\pdftooltip {\oldac {wp}}{\acl {wp}} \pdftooltip {\oldac {fpcon}}{\acl {fpcon}} at CHARLIE or DELTA}}{19}{section*.59}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{Weather decisions follow a tiered approval chain:}}{19}{section*.60}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{The \pdftooltip {\oldac {rpic}}{\acl {rpic}} is responsible for evaluating current conditions and making the initial weather determination.}}{19}{section*.61}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{The \nameref {role:projectncoic} will approve weather-related go/no-go decisions for routine operations.}}{19}{section*.62}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{The \nameref {role:projectoic} will provide final sign-off on weather decisions that involve marginal conditions or deviation from standard procedures.}}{19}{section*.63}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{If weather conditions deteriorate during operations, the \pdftooltip {\oldac {rpic}}{\acl {rpic}} will:}}{19}{section*.64}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{Immediately assess whether to continue, hold, or abort the mission}}{19}{section*.65}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{For deteriorating but still acceptable conditions: continue with increased monitoring}}{19}{section*.66}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{For marginal conditions: place the mission on weather hold and await improvement}}{19}{section*.67}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{For conditions below minimums or approaching rapidly: execute immediate recovery or abort}}{19}{section*.68}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{Emergency weather procedures are detailed in \cref {ssec:ep-weather}.}}{19}{section*.69}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{Effective crew coordination is essential for safe flight operations. Crew composition and responsibilities differ between \pdftooltip {\oldac {vlos}}{\acl {vlos}} developmental operations and \pdftooltip {\oldac {bvlos}}{\acl {bvlos}} autonomous operations.}}{19}{section*.70}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{\pdftooltip {\oldac {vlos}}{\acl {vlos}} operations typically involve 3-5 personnel for route assessment, development, and validation flights:}}{20}{section*.71}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{Responsible for overall flight safety and aircraft control. Maintains authority over all flight decisions.}}{20}{section*.72}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{Maintain visual contact with the aircraft and provide situational awareness to the \pdftooltip {\oldac {rpic}}{\acl {rpic}}. Multiple \nameref {role:visualobserver}s may be positioned along the route to maintain continuous visual contact.}}{20}{section*.73}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{Additional personnel positioned along the route to observe aircraft performance, identify hazards, and validate route suitability. Ground observers will have direct communication with the \pdftooltip {\oldac {rpic}}{\acl {rpic}}.}}{20}{section*.74}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{\pdftooltip {\oldac {bvlos}}{\acl {bvlos}} autonomous delivery operations require the following minimum crew:}}{20}{section*.75}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{Located at \pdftooltip {\oldac {kach}}{\acl {kach}}, responsible for pre-flight, launch, and monitoring during transit. Maintains authority to abort the mission.}}{20}{section*.76}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{Located at the destination \pdftooltip {\oldac {lz}}{\acl {lz}}, responsible for receiving the aircraft and confirming safe landing. The receiving pilot will be at minimum \pdftooltip {\oldac {ao}}{\acl {ao}} qualified and in direct communication with the launch \pdftooltip {\oldac {rpic}}{\acl {rpic}}.}}{20}{section*.77}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{All crewmembers will maintain communication throughout flight operations using approved methods (radio, telephone, or other means as specified in the mission brief). Standard communication calls include:}}{20}{section*.78}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{``Ready for launch'' -- \pdftooltip {\oldac {rpic}}{\acl {rpic}} confirms all pre-flight complete}}{20}{section*.79}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{``Launching'' -- Aircraft is taking off}}{20}{section*.80}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{``Aircraft in sight'' -- \nameref {role:visualobserver}/Ground Observer confirms visual contact}}{20}{section*.81}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{``Lost visual'' -- \nameref {role:visualobserver} has lost sight of aircraft}}{20}{section*.82}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{``Approaching [waypoint]'' -- Position report during autonomous flight}}{20}{section*.83}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{``On final'' -- Aircraft on approach to \pdftooltip {\oldac {lz}}{\acl {lz}}}}{20}{section*.84}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{``Touchdown'' -- Aircraft has landed}}{20}{section*.85}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{``Secured'' -- Aircraft is powered down and safe}}{20}{section*.86}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{For \pdftooltip {\oldac {bvlos}}{\acl {bvlos}} operations, control authority handoff between launch \pdftooltip {\oldac {rpic}}{\acl {rpic}} and receiving pilot will be conducted as follows:}}{20}{section*.87}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{Launch \pdftooltip {\oldac {rpic}}{\acl {rpic}} maintains authority throughout transit}}{20}{section*.88}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{When aircraft enters visual range of destination, receiving pilot confirms ``Aircraft in sight''}}{20}{section*.89}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{Launch \pdftooltip {\oldac {rpic}}{\acl {rpic}} may transfer landing authority to receiving pilot if situation requires}}{20}{section*.90}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{Transfer of authority will be verbally confirmed by both pilots}}{20}{section*.91}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{After landing, receiving pilot assumes responsibility for aircraft security}}{20}{section*.92}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{\projectmars {} conducts several types of flight operations, each with distinct procedures and crew requirements.}}{20}{section*.93}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{Routine scheduled delivery missions are \pdftooltip {\oldac {bvlos}}{\acl {bvlos}} autonomous flights conducted on pre-validated routes. These missions:}}{21}{section*.94}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{Follow routes that have been previously surveyed and approved during developmental testing}}{21}{section*.95}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{Are scheduled through the weekly planning process}}{21}{section*.96}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{Require minimum crew of launch \pdftooltip {\oldac {rpic}}{\acl {rpic}} and receiving pilot}}{21}{section*.97}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{Follow pre-programmed flight paths with minimal deviation}}{21}{section*.98}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{Mission brief completed day prior}}{21}{section*.99}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{Crew brief conducted morning of flight}}{21}{section*.100}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{Pre-flight inspection and payload loading per \cref {ssec:preflight}}}{21}{section*.101}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{Launch per approved procedures}}{21}{section*.102}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{\pdftooltip {\oldac {rpic}}{\acl {rpic}} monitors telemetry throughout transit}}{21}{section*.103}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{Receiving pilot confirms approach and landing}}{21}{section*.104}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{Post-flight documentation completed}}{21}{section*.105}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{On-demand and emergency response delivery operations are not within the current scope of \projectmars {}. Procedures for these operations will be developed as the program matures and expands beyond the developmental phase.}}{21}{section*.106}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{\pdftooltip {\oldac {dte}}{\acl {dte}} flights are conducted under \pdftooltip {\oldac {vlos}}{\acl {vlos}} conditions to survey routes, validate aircraft performance, and refine operational procedures. These flights:}}{21}{section*.107}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{Are the primary flight type during the developmental phase}}{21}{section*.108}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{Require full \pdftooltip {\oldac {vlos}}{\acl {vlos}} crew (3-5 personnel)}}{21}{section*.109}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{Allow the \pdftooltip {\oldac {rpic}}{\acl {rpic}} flexibility to adapt within a few dozen meters of the planned route}}{21}{section*.110}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{Generate data used to approve routes for future \pdftooltip {\oldac {bvlos}}{\acl {bvlos}} operations}}{21}{section*.111}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{Route survey and hazard identification}}{21}{section*.112}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{\pdftooltip {\oldac {crm}}{\acl {crm}} assessment specific to test objectives}}{21}{section*.113}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{Positioning of \nameref {role:visualobserver}s and ground observers along route}}{21}{section*.114}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{Incremental testing (low altitude, then full profile)}}{21}{section*.115}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{Documentation of route performance and any required modifications}}{21}{section*.116}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{Post-flight debrief and data collection}}{21}{section*.117}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{Training flights are conducted to qualify and maintain currency for \projectmars {} operators. Training flights require increased supervision and are restricted to approved training areas.}}{21}{section*.118}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{All training flights will:}}{22}{section*.119}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{Be supervised by a \pdftooltip {\oldac {qp}}{\acl {qp}} or higher qualified operator}}{22}{section*.120}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{Be conducted in designated training areas with minimal risk to non-participants}}{22}{section*.121}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{Follow the training requirements outlined in \cref {ch:certification}}}{22}{section*.122}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{Be documented in the trainee's qualification record}}{22}{section*.123}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{Risk management for training flights is addressed in \cref {ch:safety}.}}{22}{section*.124}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{Routes and air corridors for \projectmars {} operations are developed, validated, and managed through a structured process to ensure safe and repeatable operations.}}{22}{section*.125}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{New routes will be developed using the following process:}}{22}{section*.126}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{Ground survey of proposed route to identify obstacles, hazards, and suitable \acp {lz}}}{22}{section*.127}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{Identification of primary, alternate, and contingency routes for each destination}}{22}{section*.128}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{Designation of \acp {saa} along each route}}{22}{section*.129}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{\pdftooltip {\oldac {vlos}}{\acl {vlos}} test flights to validate route suitability}}{22}{section*.130}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{Documentation and approval of route for operational use}}{22}{section*.131}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{For each destination, the following routes will be established:}}{22}{section*.132}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{The preferred flight path under normal conditions. Selected for optimal efficiency while maintaining safety margins.}}{22}{section*.133}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{An alternative flight path available when the primary route is unavailable (e.g., due to conflicting activities or temporary obstacles).}}{22}{section*.134}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{A simplified route for use during degraded conditions or emergencies. Contingency routes prioritize safety and may include additional \acp {saa}.}}{22}{section*.135}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{Routes will be identified in the weekly mission brief and loaded into the autonomous flight plan prior to each mission.}}{22}{section*.136}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{\acp {saa} are pre-surveyed locations along each route where the aircraft can safely land in an emergency. Each route will have multiple \acp {saa} spaced to ensure the aircraft can always reach one if required.}}{22}{section*.137}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{\pdftooltip {\oldac {saa}}{\acl {saa}} locations will be:}}{22}{section*.138}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{Programmed as rally points in the autonomous flight plan}}{22}{section*.139}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{Clear of obstacles and away from populated areas}}{22}{section*.140}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{Accessible for aircraft recovery}}{22}{section*.141}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{Documented with coordinates and description}}{22}{section*.142}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{In the event of an anomaly requiring abort, the aircraft will navigate to the nearest \pdftooltip {\oldac {saa}}{\acl {saa}} and land. Lost link procedures are configured to direct the aircraft to the nearest \pdftooltip {\oldac {saa}}{\acl {saa}}.}}{23}{section*.143}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{All \pdftooltip {\oldac {bvlos}}{\acl {bvlos}} flights will operate within defined corridor boundaries enforced by geofencing. The geofence will:}}{23}{section*.144}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{Define lateral boundaries of the approved flight corridor}}{23}{section*.145}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{Enforce altitude limits in accordance with the \pdftooltip {\oldac {coa}}{\acl {coa}}}}{23}{section*.146}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{Trigger alerts if the aircraft approaches boundaries}}{23}{section*.147}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{Initiate automatic abort procedures if boundaries are breached}}{23}{section*.148}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{For \pdftooltip {\oldac {vlos}}{\acl {vlos}} operations, the \pdftooltip {\oldac {rpic}}{\acl {rpic}} may adjust within a few dozen meters of the planned route as needed for safety or mission accomplishment, but will remain within the overall approved operating area.}}{23}{section*.149}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{All \projectmars {} flight operations require planning and approval through the established cycle. Different types of operations require different levels of approval.}}{23}{section*.150}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{The following table summarizes approval authorities for \projectmars {} operations:}}{23}{section*.151}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{Overall Operational Risk}}{23}{section*.152}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{\nameref {role:hospitalcommander}}}{23}{section*.153}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{--}}{23}{section*.154}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{Airspace Authorization}}{23}{section*.155}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{\pdftooltip {\oldac {faa}}{\acl {faa}} via \pdftooltip {\oldac {usaasa}}{\acl {usaasa}}}}{23}{section*.156}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{--}}{23}{section*.157}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{Ground Operations Authority}}{23}{section*.158}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{\pdftooltip {\oldac {wp}}{\acl {wp}} Garrison Commander}}{23}{section*.159}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{\pdftooltip {\oldac {smc}}{\acl {smc}}}}{23}{section*.160}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{Weekly Flight Schedule}}{23}{section*.161}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{\nameref {role:projectoic}}}{23}{section*.162}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{\pdftooltip {\oldac {usma}}{\acl {usma}} \pdftooltip {\oldac {g3}}{\acl {g3}}, 2nd AVN}}{23}{section*.163}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{Weather Go/No-Go}}{23}{section*.164}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{\nameref {role:projectoic}}}{23}{section*.165}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{\nameref {role:projectncoic}}}{23}{section*.166}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{Equipment Airworthiness}}{23}{section*.167}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{\pdftooltip {\oldac {rpic}}{\acl {rpic}}}}{23}{section*.168}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{\nameref {role:technicallead}}}{23}{section*.169}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{Final Launch Authority}}{23}{section*.170}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{\pdftooltip {\oldac {rpic}}{\acl {rpic}}}}{23}{section*.171}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{Flight crew, \pdftooltip {\oldac {wp}}{\acl {wp}} \pdftooltip {\oldac {des}}{\acl {des}}}}{23}{section*.172}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{The weekly planning cycle proceeds as follows:}}{23}{section*.173}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{\textbf {Week -2:} \nameref {role:projectncoic} drafts preliminary schedule}}{23}{section*.174}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{\textbf {Week -1:} Weekly leadership meeting reviews and approves schedule; \nameref {role:projectncoic} coordinates with \pdftooltip {\oldac {usma}}{\acl {usma}} \pdftooltip {\oldac {g3}}{\acl {g3}} and 2nd AVN}}{23}{section*.175}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{\textbf {Week -1:} \pdftooltip {\oldac {notam}}{\acl {notam}}s submitted for publication}}{23}{section*.176}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{\textbf {Day -1:} Mission brief conducted}}{23}{section*.177}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{\textbf {Day 0:} Crew brief, pre-flight, and flight execution}}{23}{section*.178}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{Certain mission types require additional approvals:}}{23}{section*.179}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{Flights over non-pre-established routes require \pdftooltip {\oldac {usma}}{\acl {usma}} \pdftooltip {\oldac {g3}}{\acl {g3}} coordination at least 5 working days prior}}{23}{section*.180}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{Night operations or operations over people require \pdftooltip {\oldac {smc}}{\acl {smc}} approval and additional \pdftooltip {\oldac {faa}}{\acl {faa}} waivers}}{23}{section*.181}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{Flights in areas requiring Range Facility Management System (RFMIS) reservation require \pdftooltip {\oldac {dptms}}{\acl {dptms}} approval}}{24}{section*.182}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{This section establishes standardized procedures for all phases of flight. Personnel will follow these procedures unless deviation is required for safety of flight.}}{24}{section*.183}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{The following pre-flight procedures will be completed before every flight:}}{24}{section*.184}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{The \pdftooltip {\oldac {rpic}}{\acl {rpic}} will verify:}}{24}{section*.185}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{Current \pdftooltip {\oldac {awr}}{\acl {awr}} on file for the aircraft}}{24}{section*.186}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{\pdftooltip {\oldac {notam}}{\acl {notam}} is published and active}}{24}{section*.187}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{No \acp {tfr} or other airspace restrictions affect the flight}}{24}{section*.188}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{\pdftooltip {\oldac {crm}}{\acl {crm}} assessment is current and controls are in place}}{24}{section*.189}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{The \pdftooltip {\oldac {rpic}}{\acl {rpic}} or designated crewmember will:}}{24}{section*.190}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{Contact 2nd AVN for airspace deconfliction (NLT 3 hours prior)}}{24}{section*.191}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{Notify \pdftooltip {\oldac {wp}}{\acl {wp}} \pdftooltip {\oldac {des}}{\acl {des}} (NLT 10 minutes prior)}}{24}{section*.192}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{Confirm receiving crewmember is in position (if \pdftooltip {\oldac {bvlos}}{\acl {bvlos}})}}{24}{section*.193}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{The \pdftooltip {\oldac {rpic}}{\acl {rpic}} will inspect:}}{24}{section*.194}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{Airframe integrity (no visible damage, all components secure)}}{24}{section*.195}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{Propellers (no nicks, cracks, or damage)}}{24}{section*.196}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{Battery charge and condition}}{24}{section*.197}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{Control surfaces and motors (free movement, secure mounting)}}{24}{section*.198}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{Sensors and cameras (clean and unobstructed)}}{24}{section*.199}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{Payload attachment and security}}{24}{section*.200}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{The \pdftooltip {\oldac {rpic}}{\acl {rpic}} will verify:}}{24}{section*.201}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{Telemetry link established}}{24}{section*.202}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{\pdftooltip {\oldac {gps}}{\acl {gps}} signal acquired (sufficient satellites)}}{24}{section*.203}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{Flight plan loaded correctly}}{24}{section*.204}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{Geofence parameters set}}{24}{section*.205}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{Failsafe protocols configured (\pdftooltip {\oldac {rth}}{\acl {rth}}, lost link, low battery)}}{24}{section*.206}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{\acp {saa} programmed as rally points}}{24}{section*.207}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{Conduct final crew brief per \cref {ssec:crewbrief}.}}{24}{section*.208}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{Upon completion of pre-flight and crew brief:}}{24}{section*.209}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{\pdftooltip {\oldac {rpic}}{\acl {rpic}} announces ``Ready for launch'' and confirms \pdftooltip {\oldac {lz}}{\acl {lz}} is clear}}{24}{section*.210}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{\nameref {role:visualobserver}s confirm ready status}}{25}{section*.211}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{\pdftooltip {\oldac {rpic}}{\acl {rpic}} initiates launch sequence}}{25}{section*.212}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{Aircraft climbs to designated altitude and holds for system check}}{25}{section*.213}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{\pdftooltip {\oldac {rpic}}{\acl {rpic}} verifies all systems nominal, then proceeds with mission}}{25}{section*.214}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{During flight, the \pdftooltip {\oldac {rpic}}{\acl {rpic}} will:}}{25}{section*.215}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{Maintain awareness of aircraft position relative to planned route}}{25}{section*.216}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{Monitor telemetry for any anomalies}}{25}{section*.217}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{Respond to \nameref {role:visualobserver} calls regarding aircraft position or hazards}}{25}{section*.218}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{Make route adjustments as needed within approved parameters}}{25}{section*.219}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{If conditions warrant:}}{25}{section*.220}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{For minor anomalies: continue with increased monitoring}}{25}{section*.221}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{For degraded conditions: execute return to launch or nearest \pdftooltip {\oldac {saa}}{\acl {saa}}}}{25}{section*.222}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{For emergencies: follow procedures in \cref {ch:safety}}}{25}{section*.223}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{Upon completion of pre-flight and crew brief:}}{25}{section*.224}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{Launch \pdftooltip {\oldac {rpic}}{\acl {rpic}} confirms receiving pilot is in position and ready}}{25}{section*.225}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{\pdftooltip {\oldac {rpic}}{\acl {rpic}} announces ``Ready for launch'' and confirms \pdftooltip {\oldac {lz}}{\acl {lz}} is clear}}{25}{section*.226}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{\pdftooltip {\oldac {rpic}}{\acl {rpic}} initiates autonomous launch sequence}}{25}{section*.227}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{Aircraft climbs and proceeds on programmed route}}{25}{section*.228}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{During autonomous transit:}}{25}{section*.229}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{\pdftooltip {\oldac {rpic}}{\acl {rpic}} monitors telemetry continuously}}{25}{section*.230}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{Position reports are called at designated waypoints}}{25}{section*.231}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{Receiving pilot monitors for approaching aircraft}}{25}{section*.232}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{Receiving pilot confirms ``Aircraft in sight'' when visual contact established}}{25}{section*.233}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{\pdftooltip {\oldac {rpic}}{\acl {rpic}} monitors approach via telemetry}}{25}{section*.234}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{Aircraft executes autonomous landing}}{25}{section*.235}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{Receiving pilot confirms ``Touchdown'' and ``Secured''}}{25}{section*.236}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{The \pdftooltip {\oldac {rpic}}{\acl {rpic}} will abort the mission and direct the aircraft to the nearest \pdftooltip {\oldac {saa}}{\acl {saa}} if:}}{25}{section*.237}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{Telemetry indicates system anomaly}}{25}{section*.238}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{Weather conditions deteriorate below minimums}}{25}{section*.239}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{Lost link exceeds configured timeout}}{25}{section*.240}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{Receiving pilot is unable to receive the aircraft}}{25}{section*.241}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{Any crewmember calls ``Knock it off''}}{25}{section*.242}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{Following every flight, the following procedures will be completed:}}{25}{section*.243}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{Power down aircraft per manufacturer procedures}}{26}{section*.244}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{Remove and secure battery}}{26}{section*.245}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{Conduct post-flight inspection for damage}}{26}{section*.246}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{Secure payload and aircraft for transport/storage}}{26}{section*.247}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{Notify 2nd AVN of flight completion (within 15 minutes)}}{26}{section*.248}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{Notify \pdftooltip {\oldac {wp}}{\acl {wp}} \pdftooltip {\oldac {des}}{\acl {des}} of flight completion (within 15 minutes)}}{26}{section*.249}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{Report mission status to \nameref {role:projectncoic}}}{26}{section*.250}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{Complete flight log entry}}{26}{section*.251}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{Document any anomalies, discrepancies, or maintenance issues}}{26}{section*.252}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{Download and archive telemetry data (if required)}}{26}{section*.253}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{Update aircraft logbook}}{26}{section*.254}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{Proper documentation of flight operations supports program analysis, safety reviews, and potential expansion to other installations.}}{26}{section*.255}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{The following information will be recorded for every flight:}}{26}{section*.256}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{Date and time of flight (takeoff and landing)}}{26}{section*.257}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{Aircraft identification}}{26}{section*.258}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{\pdftooltip {\oldac {rpic}}{\acl {rpic}} and crewmember names}}{26}{section*.259}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{Mission type and route flown}}{26}{section*.260}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{Payload description and weight}}{26}{section*.261}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{Weather conditions}}{26}{section*.262}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{Flight duration}}{26}{section*.263}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{Any anomalies, deviations, or incidents}}{26}{section*.264}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{The following telemetry data capture is recommended but not required:}}{26}{section*.265}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{\pdftooltip {\oldac {gps}}{\acl {gps}} track (position, altitude, speed)}}{26}{section*.266}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{Battery voltage and current draw}}{26}{section*.267}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{Motor performance data}}{26}{section*.268}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{Link quality metrics}}{26}{section*.269}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{Telemetry data supports troubleshooting, route optimization, and program analysis for potential expansion.}}{26}{section*.270}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{Flight logs and associated documentation will be retained in accordance with Army record retention requirements. At minimum:}}{27}{section*.271}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{Flight logs: retained for the duration of the program plus 3 years}}{27}{section*.272}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{Aircraft logbooks: retained for the service life of the aircraft}}{27}{section*.273}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{Incident/mishap reports: retained per DA Pamphlet 385-40}}{27}{section*.274}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{Any anomaly, incident, or mishap will be documented in addition to the standard flight log. Incident documentation will include:}}{27}{section*.275}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{Detailed narrative of the event}}{27}{section*.276}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{Contributing factors identified}}{27}{section*.277}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{Actions taken in response}}{27}{section*.278}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{Recommendations for prevention}}{27}{section*.279}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{Incident reporting requirements are detailed in \cref {sec:accidentreporting}.}}{27}{section*.280}%
+\contentsline {replaced}{Replaced~(claude): \truncate {\Changestruncatewidth }{sUAS}}{29}{section*.281}%
+\contentsline {replaced}{Replaced~(claude): \truncate {\Changestruncatewidth }{crew members}}{34}{section*.282}%
+\contentsline {replaced}{Replaced~(claude): \truncate {\Changestruncatewidth }{crew members}}{38}{section*.283}%
+\contentsline {replaced}{Replaced~(claude): \truncate {\Changestruncatewidth }{landing zone}}{38}{section*.284}%
+\contentsline {replaced}{Replaced~(claude): \truncate {\Changestruncatewidth }{crew member}}{38}{section*.285}%
+\contentsline {replaced}{Replaced~(claude): \truncate {\Changestruncatewidth }{landing zone}}{38}{section*.286}%
+\contentsline {replaced}{Replaced~(claude): \truncate {\Changestruncatewidth }{lift off}}{39}{section*.287}%
+\contentsline {replaced}{Replaced~(claude): \truncate {\Changestruncatewidth }{crew members}}{39}{section*.288}%
+\contentsline {replaced}{Replaced~(claude): \truncate {\Changestruncatewidth }{landing zone}}{39}{section*.289}%
+\contentsline {replaced}{Replaced~(claude): \truncate {\Changestruncatewidth }{crew member's}}{40}{section*.290}%
+\contentsline {replaced}{Replaced~(claude): \truncate {\Changestruncatewidth }{crew members}}{41}{section*.291}%
+\contentsline {replaced}{Replaced~(claude): \truncate {\Changestruncatewidth }{landing zone}}{43}{section*.292}%
+\contentsline {replaced}{Replaced~(claude): \truncate {\Changestruncatewidth }{return-to-home}}{44}{section*.293}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{\textit {Memorandum from the Secretary of Defense, ``Unleashing U.S.\ Military Drone Dominance''} (10 July 2025, signed by the Secretary of Defense) directs the rapid proliferation of Group~1 and Group~2 \pdftooltip {\oldac {suas}}{\acl {suas}} across all \pdftooltip {\oldac {dod}}{\acl {dod}} units. Issued in support of Executive Order 14307 (``Unleashing American Drone Dominance,'' 6 June 2025), it rescinds the 2021 \pdftooltip {\oldac {dod}}{\acl {dod}} guidance implementing \pdftooltip {\oldac {ndaa}}{\acl {ndaa}} FY2020 {\S }848 and the 2022 Blue \pdftooltip {\oldac {suas}}{\acl {suas}} exception-to-policy memorandum, replacing both with streamlined authorities and procurement directives.}}{49}{section*.294}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{Key provisions relevant to this SOP include:}}{49}{section*.295}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{\textbf {Delegated Authority to O-6 Commanders:} O-6 commanders or equivalents may grant authority to operate (ATO) and may procure, test, and train with small \pdftooltip {\oldac {uas}}{\acl {uas}} compliant with statutory limitations. This authority may not be further delegated. This delegation informed the SOP's approval and command authority framework.}}{49}{section*.296}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{\textbf {Blue List Compliance:} All \pdftooltip {\oldac {uas}}{\acl {uas}} must comply with the Blue List maintained by the \pdftooltip {\oldac {diu}}{\acl {diu}} (transferring to \pdftooltip {\oldac {dcma}}{\acl {dcma}} by January 2026), which catalogues \pdftooltip {\oldac {dod}}{\acl {dod}}-approved \pdftooltip {\oldac {uas}}{\acl {uas}}, components, and software. The SOP's procurement and vetting procedures align with Blue List requirements.}}{49}{section*.297}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{\textbf {Cybersecurity --- Closed-Loop Networks:} All small \pdftooltip {\oldac {uas}}{\acl {uas}} must remain in closed-loop cyber networks, cordoned from \pdftooltip {\oldac {dod}}{\acl {dod}} networks. This requirement reinforced the SOP's cybersecurity and data-handling provisions.}}{49}{section*.298}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{\textbf {Airworthiness and Material Release Exemptions:} The Secretaries of the Military Departments shall determine airworthiness and material release requirements, exempting Group~1 and Group~2 \pdftooltip {\oldac {uas}}{\acl {uas}} with few exceptions. This exemption shaped the SOP's streamlined airworthiness approach for small \pdftooltip {\oldac {uas}}{\acl {uas}}.}}{49}{section*.299}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{\textbf {Training Delegation:} Group~1--2 \pdftooltip {\oldac {uas}}{\acl {uas}} operator training and qualifications are delegated to the Military Departments with minimal additional medical standards. \pdftooltip {\oldac {dod}}{\acl {dod}} entities outside the Military Departments shall adhere to standards prescribed by the Secretary of the Army. This delegation underpins the SOP's operator certification and medical standards.}}{49}{section*.300}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{\textbf {Covered Foreign Entity Restrictions:} The memo reaffirms \pdftooltip {\oldac {ndaa}}{\acl {ndaa}} FY2020 {\S }848, FY2023 {\S }817, and the American Security Drone Act (FY2024 {\S \S }1821--1825), permitting only limited procurement from covered foreign entities for research, training, testing, electronic warfare analysis, or counter-\pdftooltip {\oldac {uas}}{\acl {uas}} development. These statutory constraints informed the SOP's procurement restrictions and cybersecurity risk-mitigation procedures.}}{49}{section*.301}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{\textbf {Installation Commander Responsibilities:} Installation commanders will integrate drones against their unique installation restrictions, working with the \pdftooltip {\oldac {faa}}{\acl {faa}} to remove inappropriate range restrictions and expand spectrum approval. This directive informed the SOP's airspace coordination and installation-specific operating area provisions.}}{49}{section*.302}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{\textbf {Consumable Classification:} Group~1 and Group~2 \pdftooltip {\oldac {uas}}{\acl {uas}} will be accounted for as consumable commodities, not durable property. This classification influenced the SOP's property accountability and logistics procedures.}}{49}{section*.303}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{\textit {Army Regulation 95--1, Flight Regulations} (22 March 2018), Appendix~D, establishes regulatory guidance for Group~1 \pdftooltip {\oldac {suas}}{\acl {suas}} (0.55--20\,lbs) operated by personnel other than \pdftooltip {\oldac {mos}}{\acl {mos}}-qualified unmanned aircraft operators. Appendix~D is the primary Army regulatory authority governing \pdftooltip {\oldac {suas}}{\acl {suas}} training, qualification, currency, airspace usage, and crew requirements.}}{49}{section*.304}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{Key provisions drawn upon in this SOP include:}}{49}{section*.305}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{\textbf {Personnel Eligibility ({\S }D--2):} Authorized \pdftooltip {\oldac {suas}}{\acl {suas}} operators include Regular Army, \pdftooltip {\oldac {usar}}{\acl {usar}}, \pdftooltip {\oldac {arng}}{\acl {arng}}, and Army civilian employees who meet qualification, training, evaluation, and currency requirements and the medical standard of AR~40--501 (without a Class~IV physical). Government contractors require written authorization from the owning \pdftooltip {\oldac {acom}}{\acl {acom}}/\pdftooltip {\oldac {ascc}}{\acl {ascc}}/\pdftooltip {\oldac {dru}}{\acl {dru}}/\pdftooltip {\oldac {arng}}{\acl {arng}}. These eligibility criteria informed the SOP's operator qualification requirements.}}{50}{section*.306}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{\textbf {Training Program and Currency ({\S \S }D--3, D--4):} The \pdftooltip {\oldac {suas}}{\acl {suas}} \pdftooltip {\oldac {atp}}{\acl {atp}} and currency requirements follow the appropriate \pdftooltip {\oldac {mtl}}{\acl {mtl}}. Lapsed currency requires a \pdftooltip {\oldac {pfe}}{\acl {pfe}}; simulators may not reestablish currency. These requirements informed the SOP's training and currency framework (subject to the D--10 exemption discussed below).}}{50}{section*.307}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{\textbf {Airspace Usage ({\S }D--7):} \pdftooltip {\oldac {suas}}{\acl {suas}} operations comply with paragraph~2--11 of AR~95--1 and applicable \pdftooltip {\oldac {faa}}{\acl {faa}} orders. \pdftooltip {\oldac {dod}}{\acl {dod}} \pdftooltip {\oldac {suas}}{\acl {suas}} weighing 0.55--20\,lbs may operate in Class~G airspace below 1,200\,ft \pdftooltip {\oldac {agl}}{\acl {agl}} within \pdftooltip {\oldac {vlos}}{\acl {vlos}} of the operator or a certified observer, provided the \pdftooltip {\oldac {uas}}{\acl {uas}} remains more than 5\,miles from any civil airport or heliport. \pdftooltip {\oldac {notam}}{\acl {notam}} publication is required no later than 24~hours in advance for non-recurring operations; standing ``blanket'' \pdftooltip {\oldac {notam}}{\acl {notam}}s are prohibited. These airspace provisions directly shaped the SOP's default operating conditions and \pdftooltip {\oldac {notam}}{\acl {notam}} procedures.}}{50}{section*.308}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{\textbf {Minimum Crew ({\S }D--8):} The minimum crew is one qualified operator unless the operator's manual specifies otherwise. This requirement informed the SOP's minimum crew composition.}}{50}{section*.309}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{\textbf {Certification of Operators and Master Trainers ({\S }D--9):} Master Trainers designated by the first O--6 in the chain of command certify new operators at home station. Qualification courses are conducted at \pdftooltip {\oldac {tradoc}}{\acl {tradoc}}-approved locations. These provisions informed the SOP's operator certification pathway (subject to the D--10 exemption discussed below).}}{50}{section*.310}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{\textbf {Nonstandard \pdftooltip {\oldac {suas}}{\acl {suas}} with a Non-Tactical Mission ({\S }D--10):} This paragraph is the foundational regulatory exemption for \projectmars {}. See discussion below.}}{50}{section*.311}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{Paragraph~D--10 of AR~95--1 is the single most important regulatory provision enabling \projectmars {}. It provides that Group~1 \pdftooltip {\oldac {uas}}{\acl {uas}} procured per Chapter~9 of AR~95--1 for non-tactical missions---explicitly including ``research and academic activities within Army research laboratories, RDECOM, military academies''---are \textbf {exempt from the qualification, evaluation, and currency requirements} of the regulation. The owning organization retains responsibility for safe operations and compliance with applicable \pdftooltip {\oldac {faa}}{\acl {faa}} circulars.}}{50}{section*.312}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{For \projectmars {}, this means:}}{50}{section*.313}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{\textbf {Exemption from AR~95--1 operator qualification, evaluation, and currency:} \pdftooltip {\oldac {usma}}{\acl {usma}} operators need not complete the \pdftooltip {\oldac {tradoc}}{\acl {tradoc}}-approved \pdftooltip {\oldac {suas}}{\acl {suas}} operator qualification course, semi-annual proficiency and readiness tests ({\S }D--5), or standard \pdftooltip {\oldac {atp}}{\acl {atp}} currency requirements ({\S }D--4). This exemption---reinforced by ALARACT~080/2024 and West Point Policy Memorandum MR-25-02 ({\S }5.c)---is the basis for the SOP's locally developed operator certification framework.}}{50}{section*.314}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{\textbf {Continued \pdftooltip {\oldac {faa}}{\acl {faa}} compliance:} The exemption does not relieve \pdftooltip {\oldac {usma}}{\acl {usma}} of \pdftooltip {\oldac {faa}}{\acl {faa}} obligations. Operators must still hold an \pdftooltip {\oldac {faa}}{\acl {faa}} Remote Pilot Certificate (14~CFR Part~107), register \pdftooltip {\oldac {suas}}{\acl {suas}} with the \pdftooltip {\oldac {faa}}{\acl {faa}}, and comply with all applicable \pdftooltip {\oldac {faa}}{\acl {faa}} airspace rules and waivers. The SOP's \pdftooltip {\oldac {faa}}{\acl {faa}} compliance requirements derive from this continued obligation.}}{50}{section*.315}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{\textbf {Safe operations responsibility:} \pdftooltip {\oldac {usma}}{\acl {usma}} as the owning organization bears full responsibility for establishing and enforcing safe operating procedures---which is the central purpose of this SOP.}}{50}{section*.316}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{\Cref {fig:ar95-1-d10} reproduces Paragraph~D--10 from AR~95--1 in its entirety.}}{50}{section*.317}%
+\contentsline {added}{Added~(claude): \truncate {\Changestruncatewidth }{AR 95--1, Paragraph D--10: Nonstandard small unmanned aircraft systems with a non-tactical mission (22 March 2018).}}{51}{section*.319}%
+\contentsline {replaced}{Replaced~(claude): \truncate {\Changestruncatewidth }{ref{ch:airspace}}}{61}{section*.320}%

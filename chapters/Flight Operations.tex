@@ -1,32 +1,603 @@
 \chapter{Flight Operations}
 \label{ch:flightops}
 
+\claudeadd{This chapter establishes flight operations procedures for \projectmars{} \ac{suas} operations conducted from \ac{kach} across the \ac{wp} Garrison. Operations are conducted under both \ac{faa} Part 107 with \ac{coa} and \ac{dod}/Army regulations. This chapter addresses both \ac{vlos} operations (used during development, testing, and training) and \ac{bvlos} operations (used during routine autonomous delivery missions).}
+
 \section{Ground Operations}\label{sec:groundops}
+
+Ground operations encompass all activities required to prepare, launch, recover, and secure \projectmars{} \ac{suas} and associated equipment.
+
+    \subsection{Launch and Landing Zone Setup}\label{ssec:lzsetup}
+
+        \subsubsection{Primary Launch Site} The primary launch site for \projectmars{} operations is \ac{kach}. The designated \ac{lz} will be established in accordance with the approved \ac{coa} and coordinated with hospital operations. The \ac{lz} will be:
+
+        \begin{itemize}
+            \item Clear of obstacles within a 15-meter radius of the launch/landing point
+            \item Marked or cordoned to prevent unauthorized personnel entry during operations
+            \item Positioned to provide adequate clearance for approach and departure routes
+            \item Accessible for \ac{gcs} setup with clear line of sight (for \ac{vlos} operations)
+        \end{itemize}
+
+        \subsubsection{Destination Landing Zones} Each destination \ac{lz} will be surveyed and approved prior to first use. Destination \acp{lz} serving \ac{usma} and \ac{usmaps} will be identified during route development and documented in mission planning materials. Each destination \ac{lz} will have:
+
+        \begin{itemize}
+            \item A designated point of contact for receiving operations
+            \item Clearly defined boundaries and approach corridors
+            \item Emergency contact information posted
+        \end{itemize}
+
+    \subsection{Ground Control Station Setup}\label{ssec:gcssetup}
+
+        \subsubsection{} \claudeadd{The \ac{gcs} will be positioned to provide optimal telemetry reception and, for \ac{vlos} operations, direct line of sight to the \ac{lz} and initial flight path. The \nameref{role:rpic} will verify:}
+
+        \begin{itemize}
+            \item \claudeadd{\ac{gcs} is powered and all telemetry links are established}
+            \item \claudeadd{Antenna orientation is correct for the planned flight path}
+            \item \claudeadd{All software applications are running and displaying current data}
+            \item \claudeadd{Backup power is available for extended operations}
+        \end{itemize}
+
+    \subsection{Payload Handling}\label{ssec:payloadhandling}
+
+        \subsubsection{} Medical supply payloads will be prepared and loaded in accordance with \cref{sec:approvedcargo} (/nameref{sec:approvedcargo}). Personnel handling payloads will:
+
+        \begin{itemize}
+            \item Verify payload weight does not exceed aircraft limits
+            \item Ensure payload is properly secured and will not shift during flight
+            \item Confirm payload does not interfere with aircraft sensors or control surfaces
+            \item Document payload serial number and weight in the flight log
+        \end{itemize}
+
+    \subsection{Site Security}\label{ssec:sitesecurity}
+
+        \subsubsection{} During flight operations, the \ac{lz} and \ac{gcs} location will be secured to prevent unauthorized access. At minimum, one crewmember will maintain situational awareness of the immediate area to identify and respond to ground hazards. For \ac{vlos} operations, \nameref{role:visualobserver}s will be positioned to maintain both aircraft observation and ground security awareness.
+
 \section{Flight Scheduling}\label{sec:flightscheduling}
+
+\claudeadd{All \projectmars{} flights require coordination with multiple agencies and must be scheduled in advance through the established process.}
+
+    \subsection{Weekly Scheduling Process}\label{ssec:weeklyschedule}
+
+        \subsubsection{} The \nameref{role:projectncoic} will develop a weekly flight schedule and present it at the weekly leadership meeting for approval by the \nameref{role:projectoic}. The schedule will:
+
+        \begin{itemize}
+            \item Draft a preliminary schedule for two weeks out  
+            \item Set the flight schedule for the following week
+            \item Identify required crew assignments and equipment for the following week
+            \item Note any special coordination requirements
+        \end{itemize}
+
+    \subsection{Required Coordination}\label{ssec:requiredcoord}
+
+        \subsubsection{} \claudeadd{Prior to flight operations, the following coordination will be completed:}
+
+            \paragraph{2nd Aviation Detachment} \claudeadd{The \nameref{role:projectncoic} will coordinate with 2nd Aviation Detachment for airspace deconfliction no later than three hours prior to flight. 2nd Aviation will be notified within 15 minutes of flight completion.}
+
+            \paragraph{\ac{usma} \ac{g3}} \claudeadd{The \nameref{role:projectncoic} will consult with \ac{usma} \ac{g3} during weekly mission planning to ensure flight operations do not conflict with installation activities.}
+
+            \paragraph{\ac{faa} \ac{notam}} A \ac{notam} will be published for all flight operations in accordance with \ac{coa} requirements; no later than 24 hours prior to flight. The \nameref{role:rpic} will verify \ac{notam} publication prior to flight.
+
+            \paragraph{\ac{wp} \ac{des}} The \ac{wp} \ac{des} Duty Desk (845-938-3333) will be notified no later than 10 minutes prior to flight operations and within 15 minutes of flight completion.
+
 \section{Briefings and Risk Management}\label{sec:Briefings}
+
+\claudeadd{A structured briefing process ensures all personnel understand mission requirements, hazards, and contingency procedures.}
+
+    \subsection{Weekly Leadership Brief}\label{ssec:weeklyleadershipbrief}
+
+        \subsubsection{} The \nameref{role:projectncoic} will conduct a weekly leadership briefing attended by the \nameref{role:projectoic}, \nameref{role:leadoperator}, and other stakeholders as appropriate. The briefing will cover:
+
+        \begin{itemize}
+            \item Review of previous week's operations and any lessons learned
+            \item Approval of the upcoming week's flight schedule
+            \item Discussion of any new hazards or risk mitigations
+            \item Equipment status and maintenance issues
+            \item Training and qualification updates
+        \end{itemize}
+
+    \subsection{Mission Brief}\label{ssec:missionbrief}
+
+        \subsubsection{} \claudeadd{A mission brief will be conducted the day before scheduled flights. For \ac{vlos} developmental flights, the brief will be conducted by the \nameref{role:leadoperator} or designated \ac{rpic}. The mission brief will include:}
+
+        \begin{itemize}
+            \item \claudeadd{Mission objectives and planned routes}
+            \item \claudeadd{Weather forecast and go/no-go criteria}
+            \item \claudeadd{Crew assignments and responsibilities}
+            \item \claudeadd{Aircraft and equipment assignments}
+            \item \claudeadd{Communication procedures and frequencies}
+            \item \claudeadd{Emergency procedures and \acp{saa}}
+            \item \claudeadd{Known hazards and mitigations}
+        \end{itemize}
+
+    \subsection{Crew Brief}\label{ssec:crewbrief}
+
+        \subsubsection{} \claudeadd{On the day of flight, the \ac{rpic} will conduct a crew brief immediately prior to operations. The crew brief will confirm:}
+
+        \begin{itemize}
+            \item \claudeadd{Current weather conditions meet minimums}
+            \item \claudeadd{All crewmembers understand their roles}
+            \item \claudeadd{Emergency procedures are understood}
+            \item \claudeadd{Communication checks are complete}
+            \item \claudeadd{Any changes from the mission brief}
+        \end{itemize}
+
+    \subsection{Composite Risk Management}\label{ssec:crm}
+
+        \subsubsection{} \claudeadd{\ac{crm} will be conducted in accordance with DA Pamphlet 385-30 using DA Form 7566. The \nameref{role:projectncoic} will ensure a current \ac{crm} assessment exists for each flight profile. The \ac{crm} will:}
+
+        \begin{itemize}
+            \item \claudeadd{Identify hazards specific to the planned operation}
+            \item \claudeadd{Assess initial risk levels}
+            \item \claudeadd{Develop controls and mitigations}
+            \item \claudeadd{Determine residual risk}
+            \item \claudeadd{Obtain appropriate risk acceptance authority signature}
+        \end{itemize}
+
+        \subsubsection{} \claudeadd{The \ac{raa} for \projectmars{} operations is established in \cref{ch:safety}. The \ac{rpic} will review the applicable \ac{crm} assessment prior to each flight and verify all controls remain in place.}
+
 \section{Weather Considerations}\label{sec:weather}
+
+\claudeadd{\projectmars{} operations will comply with \ac{faa} Part 107 weather minimums unless more restrictive limits are specified in the applicable \ac{coa} or this \ac{sop}.}
+
+    \subsection{Weather Minimums}\label{ssec:weathermins}
+
+        \subsubsection{} \claudeadd{The following weather minimums apply to all \projectmars{} flight operations:}
+
+        \begin{itemize}
+            \item \claudeadd{Visibility: 3 statute miles minimum}
+            \item \claudeadd{Cloud clearance: 500 feet below clouds, 2000 feet horizontal from clouds}
+            \item \claudeadd{Maximum altitude: 400 feet \ac{agl}}
+            \item \claudeadd{Daylight operations only (civil twilight to civil twilight)}
+        \end{itemize}
+
+        \subsubsection{} \claudeadd{Operations during civil twilight require the \ac{suas} to be equipped with anti-collision lights visible for at least 3 statute miles.}
+
+    \subsection{Go/No-Go Criteria}\label{ssec:gonogo}
+
+        \subsubsection{} \claudeadd{In addition to weather minimums, the following conditions constitute automatic no-go criteria:}
+
+        \begin{itemize}
+            \item \claudeadd{Sustained winds exceeding aircraft limitations}
+            \item \claudeadd{Gusts exceeding aircraft limitations}
+            \item \claudeadd{Precipitation (rain, snow, sleet)}
+            \item \claudeadd{Lightning within 10 nautical miles}
+            \item \claudeadd{Icing conditions}
+            \item \claudeadd{\ac{wp} \ac{fpcon} at CHARLIE or DELTA}
+        \end{itemize}
+
+    \subsection{Weather Decision Authority}\label{ssec:weatherdecision}
+
+        \subsubsection{} \claudeadd{Weather decisions follow a tiered approval chain:}
+
+            \paragraph{} \claudeadd{The \ac{rpic} is responsible for evaluating current conditions and making the initial weather determination.}
+
+            \paragraph{} \claudeadd{The \nameref{role:projectncoic} will approve weather-related go/no-go decisions for routine operations.}
+
+            \paragraph{} \claudeadd{The \nameref{role:projectoic} will provide final sign-off on weather decisions that involve marginal conditions or deviation from standard procedures.}
+
+    \subsection{Weather Hold Procedures}\label{ssec:weatherhold}
+
+        \subsubsection{} \claudeadd{If weather conditions deteriorate during operations, the \ac{rpic} will:}
+
+        \begin{itemize}
+            \item \claudeadd{Immediately assess whether to continue, hold, or abort the mission}
+            \item \claudeadd{For deteriorating but still acceptable conditions: continue with increased monitoring}
+            \item \claudeadd{For marginal conditions: place the mission on weather hold and await improvement}
+            \item \claudeadd{For conditions below minimums or approaching rapidly: execute immediate recovery or abort}
+        \end{itemize}
+
+        \subsubsection{} \claudeadd{Emergency weather procedures are detailed in \cref{ssec:ep-weather}.}
+
 \section{Crew Coordination}\label{sec:crewcoordination}
+
+\claudeadd{Effective crew coordination is essential for safe flight operations. Crew composition and responsibilities differ between \ac{vlos} developmental operations and \ac{bvlos} autonomous operations.}
+
+    \subsection{VLOS Operations Crew}\label{ssec:vloscrew}
+
+        \subsubsection{} \claudeadd{\ac{vlos} operations typically involve 3-5 personnel for route assessment, development, and validation flights:}
+
+            \paragraph{\nameref{role:rpic}} \claudeadd{Responsible for overall flight safety and aircraft control. Maintains authority over all flight decisions.}
+
+            \paragraph{\nameref{role:visualobserver}(s)} \claudeadd{Maintain visual contact with the aircraft and provide situational awareness to the \ac{rpic}. Multiple \nameref{role:visualobserver}s may be positioned along the route to maintain continuous visual contact.}
+
+            \paragraph{Ground Observers} \claudeadd{Additional personnel positioned along the route to observe aircraft performance, identify hazards, and validate route suitability. Ground observers will have direct communication with the \ac{rpic}.}
+
+    \subsection{BVLOS Operations Crew}\label{ssec:bvloscrew}
+
+        \subsubsection{} \claudeadd{\ac{bvlos} autonomous delivery operations require the following minimum crew:}
+
+            \paragraph{Launch \ac{rpic}} \claudeadd{Located at \ac{kach}, responsible for pre-flight, launch, and monitoring during transit. Maintains authority to abort the mission.}
+
+            \paragraph{Receiving Pilot} \claudeadd{Located at the destination \ac{lz}, responsible for receiving the aircraft and confirming safe landing. The receiving pilot will be at minimum \ac{ao} qualified and in direct communication with the launch \ac{rpic}.}
+
+    \subsection{Communication Protocols}\label{ssec:commprotocols}
+
+        \subsubsection{} \claudeadd{All crewmembers will maintain communication throughout flight operations using approved methods (radio, telephone, or other means as specified in the mission brief). Standard communication calls include:}
+
+        \begin{itemize}
+            \item \claudeadd{``Ready for launch'' -- \ac{rpic} confirms all pre-flight complete}
+            \item \claudeadd{``Launching'' -- Aircraft is taking off}
+            \item \claudeadd{``Aircraft in sight'' -- \nameref{role:visualobserver}/Ground Observer confirms visual contact}
+            \item \claudeadd{``Lost visual'' -- \nameref{role:visualobserver} has lost sight of aircraft}
+            \item \claudeadd{``Approaching [waypoint]'' -- Position report during autonomous flight}
+            \item \claudeadd{``On final'' -- Aircraft on approach to \ac{lz}}
+            \item \claudeadd{``Touchdown'' -- Aircraft has landed}
+            \item \claudeadd{``Secured'' -- Aircraft is powered down and safe}
+        \end{itemize}
+
+    \subsection{Handoff Procedures}\label{ssec:handoff}
+
+        \subsubsection{} \claudeadd{For \ac{bvlos} operations, control authority handoff between launch \ac{rpic} and receiving pilot will be conducted as follows:}
+
+        \begin{itemize}
+            \item \claudeadd{Launch \ac{rpic} maintains authority throughout transit}
+            \item \claudeadd{When aircraft enters visual range of destination, receiving pilot confirms ``Aircraft in sight''}
+            \item \claudeadd{Launch \ac{rpic} may transfer landing authority to receiving pilot if situation requires}
+            \item \claudeadd{Transfer of authority will be verbally confirmed by both pilots}
+            \item \claudeadd{After landing, receiving pilot assumes responsibility for aircraft security}
+        \end{itemize}
 
 \section{Types of Operations}\label{sec:opstypes}
 
+\claudeadd{\projectmars{} conducts several types of flight operations, each with distinct procedures and crew requirements.}
+
     \subsection{Routine Scheduled Delivery}\label{ssec:routinedelivery}
-    
+
+        \subsubsection{} \claudeadd{Routine scheduled delivery missions are \ac{bvlos} autonomous flights conducted on pre-validated routes. These missions:}
+
+        \begin{itemize}
+            \item \claudeadd{Follow routes that have been previously surveyed and approved during developmental testing}
+            \item \claudeadd{Are scheduled through the weekly planning process}
+            \item \claudeadd{Require minimum crew of launch \ac{rpic} and receiving pilot}
+            \item \claudeadd{Follow pre-programmed flight paths with minimal deviation}
+        \end{itemize}
+
+        \subsubsection{Procedures}
+
+        \begin{itemize}
+            \item \claudeadd{Mission brief completed day prior}
+            \item \claudeadd{Crew brief conducted morning of flight}
+            \item \claudeadd{Pre-flight inspection and payload loading per \cref{ssec:preflight}}
+            \item \claudeadd{Launch per approved procedures}
+            \item \claudeadd{\ac{rpic} monitors telemetry throughout transit}
+            \item \claudeadd{Receiving pilot confirms approach and landing}
+            \item \claudeadd{Post-flight documentation completed}
+        \end{itemize}
+
     \subsection{On-Demand / Emergency Response Delivery}\label{ssec:ondemanddelivery}
-    
+
+        \subsubsection{} \claudeadd{On-demand and emergency response delivery operations are not within the current scope of \projectmars{}. Procedures for these operations will be developed as the program matures and expands beyond the developmental phase.}
+
     \subsection{Development, Testing, and Evaluation Flights}\label{ssec:testflights}
-    
+
+        \subsubsection{} \claudeadd{\ac{dte} flights are conducted under \ac{vlos} conditions to survey routes, validate aircraft performance, and refine operational procedures. These flights:}
+
+        \begin{itemize}
+            \item \claudeadd{Are the primary flight type during the developmental phase}
+            \item \claudeadd{Require full \ac{vlos} crew (3-5 personnel)}
+            \item \claudeadd{Allow the \ac{rpic} flexibility to adapt within a few dozen meters of the planned route}
+            \item \claudeadd{Generate data used to approve routes for future \ac{bvlos} operations}
+        \end{itemize}
+
+        \subsubsection{Procedures}
+
+        \begin{itemize}
+            \item \claudeadd{Route survey and hazard identification}
+            \item \claudeadd{\ac{crm} assessment specific to test objectives}
+            \item \claudeadd{Positioning of \nameref{role:visualobserver}s and ground observers along route}
+            \item \claudeadd{Incremental testing (low altitude, then full profile)}
+            \item \claudeadd{Documentation of route performance and any required modifications}
+            \item \claudeadd{Post-flight debrief and data collection}
+        \end{itemize}
+
     \subsection{Training Flights}\label{ssec:trainingflights}
-    
+
+        \subsubsection{} \claudeadd{Training flights are conducted to qualify and maintain currency for \projectmars{} operators. Training flights require increased supervision and are restricted to approved training areas.}
+
+        \subsubsection{} \claudeadd{All training flights will:}
+
+        \begin{itemize}
+            \item \claudeadd{Be supervised by a \ac{qp} or higher qualified operator}
+            \item \claudeadd{Be conducted in designated training areas with minimal risk to non-participants}
+            \item \claudeadd{Follow the training requirements outlined in \cref{ch:certification}}
+            \item \claudeadd{Be documented in the trainee's qualification record}
+        \end{itemize}
+
+        \subsubsection{} \claudeadd{Risk management for training flights is addressed in \cref{ch:safety}.}
+
 \section{Air Corridor and Route Management}\label{sec:aircorridormgmt}
+
+\claudeadd{Routes and air corridors for \projectmars{} operations are developed, validated, and managed through a structured process to ensure safe and repeatable operations.}
+
+    \subsection{Route Development}\label{ssec:routedevelopment}
+
+        \subsubsection{} \claudeadd{New routes will be developed using the following process:}
+
+        \begin{itemize}
+            \item \claudeadd{Ground survey of proposed route to identify obstacles, hazards, and suitable \acp{lz}}
+            \item \claudeadd{Identification of primary, alternate, and contingency routes for each destination}
+            \item \claudeadd{Designation of \acp{saa} along each route}
+            \item \claudeadd{\ac{vlos} test flights to validate route suitability}
+            \item \claudeadd{Documentation and approval of route for operational use}
+        \end{itemize}
+
+    \subsection{Primary, Alternate, and Contingency Routes}\label{ssec:routeplanning}
+
+        \subsubsection{} \claudeadd{For each destination, the following routes will be established:}
+
+            \paragraph{Primary Route} \claudeadd{The preferred flight path under normal conditions. Selected for optimal efficiency while maintaining safety margins.}
+
+            \paragraph{Alternate Route} \claudeadd{An alternative flight path available when the primary route is unavailable (e.g., due to conflicting activities or temporary obstacles).}
+
+            \paragraph{Contingency Route} \claudeadd{A simplified route for use during degraded conditions or emergencies. Contingency routes prioritize safety and may include additional \acp{saa}.}
+
+        \subsubsection{} \claudeadd{Routes will be identified in the weekly mission brief and loaded into the autonomous flight plan prior to each mission.}
+
+    \subsection{Safe Abort Areas}\label{ssec:safeabortareas}
+
+        \subsubsection{} \claudeadd{\acp{saa} are pre-surveyed locations along each route where the aircraft can safely land in an emergency. Each route will have multiple \acp{saa} spaced to ensure the aircraft can always reach one if required.}
+
+        \subsubsection{} \claudeadd{\ac{saa} locations will be:}
+
+        \begin{itemize}
+            \item \claudeadd{Programmed as rally points in the autonomous flight plan}
+            \item \claudeadd{Clear of obstacles and away from populated areas}
+            \item \claudeadd{Accessible for aircraft recovery}
+            \item \claudeadd{Documented with coordinates and description}
+        \end{itemize}
+
+        \subsubsection{} \claudeadd{In the event of an anomaly requiring abort, the aircraft will navigate to the nearest \ac{saa} and land. Lost link procedures are configured to direct the aircraft to the nearest \ac{saa}.}
+
+    \subsection{Geofencing and Corridor Boundaries}\label{ssec:geofencing}
+
+        \subsubsection{} \claudeadd{All \ac{bvlos} flights will operate within defined corridor boundaries enforced by geofencing. The geofence will:}
+
+        \begin{itemize}
+            \item \claudeadd{Define lateral boundaries of the approved flight corridor}
+            \item \claudeadd{Enforce altitude limits in accordance with the \ac{coa}}
+            \item \claudeadd{Trigger alerts if the aircraft approaches boundaries}
+            \item \claudeadd{Initiate automatic abort procedures if boundaries are breached}
+        \end{itemize}
+
+        \subsubsection{} \claudeadd{For \ac{vlos} operations, the \ac{rpic} may adjust within a few dozen meters of the planned route as needed for safety or mission accomplishment, but will remain within the overall approved operating area.}
 
 \section{Mission Planning and Approval Cycle}\label{sec:missionplanningcycle}
 
+\claudeadd{All \projectmars{} flight operations require planning and approval through the established cycle. Different types of operations require different levels of approval.}
+
+    \subsection{Approval Authority Matrix}\label{ssec:approvalmatrix}
+
+        \subsubsection{} \claudeadd{The following table summarizes approval authorities for \projectmars{} operations:}
+
+        \begin{center}
+        \begin{tabular}{|l|l|l|}
+        \hline
+        \textbf{Decision} & \textbf{Approval Authority} & \textbf{Consulted/Informed} \\
+        \hline
+        \claudeadd{Overall Operational Risk} & \claudeadd{\nameref{role:hospitalcommander}} & \claudeadd{--} \\
+        \hline
+        \claudeadd{Airspace Authorization} & \claudeadd{\ac{faa} via \ac{usaasa}} & \claudeadd{--} \\
+        \hline
+        \claudeadd{Ground Operations Authority} & \claudeadd{\ac{wp} Garrison Commander} & \claudeadd{\ac{smc}} \\
+        \hline
+        \claudeadd{Weekly Flight Schedule} & \claudeadd{\nameref{role:projectoic}} & \claudeadd{\ac{usma} \ac{g3}, 2nd AVN} \\
+        \hline
+        \claudeadd{Weather Go/No-Go} & \claudeadd{\nameref{role:projectoic}} & \claudeadd{\nameref{role:projectncoic}} \\
+        \hline
+        \claudeadd{Equipment Airworthiness} & \claudeadd{\ac{rpic}} & \claudeadd{\nameref{role:technicallead}} \\
+        \hline
+        \claudeadd{Final Launch Authority} & \claudeadd{\ac{rpic}} & \claudeadd{Flight crew, \ac{wp} \ac{des}} \\
+        \hline
+        \end{tabular}
+        \end{center}
+
+    \subsection{Weekly Planning Cycle}\label{ssec:weeklyplanning}
+
+        \subsubsection{} \claudeadd{The weekly planning cycle proceeds as follows:}
+
+        \begin{itemize}
+            \item \claudeadd{\textbf{Week -2:} \nameref{role:projectncoic} drafts preliminary schedule}
+            \item \claudeadd{\textbf{Week -1:} Weekly leadership meeting reviews and approves schedule; \nameref{role:projectncoic} coordinates with \ac{usma} \ac{g3} and 2nd AVN}
+            \item \claudeadd{\textbf{Week -1:} \ac{notam}s submitted for publication}
+            \item \claudeadd{\textbf{Day -1:} Mission brief conducted}
+            \item \claudeadd{\textbf{Day 0:} Crew brief, pre-flight, and flight execution}
+        \end{itemize}
+
+    \subsection{Mission-Specific Approvals}\label{ssec:missionapprovals}
+
+        \subsubsection{} \claudeadd{Certain mission types require additional approvals:}
+
+        \begin{itemize}
+            \item \claudeadd{Flights over non-pre-established routes require \ac{usma} \ac{g3} coordination at least 5 working days prior}
+            \item \claudeadd{Night operations or operations over people require \ac{smc} approval and additional \ac{faa} waivers}
+            \item \claudeadd{Flights in areas requiring Range Facility Management System (RFMIS) reservation require \ac{dptms} approval}
+        \end{itemize}
+
 \section{Flight Procedures}\label{sec:flightprocedures}
-    
+
+\claudeadd{This section establishes standardized procedures for all phases of flight. Personnel will follow these procedures unless deviation is required for safety of flight.}
+
     \subsection{Pre-Flight Procedures}\label{ssec:preflight}
-    
+
+        \subsubsection{} \claudeadd{The following pre-flight procedures will be completed before every flight:}
+
+            \paragraph{Documentation Review} \claudeadd{The \ac{rpic} will verify:}
+            \begin{itemize}
+                \item \claudeadd{Current \ac{awr} on file for the aircraft}
+                \item \claudeadd{\ac{notam} is published and active}
+                \item \claudeadd{No \acp{tfr} or other airspace restrictions affect the flight}
+                \item \claudeadd{\ac{crm} assessment is current and controls are in place}
+            \end{itemize}
+
+            \paragraph{Coordination Notifications} \claudeadd{The \ac{rpic} or designated crewmember will:}
+            \begin{itemize}
+                \item \claudeadd{Contact 2nd AVN for airspace deconfliction (NLT 3 hours prior)}
+                \item \claudeadd{Notify \ac{wp} \ac{des} (NLT 10 minutes prior)}
+                \item \claudeadd{Confirm receiving crewmember is in position (if \ac{bvlos})}
+            \end{itemize}
+
+            \paragraph{Aircraft Inspection} \claudeadd{The \ac{rpic} will inspect:}
+            \begin{itemize}
+                \item \claudeadd{Airframe integrity (no visible damage, all components secure)}
+                \item \claudeadd{Propellers (no nicks, cracks, or damage)}
+                \item \claudeadd{Battery charge and condition}
+                \item \claudeadd{Control surfaces and motors (free movement, secure mounting)}
+                \item \claudeadd{Sensors and cameras (clean and unobstructed)}
+                \item \claudeadd{Payload attachment and security}
+            \end{itemize}
+
+            \paragraph{\ac{gcs} Verification} \claudeadd{The \ac{rpic} will verify:}
+            \begin{itemize}
+                \item \claudeadd{Telemetry link established}
+                \item \claudeadd{\ac{gps} signal acquired (sufficient satellites)}
+                \item \claudeadd{Flight plan loaded correctly}
+                \item \claudeadd{Geofence parameters set}
+                \item \claudeadd{Failsafe protocols configured (\ac{rth}, lost link, low battery)}
+                \item \claudeadd{\acp{saa} programmed as rally points}
+            \end{itemize}
+
+            \paragraph{Crew Brief} \claudeadd{Conduct final crew brief per \cref{ssec:crewbrief}.}
+
     \subsection{Procedures During Flight}\label{ssec:inflight}
-    
+
+        \subsubsection{VLOS Flight Procedures}
+
+            \paragraph{Launch} \claudeadd{Upon completion of pre-flight and crew brief:}
+            \begin{itemize}
+                \item \claudeadd{\ac{rpic} announces ``Ready for launch'' and confirms \ac{lz} is clear}
+                \item \claudeadd{\nameref{role:visualobserver}s confirm ready status}
+                \item \claudeadd{\ac{rpic} initiates launch sequence}
+                \item \claudeadd{Aircraft climbs to designated altitude and holds for system check}
+                \item \claudeadd{\ac{rpic} verifies all systems nominal, then proceeds with mission}
+            \end{itemize}
+
+            \paragraph{In-Flight Monitoring} \claudeadd{During flight, the \ac{rpic} will:}
+            \begin{itemize}
+                \item \claudeadd{Maintain awareness of aircraft position relative to planned route}
+                \item \claudeadd{Monitor telemetry for any anomalies}
+                \item \claudeadd{Respond to \nameref{role:visualobserver} calls regarding aircraft position or hazards}
+                \item \claudeadd{Make route adjustments as needed within approved parameters}
+            \end{itemize}
+
+            \paragraph{Contingency Actions} \claudeadd{If conditions warrant:}
+            \begin{itemize}
+                \item \claudeadd{For minor anomalies: continue with increased monitoring}
+                \item \claudeadd{For degraded conditions: execute return to launch or nearest \ac{saa}}
+                \item \claudeadd{For emergencies: follow procedures in \cref{ch:safety}}
+            \end{itemize}
+
+        \subsubsection{BVLOS Flight Procedures}
+
+            \paragraph{Launch} \claudeadd{Upon completion of pre-flight and crew brief:}
+            \begin{itemize}
+                \item \claudeadd{Launch \ac{rpic} confirms receiving pilot is in position and ready}
+                \item \claudeadd{\ac{rpic} announces ``Ready for launch'' and confirms \ac{lz} is clear}
+                \item \claudeadd{\ac{rpic} initiates autonomous launch sequence}
+                \item \claudeadd{Aircraft climbs and proceeds on programmed route}
+            \end{itemize}
+
+            \paragraph{Transit Monitoring} \claudeadd{During autonomous transit:}
+            \begin{itemize}
+                \item \claudeadd{\ac{rpic} monitors telemetry continuously}
+                \item \claudeadd{Position reports are called at designated waypoints}
+                \item \claudeadd{Receiving pilot monitors for approaching aircraft}
+            \end{itemize}
+
+            \paragraph{Approach and Landing}
+            \begin{itemize}
+                \item \claudeadd{Receiving pilot confirms ``Aircraft in sight'' when visual contact established}
+                \item \claudeadd{\ac{rpic} monitors approach via telemetry}
+                \item \claudeadd{Aircraft executes autonomous landing}
+                \item \claudeadd{Receiving pilot confirms ``Touchdown'' and ``Secured''}
+            \end{itemize}
+
+            \paragraph{Abort Criteria} \claudeadd{The \ac{rpic} will abort the mission and direct the aircraft to the nearest \ac{saa} if:}
+            \begin{itemize}
+                \item \claudeadd{Telemetry indicates system anomaly}
+                \item \claudeadd{Weather conditions deteriorate below minimums}
+                \item \claudeadd{Lost link exceeds configured timeout}
+                \item \claudeadd{Receiving pilot is unable to receive the aircraft}
+                \item \claudeadd{Any crewmember calls ``Knock it off''}
+            \end{itemize}
+
     \subsection{Post-Flight Procedures}\label{ssec:postflight}
 
+        \subsubsection{} \claudeadd{Following every flight, the following procedures will be completed:}
+
+            \paragraph{Aircraft Securing}
+            \begin{itemize}
+                \item \claudeadd{Power down aircraft per manufacturer procedures}
+                \item \claudeadd{Remove and secure battery}
+                \item \claudeadd{Conduct post-flight inspection for damage}
+                \item \claudeadd{Secure payload and aircraft for transport/storage}
+            \end{itemize}
+
+            \paragraph{Notifications}
+            \begin{itemize}
+                \item \claudeadd{Notify 2nd AVN of flight completion (within 15 minutes)}
+                \item \claudeadd{Notify \ac{wp} \ac{des} of flight completion (within 15 minutes)}
+                \item \claudeadd{Report mission status to \nameref{role:projectncoic}}
+            \end{itemize}
+
+            \paragraph{Documentation}
+            \begin{itemize}
+                \item \claudeadd{Complete flight log entry}
+                \item \claudeadd{Document any anomalies, discrepancies, or maintenance issues}
+                \item \claudeadd{Download and archive telemetry data (if required)}
+                \item \claudeadd{Update aircraft logbook}
+            \end{itemize}
+
 \section{Data Management}\label{sec:datamgmt}
+
+\claudeadd{Proper documentation of flight operations supports program analysis, safety reviews, and potential expansion to other installations.}
+
+    \subsection{Required Flight Logs}\label{ssec:flightlogs}
+
+        \subsubsection{} \claudeadd{The following information will be recorded for every flight:}
+
+        \begin{itemize}
+            \item \claudeadd{Date and time of flight (takeoff and landing)}
+            \item \claudeadd{Aircraft identification}
+            \item \claudeadd{\ac{rpic} and crewmember names}
+            \item \claudeadd{Mission type and route flown}
+            \item \claudeadd{Payload description and weight}
+            \item \claudeadd{Weather conditions}
+            \item \claudeadd{Flight duration}
+            \item \claudeadd{Any anomalies, deviations, or incidents}
+        \end{itemize}
+
+    \subsection{Recommended Telemetry Capture}\label{ssec:telemetrycapture}
+
+        \subsubsection{} \claudeadd{The following telemetry data capture is recommended but not required:}
+
+        \begin{itemize}
+            \item \claudeadd{\ac{gps} track (position, altitude, speed)}
+            \item \claudeadd{Battery voltage and current draw}
+            \item \claudeadd{Motor performance data}
+            \item \claudeadd{Link quality metrics}
+        \end{itemize}
+
+        \subsubsection{} \claudeadd{Telemetry data supports troubleshooting, route optimization, and program analysis for potential expansion.}
+
+    \subsection{Record Retention}\label{ssec:recordretention}
+
+        \subsubsection{} \claudeadd{Flight logs and associated documentation will be retained in accordance with Army record retention requirements. At minimum:}
+
+        \begin{itemize}
+            \item \claudeadd{Flight logs: retained for the duration of the program plus 3 years}
+            \item \claudeadd{Aircraft logbooks: retained for the service life of the aircraft}
+            \item \claudeadd{Incident/mishap reports: retained per DA Pamphlet 385-40}
+        \end{itemize}
+
+    \subsection{Incident Documentation}\label{ssec:incidentdocs}
+
+        \subsubsection{} \claudeadd{Any anomaly, incident, or mishap will be documented in addition to the standard flight log. Incident documentation will include:}
+
+        \begin{itemize}
+            \item \claudeadd{Detailed narrative of the event}
+            \item \claudeadd{Contributing factors identified}
+            \item \claudeadd{Actions taken in response}
+            \item \claudeadd{Recommendations for prevention}
+        \end{itemize}
+
+        \subsubsection{} \claudeadd{Incident reporting requirements are detailed in \cref{sec:accidentreporting}.}

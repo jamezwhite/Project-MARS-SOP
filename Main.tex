@@ -1,6 +1,21 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Preamble %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \documentclass{sop}
 
+% Changes tracking package configuration
+% Undefine pdfcomment's \comment to avoid conflict with changes package
+\let\pdfcommentaliascomment\comment
+\makeatletter
+\let\comment\@undefined
+\makeatother
+\usepackage{changes}
+\definechangesauthor[name={Claude}, color=Peach]{claude}
+
+% Custom wrapper commands for Claude's edits
+\newcommand{\claudeadd}[1]{\added[id=claude]{#1}}
+\newcommand{\claudedel}[1]{\deleted[id=claude]{#1}}
+\newcommand{\claudereplace}[2]{\replaced[id=claude]{#1}{#2}}
+\newcommand{\claudecomment}[1]{\comment[id=claude]{#1}}
+
 % Load project-specific glossary and acronym data
 \input{glossaries/ABCA}
 \makenoidxglossaries
@@ -9,11 +24,11 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Document Information %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \title{Project MARS - Standard Operating Procedure}
 \author{SFC Jamez White, Project NCOIC}
-\date{01 Dec 2025}
+\date{01 February 2026}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Document Content %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document}
-%\include{frontmatter/frontpage}
+\include{frontmatter/frontpage}
 
 \tableofcontents
 \listoffigures
@@ -25,12 +40,13 @@
 \include{chapters/Operator Certification}
 \include{chapters/Flight Operations}
 \include{chapters/Maintenance}
-\include{chapters/Safety}
+\include{chapters/Safety} 
 
 \begin{appendices}
 \include{appendices/References}
 \include{appendices/Checklists}
 \include{appendices/Forms}
+\include{appendices/airspace}
 \include{appendices/uas characteristics}
 \end{appendices}
 \include{glossaries/Glossary}

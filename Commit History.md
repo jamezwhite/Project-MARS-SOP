@@ -442,3 +442,17 @@ Commit: `532e385`
 
 ---
 
+## 2026-02-02 – Update to SOP
+
+Commit: `073a377`
+
+- Added a new Project MARS contributor guideline (/.claude/CLAUDE.md) that: defines mandatory change-tracking macros for substantive prose edits, lists what to track/what not to track, documents acronym and glossary conventions and file locations, specifies the document class/sectioning and cross-reference style, and gives tone/style rules (formal, imperative). It also explicitly instructs contributors not to compile the document locally.
+
+- Added an ABCA checklist (/.claude/commands/ABCA_Check.md) with a step-by-step workflow to find uncited acronyms/abbreviations across .tex files, replace plain uppercase ABCAs with proper glossary commands, add new acronym declarations to the glossary when needed, and produce a summary of edits and uncertain items.
+
+- Added editor/build helper files to standardize local workflows: a latexmk configuration (/.latexmkrc) forcing pdflatex and up to 5 runs for cross-references/glossaries, and VS Code LaTeX Workshop settings (/.vscode/settings.json) with a latexmk (pdflatex) recipe and a pdflatex x3 option. Also added a local Claude permissions file (/.claude/settings.local.json) listing allowed shell actions.
+
+- Committed a generated LaTeX auxiliary file (Main.aux) containing precomputed frontmatter/includes, table-of-contents/loc entries and extensive glossary/acronym usage and page-mapping metadata — this is a build artifact that captures current acronym/glossary references and counts.
+
+---
+

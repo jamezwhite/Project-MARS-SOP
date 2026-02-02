@@ -15,12 +15,32 @@
 \RequirePackage{titlesec}
 \RequirePackage[normalem]{ulem}
 \RequirePackage{graphicx}
+\RequirePackage[most]{tcolorbox}
+
+% Framed image with drop shadow for full-page document scans
+% Usage: \shadowimage[includegraphics opts]{file}
+\newtcolorbox{shadowimgbox}{%
+  enhanced,
+  boxrule=0.5pt,
+  colframe=black!60,
+  colback=white,
+  sharp corners,
+  drop fuzzy shadow,
+  boxsep=0pt,
+  left=0pt, right=0pt, top=0pt, bottom=0pt,
+  halign=center,
+}
+\newcommand{\shadowimage}[2][]{%
+  \begin{shadowimgbox}%
+    \includegraphics[#1]{#2}%
+  \end{shadowimgbox}%
+}
 \RequirePackage[titletoc]{appendix}
 \RequirePackage[
   letterpaper,
   margin=1in,
   includeheadfoot,
-  headheight=14pt,
+  headheight=23pt,
   headsep=10pt,
   footskip=24pt
 ]{geometry}
@@ -29,6 +49,7 @@
 \RequirePackage{pdfcomment}
 \RequirePackage{enumitem}
 \RequirePackage{etoolbox}
+\RequirePackage[dvipsnames]{xcolor}
 \RequirePackage{xparse} % for \NewDocumentCommand (tooltips for terms)
 
 % ------------------------------ Fonts and project helper ------------------------------
@@ -67,7 +88,7 @@
 }
 
 % Prevent the classic "Package Fancyhdr Warning: \headheight is too small"
-\setlength{\headheight}{14pt}
+\setlength{\headheight}{23pt}
 
 % ------------------------------ Acronym Setup and Tooltips ------------------------------
 % Redefine commands after everything is loaded to turn on tooltips
