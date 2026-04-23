@@ -8,6 +8,7 @@
 \let\comment\@undefined
 \makeatother
 \usepackage{changes}
+\usepackage{float}
 \definechangesauthor[name={Claude}, color=Peach]{claude}
 
 % Custom wrapper commands for Claude's edits
@@ -17,9 +18,9 @@
 \newcommand{\claudecomment}[1]{\comment[id=claude]{#1}}
 
 % Load project-specific glossary and acronym data
-\input{glossaries/ABCA}
-\makenoidxglossaries
-\input{glossaries/Terms}
+%\input{glossaries/ABCA}
+%\makenoidxglossaries
+%\input{glossaries/Terms}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Document Information %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \title{Project MARS - Standard Operating Procedure}
@@ -36,18 +37,19 @@
 
 \include{chapters/General}
 \include{chapters/Roles and Responsibilities}
-\include{chapters/Airframe and Supporting Systems}
+% \include{chapters/Airframe and Supporting Systems}
 \include{chapters/Operator Certification}
 \include{chapters/Flight Operations}
-\include{chapters/Maintenance}
+\include{chapters/First-Time Set Up and Troubleshooting}
+% \include{chapters/Maintenance}
 \include{chapters/Safety} 
 
 \begin{appendices}
 \include{appendices/References}
 \include{appendices/Checklists}
-\include{appendices/Forms}
+% \include{appendices/Forms}
 \include{appendices/airspace}
-\include{appendices/uas characteristics}
+% \include{appendices/uas characteristics}
 \end{appendices}
 \include{glossaries/Glossary}
 \end{document}
