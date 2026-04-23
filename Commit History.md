@@ -472,3 +472,15 @@ Commit: `539f447`
 
 ---
 
+## 2026-04-23 – Merge overleaf-2026-04-23-1147 into main
+
+Commit: `d61b6dc`
+
+- Updated front matter credits on the title page: consolidated SFC Jamez White as Project NCOIC, added USMA faculty advisors (COL Joseph Davis, Arthur Chu, Jordan Beason), and replaced the duplicate NCOIC block with a new "Cadet Contributors" list (CDT Jacob Crossman, CDT Lydia Kittrell, CDT Walker Owens, CDT Rylan Pettus, CDT William Reid, LTA Zi Yann Aw).
+
+- Standardized the document dates to 23 April 2026 (updated both the main document date and the front-page date) and retained the UNCLASSIFIED marking.
+
+- Adjusted the appendix heading for "West Point Airspace Approval" to use the appendix naming command instead of a chapter-level heading, aligning the appendix title formatting/labeling with the document's appendix conventions.
+
+---
+
