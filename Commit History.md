@@ -456,3 +456,19 @@ Commit: `073a377`
 
 ---
 
+## 2026-04-23 – Rylan's Updates for Project Day
+
+Commit: `539f447`
+
+- Expanded the Pre-Flight Checklist (appendices/Checklists.tex) with detailed, step-by-step procedures for payload handling, battery checks (including specific battery and Mission Planner parameter values), drone inspection and takeoff-site clearance, GCS network configuration (static IP example) and connection workflows, GCS software setup for Mission Planner and QGroundControl, mission loading/uploading, and comprehensive failsafe/arming parameter lists. Added an IP settings figure referenced from the checklist.
+
+- Added new chapter file for "First-Time Set Up and Troubleshooting" and updated Main.tex to include it; simultaneously commented-out several chapters and appendices (Airframe and Supporting Systems, Maintenance, Forms, and the UAS characteristics appendix) so those items are temporarily excluded from the build.
+
+- Added image assets (IP_settings, OB_Radio_NET.png, RTK.png) and enabled the float package in Main.tex to improve figure handling and placement.
+
+- Cleaned up internal cross-references and labels: replaced ad-hoc replacement markup with a proper section label and normalized the cross-reference to the airspace chapter; also simplified a figure caption in the References appendix by removing editor markup.
+
+- Disabled loading of the project glossary inputs (ABCA and Terms) in Main.tex while retaining the final glossary inclusion, effectively pausing automatic glossary population for now.
+
+---
+

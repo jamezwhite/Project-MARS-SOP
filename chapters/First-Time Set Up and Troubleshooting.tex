@@ -1,0 +1,199 @@
+\chapter{First-Time Set Up and Troubleshooting}
+\label{ch:FirstTimeSetUp}
+
+This section details the steps for configuring each component of MARS, including the drone and ground control station. The set up instructions in this section are intended to be followed as if each component is brand new. This is useful for first-time setup of the system or for troubleshooting individual components. 
+    \section{Sensor Set-Up Guide} The MARS drone is equipped with many external sensors that are user-configurable. Note that not all of the sensors listed below are included onboard the MARS drone, as some of them may be used as alternatives.
+        \subsection{Garmin Lidar Lite v3.}
+            \subsubsection{} Plug the rangefinder’s cable into the I2C port of the Cube Orange+.
+            \subsubsection{} Configure the following in the Full Parameter List of your \ac{gcs} software.
+                \begin{itemize}
+                    \item RNGFND1\_TYPE = 3 (LidarLite-I2c)
+                    \item RNGFND1\_MAX = 40 (the maximum range in meters the LiDAR can accurately report) 
+                    \item RNGFND1\_MIN = 0.20 (the minimum range in meters the LiDAR can accurately report) 
+                    \item RNGFND1\_ADDR = 98 (0x62)
+                \end{itemize}
+                
+            \subsubsection{} For more information, reference the official Ardupilot Copter documentation. https://ardupilot.org/copter/docs/common-rangefinder-lidarlite.htmlhttps://ardupilot.org/copter/docs/common-lightware-sf10-lidar.html
+            
+        \subsection{LightWare SF11/C (Analog Connection)}
+            The LightWare SF11/C has a known compatibility issue of connecting to the Cube Orange+ over the I2C protocol. The cause of this issue is unknown, but it effectively prevents the flight controller from the receiving rangefinder's data. For this reason, we recommend using the analog protocol.
+            
+            \subsubsection{} Plug the rangefinder’s cable into the ADC port of the Cube Orange+.
+            \subsubsection{} Configure the following in the Full Parameter List
+                \begin{itemize}
+                    \item RNGFND1\_TYPE= 1 (Analog)
+                    \item RNGFND1\_MAX = 100 (the maximum range in meters the lidar can accurately report)  
+                    \item RNGFND1\_MIN = 0.20 (the minimum range in meters the lidar can accurately report)  
+                    \item RNGFND1\_SCALING = 46.87
+                    \item RNGFND1\_PIN = 8
+                \end{itemize}
+            
+            \subsubsection{} For more information, reference the official Ardupilot Copter documentation. 
+            For more information on set up, reference the official Ardupilot Copter documentation \textcolor{blue}{\href{https://ardupilot.org/copter/docs/common-lightware-sf10-lidar.html}{here}}.         
+            
+        \subsection{ADSB Receiver (PingRX Pro)}
+            
+            \subsubsection{} Plug the PingRX Pro cable into the SERIAL1 port on the Cube Orange+.
+            \subsubsection{} Configure the following in the Full Parameter List.
+                \begin{itemize}
+                    \item SERIAL1\_PROTOCOL = 2 (MavLink2)
+                    \item SERIAL1\_BAUD = 57
+                    \item MAV2\_ADSB = 5
+                    \item ADSB\_TYPE = 1
+                    \item ADSB\_LIST\_ALT = 1000
+                    \item ADSB\_LIST\_MAX = 10
+                    \item ADSB\_LIST\_RADIUS = 2000
+                 \end{itemize}           
+            \subsubsection{} View the product page for the uAvionix PingRX Pro
+            \textcolor{blue}{\href{https://uavionix.com/uncrewed-aircraft-systems/pingrx-pro/?srsltid=AfmBOooqlrmsQ8bbImx3x5luUUu8aQBeiHQzcjQTfeGQW_IhnDc-3P5R#documentation}{here}}.
+            \subsubsection{} For more information on set up, reference the official Ardupilot Copter documentation \textcolor{blue}{\href{https://ardupilot.org/copter/docs/common-ads-b-receiver.html}{here}}.
+
+        \subsection{CubePilot Here4 GPS}
+            
+            \subsubsection{} Connect the red-orange cable of the Here4 to the CAN1 port on the Cube Orange+.
+            \subsubsection{} Configure the following in the Full Parameter List.
+                \begin{itemize}
+                    \item CAN\_D1\_PROTOCOL: 1
+                    \item CAN\_D2\_PROTOCOL: 1
+                    \item CAN\_P1\_DRIVER: 1
+                    \item CAN\_P2\_DRIVER: 1
+                    \item GPS\_TYPE: 9
+                    \item NTF\_LED\_TYPES: 231
+                \end{itemize} 
+            \subsubsection{} In Mission Planner, go to setup $\rightarrow$ Optional Hardware $\rightarrow$ DroneCAN/UAVCAN. Click MAVLinkCAN1 from the dropdown menu and click Connect. You should see three device IDs, with the GPS being ID 125. If this does not appear, the flight controller is not recognizing the GPS.
+            \subsubsection{} When the GPS is working but awaiting a GPS signal, the lights should be flashing yellow.
+            \subsubsection{} 4.5.	For more information, reference the official CubePilot documentation \textcolor{blue}{\href{https://docs.cubepilot.org/user-guides/here-4/here-4-manual}{here}.}
+            
+        \subsection{RTK (NTRIP)}
+            
+            \subsubsection{} In Mission Planner, go to Setup $\rightarrow$ Optional Hardware $\rightarrow$ RTK/GPS Inject. Select NTRIP from the drop-down menu in the top left and click connect. Enter the following URL: ntrip://mars:medd@rtn.dot.ny.gov:8080/near\_msm
+            \subsubsection{} In the Data tab, you should see ``rtk Float" or ``rtk Fixed" next to GPS. Keep in mind that RTK first requires a GPS fix. RTK provides additional corrections to improve GPS accuracy.
+            \begin{figure}
+                \centering
+                \includegraphics[width=0.5\linewidth]{RTK.png}
+                \caption{RTK Indicator in Mission Planner}
+                \label{fig:placeholder}
+            \end{figure}
+            \subsubsection{} For more information, reference the official CubePilot documentation \textcolor{blue}{\href{https://ardupilot.org/copter/docs/common-rtk-correction.html}{here}}. Scroll down to method 2, NTRIP. 
+            
+        \subsection{RemoteID (CubeID)}
+            
+            \subsubsection{} Plug the cable of the CubeID module into the CAN2 port of the Cube Orange+.
+            \subsubsection{} Configure the following in the Full Parameter List.
+                \begin{itemize}
+                    \item DID\_ENABLE = 1
+                    \item DID\_CANDRIVER = 2
+                    \item DID\_OPTIONS = 0
+                \end{itemize}    
+            \subsubsection{} RemoteID must be selected during the installation of your Ardupilot firmware in order for this work. If these steps did not work or you are unsure if your firmware supports Remote ID, build a new custom firmware at this \textcolor{blue}{\href{https://custom.ardupilot.org/add_build}{link}}.
+            \subsubsection{} The following video offers a good explanation if you get stuck:
+            \textcolor{blue}{\href{https://custom.ardupilot.org/add_build}{https://youtu.be/XXjpxRVWvc4?si=Zn3sFXNMrUD6qZT0}}.
+            \subsubsection{} For more information, reference the official CubePilot documentation \textcolor{blue}{\href{https://docs.cubepilot.org/user-guides/cube-id/cube-id}{here}}. 
+            
+
+    \section{Radio Configuration}
+        \subsection{Drone Radio}
+        The MARS drone is equipped with a Doodle Labs Mesh Rider Mini OEM radio. This guide will walk you through how to set up the radio from factory settings. View the manufacturer's documentation \textcolor{blue}{\href{https://techlibrary.doodlelabs.com/mini-oem-dual-band-mesh-rider-radio-915-mhz-and-2450-mhz-ism-bands}{here}}.
+        
+            \subsubsection{} Access the Doodle Labs configuration dashboard by typing the hardware IP address into the URL field in a new browser window. The hardware IP address is found on the back of the device. If no password is set, you can click log in without entering a password. 
+            \subsubsection{} navigate to Advanced Settings $\rightarrow$ Services $\rightarrow$ Serial Configuration $\rightarrow$ General and verify the following settings.
+                \begin{itemize}
+                    \item Check ``Enable"
+                    \item Role: Multicast Client
+                    \item Transport: UDP
+                    \item Host IP: IP address of the GCS radio (e.g. 10.223.148.10)
+                    \item Port: 14560
+                    \item Sort Port: None
+                    \item Baud Rate: 57600
+                    \item Device: /dev/uart() 
+                \end{itemize} 
+            \subsubsection{} Navigate to the Simple Configuration page and change the following settings.
+                \begin{itemize}
+                    \item Select Profiles: General
+                    \item Active frequency band: 915v4 MHz
+                    \item Select Scenario: Mesh on radio0
+                    \item Mesh ID simpleconfig
+                    \item Channel: 17 (910 MHz)
+                    \item Bandwidth: 3 MHz
+                    \item Operating Distance: 4000 m
+                    \item Number of Devices: 3 to 5
+                    \item Optimize for Latency: Enabled
+                    \item TPC: Enabled
+                    \item Aggressive TPC: Disabled
+                    \item use VLAN for internal Messaging: Disabled
+                    \item Add ETH1 to br-wan: Enabled
+                    \item DHCP on br-wan: Client enabled
+                    \item Enable Automatic C\&C Queue Detection: Enabled
+                    \item Rate Threshold (kBit/s):  400
+                    \item Size Threshold (kBit/s):  400
+                \end{itemize} 
+            \subsubsection{} In order to enable multiple ground stations to connect to the drone, the MAVp2p package must be installed on the drone radio. The instructions for this can be found on the Doodle Labs Technical Library \textcolor{blue}{\href{https://techlibrary.doodlelabs.com/mavp2p-guide}{here}}. 
+            \subsubsection{} To configure MAVp2p on the Doodle Labs configuration page, navigate to Services $\rightarrow$ Mavlink and set the following settings.
+                \paragraph{} Under General: check ``Enabled"
+                \paragraph{} Under UART endpoint:
+                    \begin{itemize}
+                        \item Baud rate: 57600
+                        \item Mode: Serial
+                    \end{itemize}
+                \paragraph{} Under UDP endpoint, create two endpoints: 
+                    \begin{itemize}
+                        \item Endpoint 1
+                            \begin{itemize}
+                                \item IP address: same IP address as the radio itself (e.g. 10.223.148.10)
+                                \item Port: 14561
+                                \item Mode: Client
+                            \end{itemize} 
+                        \item Endpoint 2
+                            \begin{itemize}
+                                \item IP address: Different IP address as the radio (e.g. 10.223.148.20)
+                                \item Port: 14561
+                                \item Mode: Client
+                            \end{itemize} 
+                    
+                    \end{itemize}
+            \subsubsection{} On the radio configuration page, make sure to enable Mavp2p under Services $\rightarrow$ Mavlink $\rightarrow$ Mavp2p. Set the baud rate to 57600 and the mode to serial. At a minimum, the following performance metrics must be verified between the ground station radios and the drone radio to ensure functionality:
+            \begin{itemize}
+                \item Signal strength of  -60 dBm to -70 dBm
+                \item Noise strength of -95 dBm to -100 dBm
+                \item Latency of less than 25 ms
+                \item Throughput of 3 to 12 Mbps
+            \end{itemize} 
+        
+        \subsection{GCS Radio}
+        
+            \subsubsection{} The radio used for the MARS GCS is the Doodle Labs Mesh Rider OEM. View the manufacturer's documentation \textcolor{blue} {\href{https://techlibrary.doodlelabs.com/multiband-oem-mesh-rider-radio-915-mhz-and-2450-mhz-ism-bands-1}{here}}. If you have more than one GCS radio in the mesh network, they can all be set up according to these settings.
+        
+            \subsubsection{} Access the Doodle Labs configuration dashboard by typing the hardware IP address into the URL field in a new browser window. The hardware IP address is found on the back of the device. If no password is set, you can click log in without entering a password.
+            
+            \subsubsection{} Navigate to the Simple Configuration page and change the following settings.
+                \begin{itemize}
+                    \item Select Profiles: General
+                    \item Active frequency band: 915 MHz
+                    \item Select Scenario: Mesh on radio0
+                    \item Mesh ID simpleconfig
+                    \item Channel: 17 (910 MHz)
+                    \item Bandwidth: 3 MHz
+                    \item Operating Distance: 4000 m
+                    \item Number of Devices: 3 to 5
+                    \item Optimize for Latency: Enabled
+                    \item TPC: Enabled
+                    \item Aggressive TPC: Enabled
+                    \item Add ETH1 to br-wan: Enabled
+                    \item DHCP on br-wan: Client enabled
+                    \item Enable Automatic C\&C Queue Detection: Enabled
+                    \item Rate Threshold (kBit/s):  400
+                    \item Size Threshold (kBit/s):  400
+                \end{itemize} 
+            \subsubsection{} Navigate to Advanced Settings $\rightarrow$ Network Configuration $\rightarrow$ Custom Config and change the following settings.
+                \begin{itemize}
+                    \item Host Name: MAVLink\_UDP
+                    \item IP address: 10.223.148.10 (You may want to set a different IP depending on the number of devices in your network or your subnet mask. For simplicity, this example uses the IP written on the back of the device.
+                    \item MAC address: blank
+                    \item Rule Name: blank
+                    \item Protocol: UDP
+                    \item Internal Port: 14560
+                    \item External Port: 14560
+                \end{itemize} 
+        
+            
+            
