@@ -496,3 +496,14 @@ Commit: `1e4554c`
 
 ---
 
+## 2026-05-11 – Added system diagrams
+
+Commit: `b09feda`
+
+- Inserted a series of system-diagram figures into the Airframe and Supporting Systems chapter: seven full-width diagrams showing overhead component layout, battery shroud, middle-plate screw-hole dimensions (millimetres), isometric cargo-bay view, propeller distances/diameters, battery-shroud composition, and propeller-arm dimensions — these enlarge the hardware documentation and provide detailed dimensional drawings.
+- Added the corresponding PDF diagram assets to the repository (system_diagrams.pdf and the system_diagrams_Part*.pdf files) so the new figures are bundled with the source.
+- Replaced generic "placeholder" figure labels with specific labels across the airframe chapter and the Checklists appendix (e.g., IP_settings, Mini_Ports / Mini_RF / Mini_HW, OEM_Ports / OEM_RF / OEM_HW) to improve cross-referencing and clarify which hardware images are being referenced.
+- Disabled inclusion of the glossary in the main document (the glossary include line is commented out), so the glossary will not be compiled/printed.
+
+---
+
