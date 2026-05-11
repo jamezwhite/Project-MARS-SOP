@@ -547,3 +547,11 @@ Commit: `25bfd67`
 
 ---
 
+## 2026-05-11 – Merge overleaf-2026-05-11-1935 into main
+
+Commit: `2297eff`
+
+- Fixed minor typography in the References appendix under "SecDef Memo — Unleashing U.S. Military Drone Dominance": removed an extra sentence-space (standardized spacing) in the memorandum description; no substantive content changes.
+
+---
+
