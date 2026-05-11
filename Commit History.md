@@ -507,3 +507,13 @@ Commit: `b09feda`
 
 ---
 
+## 2026-05-11 – Compiled PDF
+
+Commit: `da96703`
+
+- Added generated LaTeX auxiliary file Main.aux, which records document bookkeeping (TOC/LOF/LOT write flags, inputs of frontmatter, chapters and appendices .aux files, glossary/acronym usage and page tracking, and the last absolute page number).
+- Added latexmk build database Main.fdb_latexmk containing pdflatex/latexmk run metadata and a dependency/cache list (timestamps, generated output filenames, included image and asset references, and referenced TeX Live files).
+- These are build artifacts produced by compiling the document (capture current TOC/glossary/acronym state and build dependencies) and do not introduce substantive changes to the source content or visible document text.
+
+---
+
