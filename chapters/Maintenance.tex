@@ -1,14 +1,91 @@
 \chapter{Maintenance and Logistics}
 \label{ch:maintenance}
 
-\section{Maintenance Overview}\label{sec:maintoverview}
-
-\section{Maintenance Schedule}\label{sec:maintschedule}
+Although \ac{uas} are considered consumable commodities, parts are generally expensive to replace. Therefore, regular maintenance is required to ensure the system lasts as long as possible and unnecessary spending is minimized.
 
 \section{Battery Management Protocol}\label{sec:batterymgmt}
-
+    The MARS aircraft is powered with a lithium-polymer (LiPo) battery. LiPo batteries are notoriously susceptible to combustion if not properly cared for.
+    \subsection{Charging}
+    \subsubsection{} All LiPo batteries shall be charged in accordance with manufacturer specifications and under direct supervision. Only approved balance chargers configured for lithium-polymer chemistry may be used. Charging shall take place on a non-flammable surface, preferably inside a fire-resistant LiPo charging bag or container.
+    
+    \subsubsection{} Prior to charging, the battery must be inspected for physical damage, swelling, punctures, or compromised wiring. Batteries exhibiting any abnormalities shall not be charged.
+    
+    \subsubsection{} The charger must be set to the correct cell count and charge rate (not to exceed 1C unless otherwise specified by the manufacturer). Overcharging is strictly prohibited. Charging shall never occur unattended, and batteries must be disconnected promptly upon reaching full charge.
+    
+    \subsubsection{} Charging shall not occur immediately after flight; batteries must be allowed to cool to ambient temperature before initiating a charge cycle. Likewise, fully charged batteries should never be left connected to the charger.
+    
+    \subsection{Indicators of Damage}
+    \subsubsection{} LiPo batteries shall be removed from service immediately if any signs of damage or degradation are observed. Indicators of damage include, but are not limited to, physical swelling (puffing), punctures, tears in the outer casing, exposed internal components, or leakage.
+    
+    \subsubsection{} Additional warning signs include a noticeable increase in temperature during normal operation or charging, irregular cell voltage readings, failure to hold charge, or unusual odors (e.g., sweet or metallic smells).
+    
+    \subsubsection{} Any battery involved in a crash, hard landing, or suspected electrical fault must be treated as potentially compromised and inspected thoroughly before reuse. If damage is confirmed or suspected, the battery shall be isolated in a fire-resistant area until it is disposed of at a local hazardous waste collection site.
+    
 \section{Software and Firmware Update Procedures}\label{sec:softwaremgmt}
-
-\section{Supply and Spare Parts Management}\label{sec:supplymgmt}
-
-\section{Maintenance Documentation}\label{sec:maintdocs}
+    
+    The MARS UAS utilizes Mission Planner as the primary \ac{gcs} and operates on ArduPilot firmware. Maintaining up-to-date and verified software and firmware is critical for safe and reliable operation.
+    
+    \subsection{Ground Control Software (Mission Planner) Updates}
+        
+        Mission Planner shall be maintained at the latest stable release version unless mission requirements dictate otherwise. 
+        
+        \subsubsection{} Prior to updating, operators shall:
+        \begin{itemize}
+            \item Verify current system compatibility and review release notes for changes that may affect operations.
+            \item Backup all mission files, configuration parameters, and logs.
+        \end{itemize}
+        
+        \subsubsection{} Updates shall be conducted using the official Mission Planner installer or update utility. Upon completion, operators shall:
+        \begin{itemize}
+            \item Confirm successful installation and software version.
+            \item Verify communication with the aircraft.
+            \item Load and validate existing parameter files.
+            \item Conduct a functional check of critical systems (telemetry, GPS lock, flight modes).
+        \end{itemize}
+    
+    \subsection{Flight Controller Firmware Updates (ArduPilot)}
+    
+        \subsubsection{} Firmware updates to the flight controller shall be performed using Mission Planner or other approved tools. Only stable, officially released versions of ArduPilot firmware shall be used unless testing is explicitly authorized.
+        
+        \subsubsection{} Prior to updating, operators shall:
+        \begin{itemize}
+            \item Record the current firmware version.
+            \item Backup all configuration parameters to a local file.
+            \item Ensure the battery is disconnected from the power distribution board.
+            \item Connect the flight controller to a computer via a USB cable rather than wirelessly.
+        \end{itemize}
+        
+        \subsubsection{} During the update:
+        \begin{itemize}
+            \item Select the correct vehicle type and hardware target.
+            \item Verify firmware integrity prior to installation.
+        \end{itemize}
+        
+        \subsubsection{} After installation, operators shall:
+        \begin{itemize}
+            \item Reapply saved parameters or load a validated configuration file.
+            \item Recalibrate required sensors (accelerometer, compass, radio, etc.).
+            \item Verify firmware version and system status.
+            \item Conduct a full preflight check, including failsafe verification.
+        \end{itemize}
+        
+        \subsubsection{} A test flight in a controlled environment is required following any firmware update before operational deployment.
+        
+    \subsection{Custom Firmware Build Configuration}
+        
+        When compiling custom ArduPilot firmware, only required features and packages shall be included to minimize system overhead and reduce potential points of failure. The firmware build configuration shall be documented and version-controlled. 
+        
+        \subsubsection{} The following packages and modules shall be reviewed and included as required:
+        
+        \begin{itemize}
+            \item [ ] Core flight stack (mandatory)
+            \item [ ] \textit{[Insert package/module name]}
+            \item [ ] \textit{[Insert package/module name]}
+            \item [ ] \textit{[Insert package/module name]}
+            \item [ ] \textit{[Insert package/module name]}
+            \item [ ] \textit{[Insert package/module name]}
+        \end{itemize}
+        
+        \subsection{Version Control and Documentation} Configuration files, parameter files, and firmware builds shall be stored in a centralized repository accessible to authorized personnel. This facilitates the ability to restore the system to a previous functional state in case of malfunction.
+    
+% \section{Supply and Spare Parts Management}\label{sec:supplymgmt}
