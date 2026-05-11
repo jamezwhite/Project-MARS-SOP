@@ -527,3 +527,23 @@ Commit: `751b7bb`
 
 ---
 
+## 2026-05-11 – Merge branch 'main' of https://github.com/jamezwhite/Project-MARS-SOP
+
+Commit: `8776499`
+
+- Added a new Commit History entry (2026-05-11) recording a merge from the remote repository and the commit hash 751b7bb.
+- Documented inclusion of a compiled PDF and generated LaTeX build artifacts (Main.aux and Main.fdb_latexmk); added the auxiliary bookkeeping content associated with the "First-Time Set Up and Troubleshooting" chapter, capturing TOC/chapter/section entries, figure/table labels (including the RTK indicator placeholder), page/counter state, and glossary/acronym usage tracking.
+- Clarified that these files are compilation/latexmk bookkeeping artifacts and do not introduce substantive changes to source content or visible document text.
+
+---
+
+## 2026-05-11 – Merge branch 'main' of https://github.com/jamezwhite/Project-MARS-SOP
+
+Commit: `25bfd67`
+
+- Added a new Commit History entry dated 2026-05-11 recording a merge from the remote main branch (remote commit 751b7bb) under local commit 8776499.
+- Noted the inclusion of a compiled PDF and generated LaTeX build artifacts (Main.aux, Main.fdb_latexmk) and captured their auxiliary bookkeeping content related to the "First‑Time Set Up and Troubleshooting" chapter: TOC/chapter/section listings, figure/table labels (including the RTK indicator placeholder), page/counter state, and glossary/acronym usage tracking.
+- Clarified that the files described are LaTeX/latexmk compilation bookkeeping artifacts and do not introduce substantive edits to source content or visible document text.
+
+---
+
