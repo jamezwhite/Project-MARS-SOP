@@ -484,3 +484,15 @@ Commit: `d61b6dc`
 
 ---
 
+## 2026-05-11 – Updates from Overleaf
+
+Commit: `1e4554c`
+
+- Enabled project glossaries and re-enabled previously-commented chapters in the main build (glossaries/ABCA and Terms now loaded; the "Airframe and Supporting Systems" and "Maintenance" chapters are included again).
+- Substantially expanded the Airframe and Supporting Systems chapter: renamed slightly and added a System Specifications section with frame design details and a list of critical hardware (Cube Orange+ flight controller, Here4 GNSS, LightWare LW20/C rangefinder, KDE 3520XF motors + KDE UAS35 ESCs, Tattu 23,000 mAh LiPo + FCHUB-12S PDB, ADS‑B); added airframe performance metrics (tested max speed, radio connectivity range, hover endurance with test conditions); added a Radios subsection describing onboard and GCS radios (Doodle Labs Mesh Rider Mini OEM and Mesh Rider OEM) with manufacturer links.
+- Added new sections covering approved cargo and ground-control software: a Cargo Approved for Flight section (5 lb payload limit, list of approved MEDLOG items, temperature-controlled restrictions and KACH authority) and a GCS and Software section describing ArduPilot (firmware version noted) and supported ground control clients (Mission Planner recommended, QGroundControl noted).
+- Added and renamed figure assets and updated figure references: multiple new PNGs (Mini‑OEM and OEM port diagrams and RF/HW specification images, plus other radio diagrams) were added to the repository; the Wi‑Fi settings figure filename was renamed to IP_settings.png and the checklist now references that file.
+- Removed the "Post‑Flight Checklist" section from the appendices checklist file and tidied the checklist figure inclusion/caption.
+
+---
+
